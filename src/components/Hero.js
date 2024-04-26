@@ -4,7 +4,8 @@ import Image from 'next/image'
 import { Button } from './Button'
 import { Container } from './Container'
 import { DribbbleIcon, InstagramIcon, TwitterIcon } from './SocialIcons'
-import heroPortrait from '@/images/hero-portrait.jpg'
+// import heroPortrait from '@/images/hero-portrait.jpg'
+import heroPortrait from '@/images/pro_pic.jpg'
 import heroBG from '@/images/home-hero-gradient.svg'
 import figma from '@/images/logos/icons/figma.png'
 import tailwind from '@/images/logos/icons/tailwindcss.png'
@@ -89,7 +90,7 @@ export function Hero() {
             <div>
               <div className="absolute hidden w-max md:left-full md:top-16 md:block lg:-left-28 lg:-top-8 2xl:left-full 2xl:top-16 ">
                 <span className="inline-block transform font-writing text-2xl tracking-wide text-slate-600 md:rotate-[16deg] lg:translate-x-6 lg:rotate-[-18deg] 2xl:rotate-12">
-                  Hi, I'm Jane!
+                  Hi, I'm oussama!
                 </span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

@@ -92,7 +92,7 @@ function Form() {
           label="Name"
           name="name"
           autoComplete="name"
-          placeholder="Jane Doe"
+          placeholder="oussama ennadafy"
         />
         <TextField
           label="Email"
@@ -216,10 +216,10 @@ export default function ContactPage() {
                         I will usually email you back within an hour
                       </p>
                       <Link
-                        href="mailto:hey@janedoe.com"
+                        href="mailto:hey@oussamaennadafy.com"
                         className="mt-5 inline-block text-sky-700 duration-200 ease-in-out hover:text-sky-600 sm:mt-6"
                       >
-                        hey@janedoe.com
+                        hey@oussamaennadafy.com
                       </Link>
                     </div>
                   </div>

@@ -7,7 +7,7 @@ import { getFeaturedTags } from '@/lib/caseStudies'
 
 export const metadata = {
   title: {
-    template: 'Work - %s - Jane Doe',
+    template: 'Work - %s - oussama ennadafy',
     default: 'Work',
   },
   description:

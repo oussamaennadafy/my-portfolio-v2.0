@@ -110,7 +110,7 @@ function ConferenceIcon(props) {
 
 const items = [
   {
-    title: 'The Future of Software Engineering with Jane Doe',
+    title: 'The Future of Software Engineering with oussama ennadafy',
     category: 'Podcast',
     icon: PodcastIcon,
     link: {

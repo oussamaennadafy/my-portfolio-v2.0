@@ -7,7 +7,7 @@ import { getAllCategories } from '@/lib/articles'
 
 export const metadata = {
   title: {
-    template: 'Blog - %s - Jane Doe',
+    template: 'Blog - %s - oussama ennadafy',
     default: 'Blog',
   },
   description:

@@ -1,4 +1,4 @@
-# Jane - Next.js
+# oussama - Next.js
 
 This is a personal portfolio template built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org).
 
@@ -41,7 +41,7 @@ Note that in order to more concisely import images and components, we defined a 
 
 ## MDX Content
 
-All of the content for the site is stored in mdx files in the `src/content` directory. Jane uses [contentlayer](https://www.contentlayer.dev/docs), to access, model and transform this content into data throughout the blog and work sections.
+All of the content for the site is stored in mdx files in the `src/content` directory. oussama uses [contentlayer](https://www.contentlayer.dev/docs), to access, model and transform this content into data throughout the blog and work sections.
 
 In order to model your data correctly, `contentlayer` needs to know the shape of your content — your content schema. This content schema is stored and defined in the root of the project in the `contentlayer.config.js` file.
 
@@ -75,7 +75,7 @@ This template uses the [Inter](https://fonts.google.com/specimen/Inter), [Lexend
 
 The icons used for this theme are part of the [Hero Icons](https://heroicons.com/) set that is free to use and published under the [MIT License](https://github.com/tailwindlabs/heroicons/blob/master/LICENSE).
 
-Some of the examples in Jane use [Nucleo App](https://nucleoapp.com/premium-icons) icons which we have acquired a license for. You are free to use the Nucleo icons included in this template on your projects, but if you are interested in using the rest of their premium icons you can buy a license on their [website](https://nucleoapp.com/).
+Some of the examples in oussama use [Nucleo App](https://nucleoapp.com/premium-icons) icons which we have acquired a license for. You are free to use the Nucleo icons included in this template on your projects, but if you are interested in using the rest of their premium icons you can buy a license on their [website](https://nucleoapp.com/).
 
 ## Images
 
