@@ -102,12 +102,12 @@ export function Header() {
               className="absolute inset-x-0 top-full z-30 mt-4 origin-top overflow-hidden rounded-2xl bg-slate-50 px-6 py-7 shadow-xl shadow-sky-100/40 ring-1 ring-slate-900/5"
             >
               <div>
-                <div className="flex flex-col space-y-4">
+                <div className="flex flex-col">
                   {links.map((link) => (
                     <Link
                       key={`${link.label}-mobile`}
                       href={link.href}
-                      className="block text-base font-semibold text-slate-700 duration-200 hover:text-slate-900"
+                      className="block text-base font-semibold text-slate-700 duration-200 hover:text-slate-900 py-2"
                     >
                       {link.label}
                     </Link>
@@ -118,7 +118,7 @@ export function Header() {
                       <>
                         <Disclosure.Button
                           className={clsx(
-                            'group flex w-full items-center gap-2 text-base font-semibold duration-200 ease-in-out',
+                            'group flex w-full items-center gap-2 text-base font-semibold duration-200 ease-in-out pt-2',
                             open
                               ? 'text-slate-900'
                               : 'text-slate-700 hover:text-slate-900'

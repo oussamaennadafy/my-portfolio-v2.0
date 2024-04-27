@@ -24,7 +24,7 @@ export const metadata = {
   title: {
     template: '%s - oussama ennadafy',
     default:
-      'oussama - Developer, entrepreneur, and general technology enthusiast',
+      'oussama - Developer, freelancer, and general technology enthusiast',
   },
 }
 

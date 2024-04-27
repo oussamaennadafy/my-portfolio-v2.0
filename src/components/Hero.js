@@ -78,9 +78,9 @@ export function Hero() {
           </div>
         </div>
         <div className="w-full max-w-lg mx-auto lg:mr-0">
-          <div className="relative aspect-h-5 aspect-w-4 rounded-2xl bg-slate-50">
+          <div className="relative aspect-h-5 aspect-w-4 rounded-2xl bg-slate-50 group">
             <Image
-              className="object-cover object-center w-full h-full rounded-2xl"
+              className="object-cover object-center w-full h-full rounded-2xl lg:group-hover:scale-105 transition-all"
               src={heroPortrait}
               alt=""
               sizes="(min-width: 552px) 32rem, calc(100vw - 2.5rem)"
@@ -88,7 +88,7 @@ export function Hero() {
               priority
             />
             <div>
-              <div className="absolute hidden w-max md:left-full md:top-16 md:block lg:-left-28 lg:-top-8 2xl:left-full 2xl:top-16 ">
+              <div className="absolute hidden w-max md:left-full md:top-16 md:block lg:-left-28 lg:-top-8 2xl:left-full 2xl:top-16 animate-bounce">
                 <span className="inline-block transform font-writing text-2xl tracking-wide text-slate-600 md:rotate-[16deg] lg:translate-x-6 lg:rotate-[-18deg] 2xl:rotate-12">
                   Hi, I'm oussama!
                 </span>
