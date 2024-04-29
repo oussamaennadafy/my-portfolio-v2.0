@@ -8,7 +8,7 @@ import { Footer } from '@/components/Footer'
 
 export const metadata = {
   description:
-    "I'm a passionate developer, entrepreneur, and general technology enthusiast living in San Francisco. I've worked with hundreds of startups to help them develop their ideas into profitable businesses.",
+    "I'm a passionate developer, Freelancer, and general technology enthusiast living in morocco. I've worked with hundreds of startups to help them develop their ideas into profitable businesses.",
 }
 
 export default function HomePage() {

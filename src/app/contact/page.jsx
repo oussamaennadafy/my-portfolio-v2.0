@@ -216,10 +216,10 @@ export default function ContactPage() {
                         I will usually email you back within an hour
                       </p>
                       <Link
-                        href="mailto:hey@oussamaennadafy.com"
+                        href="mailto:oussama.ennadafy@gmail.com"
                         className="mt-5 inline-block text-sky-700 duration-200 ease-in-out hover:text-sky-600 sm:mt-6"
                       >
-                        hey@oussamaennadafy.com
+                        oussama.ennadafy@gmail.com
                       </Link>
                     </div>
                   </div>
@@ -244,13 +244,13 @@ export default function ContactPage() {
                         Call me
                       </p>
                       <p className="mt-2 text-base text-slate-600">
-                        I’m available weekdays from 9AM to 5PM
+                        I&lsquo;m available weekdays from 9AM to 5PM
                       </p>
                       <Link
                         href="tel:+13234567891"
                         className="mt-6 inline-block text-sky-700 duration-200 ease-in-out hover:text-sky-600"
                       >
-                        +1 (323) 456-7891
+                        +212 688-744076
                       </Link>
                     </div>
                   </div>

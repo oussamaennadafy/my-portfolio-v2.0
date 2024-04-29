@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 import { Button } from './Button'
 import { Container } from './Container'
-import { DribbbleIcon, InstagramIcon, TwitterIcon } from './SocialIcons'
+import { DribbbleIcon, InstagramIcon, TwitterIcon, GitHubIcon, LinkedInIcon, EmailIcon } from './SocialIcons'
 // import heroPortrait from '@/images/hero-portrait.jpg'
 import heroPortrait from '@/images/pro_pic.jpg'
 import heroBG from '@/images/home-hero-gradient.svg'
@@ -11,13 +11,13 @@ import figma from '@/images/logos/icons/figma.png'
 import tailwind from '@/images/logos/icons/tailwindcss.png'
 import sketch from '@/images/logos/icons/sketch.png'
 
-function SocialLink({ icon: Icon, ...props }) {
+function SocialLink({ icon: Icon, styles, ...props }) {
   return (
     <Link
       className="flex items-center justify-center duration-200 border rounded-full h-11 w-11 border-slate-200 hover:bg-slate-50"
       {...props}
     >
-      <Icon className="w-4 h-4 transition fill-slate-600 group-hover:fill-slate-700" />
+      <Icon className={`w-4 h-4 transition fill-slate-600 group-hover:fill-slate-700 ${styles}`} />
     </Link>
   )
 }
@@ -47,32 +47,32 @@ export function Hero() {
             businesses turn their ideas into reality
           </h1>
           <p className="mt-6 text-lg leading-8 text-center text-slate-700 lg:text-left">
-            I'm a passionate developer, entrepreneur, and general technology
-            enthusiast living in San Francisco. I've worked with hundreds of
+            I&#39;m a passionate developer, Freelancer, and general technology
+            enthusiast living in morocco. I&#39;ve worked with hundreds of
             startups to help them develop their ideas into profitable
             businesses.
           </p>
           <div className="flex flex-wrap items-center justify-center mt-10 gap-x-10 gap-y-6 lg:justify-start">
-            <Button href="#" className="h-11">
+            <Button href="/contact" className="h-11">
               Book a call with me
             </Button>
 
             <div className="flex gap-3 sm:gap-4">
               <SocialLink
-                href="https://dribbble.com"
-                aria-label="Follow on Dribbble"
-                icon={DribbbleIcon}
-              />
-
-              <SocialLink
-                href="https://instagram.com"
-                aria-label="Follow on Instagram"
-                icon={InstagramIcon}
+                href="https://github.com/oussamaennadafy"
+                aria-label="Follow on Github"
+                icon={GitHubIcon}
               />
               <SocialLink
-                href="https://twitter.com"
-                aria-label="Follow on Twitter"
-                icon={TwitterIcon}
+                href="https://www.linkedin.com/in/oussama-ennadafy/"
+                aria-label="Follow on linkedIn"
+                icon={LinkedInIcon}
+              />
+              <SocialLink
+                aria-label="contact me on email"
+                href="mailto:oussama.ennadafy@gmail.com"
+                styles={"fill-white stroke-slate-600"}
+                icon={EmailIcon}
               />
             </div>
           </div>
@@ -90,7 +90,7 @@ export function Hero() {
             <div>
               <div className="absolute hidden w-max md:left-full md:top-16 md:block lg:-left-28 lg:-top-8 2xl:left-full 2xl:top-16 animate-bounce">
                 <span className="inline-block transform font-writing text-2xl tracking-wide text-slate-600 md:rotate-[16deg] lg:translate-x-6 lg:rotate-[-18deg] 2xl:rotate-12">
-                  Hi, I'm oussama!
+                  Hi, I&apos;m oussama!
                 </span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

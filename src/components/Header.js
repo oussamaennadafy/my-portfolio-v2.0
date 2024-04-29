@@ -9,7 +9,7 @@ import { Menu, Popover, Transition, Disclosure } from '@headlessui/react'
 
 import { Button } from './Button'
 import { Container } from './Container'
-import logo from '@/images/logo.png'
+import logo from '@/images/logo1.png'
 import logoIcon from '@/images/logo-icon.png'
 
 const links = [
@@ -185,12 +185,12 @@ export function Header() {
               <Image
                 src={logo}
                 alt=""
-                className="h-8 w-auto sm:h-9 md:hidden lg:block lg:h-10"
+                className="hidden h-8 w-auto midSm:block sm:h-9 md:hidden lg:block lg:h-10"
               />
               <Image
                 src={logoIcon}
                 alt=""
-                className="hidden h-8 w-auto md:block lg:hidden"
+                className="block midSm:hidden h-8 w-auto md:block lg:hidden"
               />
             </Link>
           </div>
@@ -264,7 +264,7 @@ export function Header() {
             </Menu>
           </div>
           <div className="flex items-center">
-            <Button variant="secondary" href="#">
+            <Button variant="secondary" href="/contact">
               Book a call
             </Button>
             <div className="ml-4 md:hidden">
