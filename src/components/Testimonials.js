@@ -34,7 +34,7 @@ const testimonials = [
       'And robusta french bar luwak extra caffeine cup filter macchiato skinny shop cream that variety. Caramel black affogato con frappuccino mocha sweet milk and.',
     author: {
       name: 'Katy Jackson',
-      role: 'Designer at Mailgorilla',
+      role: 'freelancer at Mailgorilla',
       image: avatarImage1,
     },
   },
@@ -84,7 +84,7 @@ const testimonials = [
       'And robusta french bar luwak extra caffeine cup filter macchiato skinny shop cream that variety. Caramel black affogato con frappuccino mocha sweet milk and.',
     author: {
       name: 'Katy Jackson',
-      role: 'Designer at Mailgorilla',
+      role: 'freelancer at Mailgorilla',
       image: avatarImage1,
     },
   },

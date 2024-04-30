@@ -86,7 +86,7 @@ export function Footer({ newsletter = true }) {
                     Subscribe to my newsletter
                   </h3>
                   <p className="mx-auto mt-4 max-w-lg text-lg text-sky-50 lg:mx-0 lg:mt-6">
-                    Join 10,000+ designers and get creative site breakdowns,
+                    Join 10,000+ freelancers and get creative site breakdowns,
                     design musings and tips every Monday.
                   </p>
                 </div>

@@ -1,3 +1,4 @@
+const { default: subISOWeekYears } = require('date-fns/esm/fp/subISOWeekYears')
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 /** @type {import('tailwindcss').Config} */
@@ -43,4 +44,5 @@ module.exports = {
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
   ],
+  darkMode: "class"
 }
