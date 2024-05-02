@@ -415,7 +415,7 @@ export function Experience() {
                       Years of experience
                     </dt>
                     <dd className="order-first text-3xl font-extrabold text-white sm:text-4xl">
-                      10
+                      3
                     </dd>
                   </div>
 
@@ -424,7 +424,7 @@ export function Experience() {
                       Projects completed
                     </dt>
                     <dd className="order-first text-3xl font-extrabold text-white sm:text-4xl">
-                      150
+                      +20
                     </dd>
                   </div>
                 </dl>

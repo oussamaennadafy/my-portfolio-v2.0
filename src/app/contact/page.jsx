@@ -213,7 +213,7 @@ export default function ContactPage() {
                         Email me
                       </p>
                       <p className="mt-1.5 text-base text-slate-600 sm:mt-2">
-                        I will usually email you back within an hour
+                        I will usually email you back within a day
                       </p>
                       <Link
                         href="mailto:oussama.ennadafy@gmail.com"

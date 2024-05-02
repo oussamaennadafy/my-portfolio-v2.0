@@ -62,13 +62,15 @@ export function Hero() {
               <SocialLink
                 href="https://github.com/oussamaennadafy"
                 aria-label="Follow on Github"
+                target="_blank"
                 icon={GitHubIcon}
-              />
+                />
               <SocialLink
                 href="https://www.linkedin.com/in/oussama-ennadafy/"
                 aria-label="Follow on linkedIn"
                 icon={LinkedInIcon}
-              />
+                target="_blank"
+                />
               <SocialLink
                 aria-label="contact me on email"
                 href="mailto:oussama.ennadafy@gmail.com"
