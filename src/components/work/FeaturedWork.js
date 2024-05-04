@@ -1,3 +1,5 @@
+"use client"
+
 import Link from 'next/link'
 import Image from 'next/image'
 import { compareDesc } from 'date-fns'
@@ -11,6 +13,8 @@ import {
   ProductDevelopmentIcon,
 } from '../CategoryIcons'
 import { allCaseStudies } from 'contentlayer/generated'
+import { useInView } from 'react-intersection-observer'
+import { useEffect } from 'react'
 
 const iconOptions = {
   'Web Development': WebDevelopmentIcon,
@@ -25,11 +29,23 @@ function CategoryIcon({ category, ...props }) {
   return <Icon {...props} />
 }
 
-function CaseStudy({ caseStudy }) {
+function CaseStudy({ caseStudy, i }) {
+
+  const [ref, inView, entry] = useInView({
+    root: null,
+    rootMargin: "0px",
+    threshold: 0,
+    triggerOnce: true,
+    delay: 200,
+  })
+  
+  const translateXDirection = i % 2 ? 1 : -1;
+
   return (
     <div
       key={caseStudy.title}
-      className="relative grid items-center gap-8 overflow-hidden rounded-2xl bg-slate-50 px-4 pb-14 pt-5 shadow-sm shadow-sky-100/50 ring-1 ring-slate-100 sm:gap-12 sm:px-8 sm:pt-8 lg:grid-cols-12 lg:px-0 lg:py-0 xl:gap-16 xl:pt-16"
+      ref={ref}
+      className={`relative grid items-center gap-8 overflow-hidden rounded-2xl bg-slate-50 px-4 pb-14 pt-5 shadow-sm shadow-sky-100/50 ring-1 ring-slate-100 sm:gap-12 sm:px-8 sm:pt-8 lg:grid-cols-12 lg:px-0 lg:py-0 xl:gap-16 xl:pt-16 transition-all duration-500 ${translateXDirection === 1 ? "translate-x-96" : "-translate-x-96"} opacity-0 ${inView ? "translate-x-0 opacity-100" : ""}`}
     >
       <Image
         src={workBG}
@@ -104,8 +120,8 @@ export function FeaturedWork() {
           </p>
         </div>
         <div className="relative mx-auto mt-16 max-w-xl space-y-16 lg:mx-0 lg:max-w-none">
-          {caseStudies.map((caseStudy) => (
-            <CaseStudy key={caseStudy.slug} caseStudy={caseStudy} />
+          {caseStudies.map((caseStudy, i) => (
+            <CaseStudy i={i} key={caseStudy.slug} caseStudy={caseStudy} />
           ))}
         </div>
       </Container>
