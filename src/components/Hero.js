@@ -1,3 +1,5 @@
+"use client"
+
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -11,6 +13,8 @@ import heroBG from '@/images/home-hero-gradient.svg'
 import figma from '@/images/logos/icons/figma.png'
 import tailwind from '@/images/logos/icons/tailwindcss.png'
 import sketch from '@/images/logos/icons/sketch.png'
+import { useInView } from "react-intersection-observer"
+import { useEffect } from 'react'
 
 function SocialLink({ icon: Icon, styles, ...props }) {
   return (
@@ -24,13 +28,21 @@ function SocialLink({ icon: Icon, styles, ...props }) {
 }
 
 export function Hero() {
+  const [ref, inView, entry] = useInView({
+    root: null,
+    rootMargin: "0px",
+    threshold: 0,
+    triggerOnce: true,
+  })
+  
+
   return (
-    <section className="relative py-20 overflow-hidden lg:py-24">
+    <section ref={ref} className="relative py-20 overflow-hidden lg:py-24">
       {/* Light blue gradient background */}
       <Image src={heroBG} alt="" className="absolute inset-x-0 w-auto top-56 lg:inset-y-0" />
 
       <Container className="relative z-10 grid items-center gap-16 lg:grid-cols-2 lg:gap-8">
-        <div className="flex flex-col items-center max-w-2xl mx-auto lg:items-start">
+        <div className={`flex flex-col items-center max-w-2xl mx-auto transition-all duration-500 lg:items-start ${!inView ? "lg:-translate-x-96 opacity-0" : ""}`}>
           <h1 className="text-5xl font-semibold text-center font-display text-slate-900 sm:text-6xl lg:text-left">
             <span className="relative whitespace-nowrap">
               <svg
@@ -80,7 +92,7 @@ export function Hero() {
             </div>
           </div>
         </div>
-        <div className="w-full max-w-lg mx-auto lg:mr-0">
+        <div className={`w-full max-w-lg transition-all duration-500 mx-auto lg:mr-0 ${!inView ? "lg:translate-x-96 opacity-0" : ""}`}>
           <div className="relative aspect-h-5 aspect-w-4 rounded-2xl bg-slate-50">
             <Image
               className="object-cover object-center w-full h-full rounded-2xl transition-all"
