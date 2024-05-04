@@ -375,9 +375,11 @@ export function Experience() {
                       fill="currentColor"
                     />
                   </svg>
-                  <button
+                  <a
                     className="relative inline-flex items-center justify-center w-12 h-12 duration-200 -translate-x-1/2 -translate-y-1/2 rounded-full left-1/2 top-1/2 bg-slate-900 hover:bg-slate-800 lg:h-20 lg:w-20"
                     aria-label="Download resume"
+                    download="oussama-ennadafy-resume.pdf"
+                    href='assets/oussama-ennadafy-resume.pdf'
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -407,7 +409,7 @@ export function Experience() {
                         <path d="M2,22v5a3,3,0,0,0,3,3H27a3,3,0,0,0,3-3V22"></path>
                       </g>
                     </svg>
-                  </button>
+                  </a>
                 </div>
                 <dl className="absolute bottom-0 grid grid-cols-2 gap-5 px-6 py-8 text-center translate-x-1/2 right-1/2 w-max translate-y-3/4 rounded-2xl bg-sky-700/90 backdrop-blur-sm sm:translate-y-1/2 sm:gap-12 sm:p-10 lg:right-20 lg:translate-x-0">
                   <div className="flex flex-col gap-1">
