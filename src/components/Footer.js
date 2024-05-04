@@ -26,7 +26,7 @@ const socialLinks = [
   {
     label: 'Email me',
     icon: EmailIcon,
-    href: '#',
+    href: 'mailto:oussama.ennadafy@gmail.com',
   },
   {
     label: 'Dribbble',
@@ -46,12 +46,14 @@ const socialLinks = [
   {
     label: 'LinkedIn',
     icon: LinkedInIcon,
-    href: '#',
+    href: 'https://www.linkedin.com/in/oussama-ennadafy/',
+    target: "_blank"
   },
   {
     label: 'Github',
     icon: GitHubIcon,
-    href: '#',
+    href: 'https://github.com/oussamaennadafy',
+    target: "_blank"
   },
 ]
 
@@ -122,7 +124,7 @@ export function Footer({ newsletter = true }) {
                 Lets make something great together
               </h3>
               <div className="hidden lg:block">
-                <Button href="#" variant="primaryOnDark" className="mt-12">
+                <Button href="/contact" variant="primaryOnDark" className="mt-12">
                   Book a call
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -171,6 +173,7 @@ export function Footer({ newsletter = true }) {
                     icon={socialLink.icon}
                     label={socialLink.label}
                     href={socialLink.href}
+                    target={socialLink.target}
                   />
                 ))}
               </div>
@@ -190,7 +193,7 @@ export function Footer({ newsletter = true }) {
               ))}
             </div>
             <p className="mt-8 text-base text-slate-400/90 md:mt-0">
-              © {new Date().getFullYear()} Tailwind Awesome. All rights
+              © {new Date().getFullYear()} oussama&apos;s portfolio. All rights
               reserved.
             </p>
           </div>
