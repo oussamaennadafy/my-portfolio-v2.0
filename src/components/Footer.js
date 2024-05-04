@@ -1,3 +1,5 @@
+"use client"
+
 import Link from 'next/link'
 import Image from 'next/image'
 import clsx from 'clsx'
@@ -13,6 +15,7 @@ import {
   GitHubIcon,
   EmailIcon,
 } from './SocialIcons'
+import { useInView } from 'react-intersection-observer'
 
 const links = [
   { label: 'Home', href: '/' },
@@ -70,12 +73,20 @@ function SocialLink({ icon: Icon, label, ...props }) {
 }
 
 export function Footer({ newsletter = true }) {
+  const [ref, inView, entry] = useInView({
+    root: null,
+    rootMargin: "0px",
+    threshold: 0,
+    triggerOnce: true,
+    delay: 500,
+  })
+
   return (
     <section className={clsx(newsletter && 'pt-12 sm:pt-16')}>
       {newsletter && (
         <div className="relative">
           <div className="absolute inset-x-0 bottom-0 h-1/2 bg-slate-900"></div>
-          <div className="relative mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+          <div ref={ref} className={`relative mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 transition-all duration-500 ${inView ? "translate-y-0 opacity-100" : "-translate-y-20 opacity-0"}`}>
             <div className="relative overflow-hidden rounded-2xl bg-sky-700 px-5 py-12 sm:px-16 lg:py-14">
               <Image
                 src={newsletterBg}
