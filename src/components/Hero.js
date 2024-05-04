@@ -42,7 +42,7 @@ export function Hero() {
       <Image src={heroBG} alt="" className="absolute inset-x-0 w-auto top-56 lg:inset-y-0" />
 
       <Container className="relative z-10 grid items-center gap-16 lg:grid-cols-2 lg:gap-8">
-        <div className={`flex flex-col items-center max-w-2xl mx-auto transition-all duration-500 lg:items-start ${!inView ? "lg:-translate-x-96 lg:opacity-0" : ""}`}>
+        <div className={`flex flex-col items-center max-w-2xl mx-auto transition-all duration-500 lg:items-start ${!inView ? "lg:-translate-x-1/2 lg:opacity-0" : ""}`}>
           <h1 className="text-5xl font-semibold text-center font-display text-slate-900 sm:text-6xl lg:text-left">
             <span className="relative whitespace-nowrap">
               <svg
