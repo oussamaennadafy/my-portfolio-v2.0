@@ -39,13 +39,13 @@ function CaseStudy({ caseStudy, i }) {
     delay: 200,
   })
 
-  const translateXDirection = i % 2 ? 1 : -1;
+  const translateXDirection = i % 2 === 1 ? 1 : -1;
 
   return (
     <div
       key={caseStudy.title}
       ref={ref}
-      className={`relative grid items-center gap-8 overflow-hidden rounded-2xl bg-slate-50 px-4 pb-14 pt-5 shadow-sm shadow-sky-100/50 ring-1 ring-slate-100 sm:gap-12 sm:px-8 sm:pt-8 lg:grid-cols-12 lg:px-0 lg:py-0 xl:gap-16 xl:pt-16 transition-all duration-500 ${translateXDirection === 1 ? "translate-x-1/2" : "-translate-x-1/2"} opacity-0 ${inView ? "translate-x-0 opacity-100" : ""}`}
+      className={`relative grid items-center gap-8 overflow-hidden rounded-2xl bg-slate-50 px-4 pb-14 pt-5 shadow-sm shadow-sky-100/50 ring-1 ring-slate-100 sm:gap-12 sm:px-8 sm:pt-8 lg:grid-cols-12 lg:px-0 lg:py-0 xl:gap-16 xl:pt-16 transition-all duration-500 ${inView ? "translate-x-0 opacity-100" : translateXDirection === 1 ? "opacity-0 translate-x-1/2" : "opacity-0 -translate-x-1/2"}`}
     >
       <Image
         src={workBG}
