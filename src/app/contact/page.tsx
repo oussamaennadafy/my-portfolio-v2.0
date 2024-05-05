@@ -5,6 +5,7 @@ import { Button } from '@/components/Button'
 import { Footer } from '@/components/Footer'
 
 import image from '@/images/contact.jpg'
+import { ReactNode } from 'react'
 
 export const metadata = {
   title: 'Contact me',
@@ -12,11 +13,34 @@ export const metadata = {
     "Whether you're looking to kickstart a new web project or simply want to say hi, feel free to get in touch.",
 }
 
+type LabelProps = {
+  name: string,
+  description?: string,
+  children?: ReactNode | ReactNode[],
+}
+
+type TextFieldProps = {
+  label: string,
+  name: string,
+  type?: string,
+  rows?: number,
+  className?: string,
+  autoComplete?: string, 
+  placeholder?: string, 
+}
+
+type CheckboxFieldProps = {
+  label: string, 
+  name: string,
+}
+
+
+
 function Form() {
   const inputClasses =
     'block w-full px-4 py-4 leading-4 transition-colors duration-200 ease-in-out border-0 shadow-sm rounded-xl bg-slate-50 text-md text-slate-900 shadow-sky-100/50 ring-1 ring-inset ring-slate-200 placeholder:text-slate-400 hover:bg-white focus:border-0 focus:bg-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-600/60'
 
-  function Label({ name, description, children }) {
+  function Label({ name, description, children }: LabelProps): JSX.Element {
     return (
       <div className="flex justify-between text-md leading-6">
         <label htmlFor={name} className="block font-medium text-slate-900">
@@ -24,7 +48,7 @@ function Form() {
         </label>
         {description && (
           <p id={`${name}-description`} className="text-slate-500/80">
-            {description}
+            {description}test
           </p>
         )}
       </div>
@@ -38,7 +62,7 @@ function Form() {
     rows = 5,
     className,
     ...props
-  }) {
+  }: TextFieldProps): JSX.Element {
     return (
       <div className={className}>
         {label && <Label name={name}>{label}</Label>}
@@ -65,7 +89,7 @@ function Form() {
     )
   }
 
-  function CheckboxField({ label, name }) {
+  function CheckboxField({ label, name }: CheckboxFieldProps): JSX.Element {
     return (
       <div className="flex items-start select-none">
         <div className="flex h-6 items-center">
@@ -86,7 +110,7 @@ function Form() {
   }
 
   return (
-    <form action="#" method="POST" className="mt-10">
+    <form action="#" className="mt-10">
       <div className="space-y-7">
         <TextField
           label="Name"
@@ -129,7 +153,7 @@ function Form() {
         </fieldset>
       </div>
       <div className="mt-10 border-t border-slate-200 pt-8">
-        <Button type="submit" className="w-full !text-base sm:!text-lg">
+        <Button className="w-full !text-base sm:!text-lg">
           Get started
         </Button>
       </div>

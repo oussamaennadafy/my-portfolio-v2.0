@@ -8,7 +8,14 @@ const variantStyles = {
   primaryOnDarkClassName: 'bg-white hover:bg-sky-50 text-slate-700',
 }
 
-export function Button({ variant = 'primary', className, href, ...props }) {
+type ButtonProps = {
+  variant?: 'primary' | "secondary" | "primaryOnDark",
+  className: string,
+  href?: string,
+  children?: React.ReactNode,
+}
+
+export function Button({ variant = 'primary', className, href, ...props }: ButtonProps): JSX.Element {
   className = clsx(
     'inline-flex items-center rounded-full gap-2.5 justify-center px-7 py-3 text-md font-semibold leading-none outline-offset-2 transition-all duration-200 ease-in-out active:transition-none',
     variantStyles[`${variant}ClassName`],
