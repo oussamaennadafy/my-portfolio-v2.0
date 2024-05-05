@@ -1,4 +1,4 @@
-// contentlayer.config.js
+// contentlayer.config.ts
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
 import remarkGfm from "remark-gfm";
 import rehypePrism from "@mapbox/rehype-prism";
@@ -63,4 +63,4 @@ export {
   Post,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-EAZDXGGL.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-62RH6B4G.mjs.map
