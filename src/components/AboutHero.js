@@ -33,7 +33,7 @@ export function AboutHero() {
               </svg>
               <span className="relative">I’m oussama</span>
             </span>{' '}
-            and I’m a freelancer & developer
+            and I’m a developer & freelancer
           </h1>
           <p className="mt-8 text-lg leading-8 text-slate-700">
             Pumpkin seasonal rich froth decaffeinated trifecta organic blue

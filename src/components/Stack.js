@@ -1,3 +1,5 @@
+"use client"
+
 import Image from 'next/image'
 
 import { Container } from './Container'
@@ -14,6 +16,7 @@ import avatar2 from '@/images/avatars/avatar-2.png'
 import avatar3 from '@/images/avatars/avatar-3.png'
 import avatar4 from '@/images/avatars/avatar-4.png'
 import avatar5 from '@/images/avatars/avatar-5.png'
+import { useInView } from 'react-intersection-observer'
 
 const stack = [
   {
@@ -51,6 +54,13 @@ const stack = [
 const clientAvatars = [avatar1, avatar2, avatar3, avatar4, avatar5]
 
 export function Stack() {
+  const [ref, inView] = useInView({
+    root: null,
+    rootMargin: "0px",
+    threshold: 0,
+    triggerOnce: true,
+  });
+
   return (
     <section className="py-16 overflow-hidden bg-white sm:py-24 lg:py-32">
       <Container>
@@ -135,7 +145,7 @@ export function Stack() {
                   sizes="(min-width: 640px) 32rem, calc(100vw - 2.5rem)"
                 />
               </div>
-              <div className="absolute max-w-xs p-8 -bottom-16 right-6 rounded-2xl bg-sky-700/95 backdrop-blur-sm xl:right-0 xl:bottom-10 xl:translate-x-1/4">
+              <div ref={ref} className={`absolute max-w-xs p-8 rounded-2xl bg-sky-700/95 backdrop-blur-sm transition-all duration-500 ${inView ? "opacity-100 xl:right-0 xl:bottom-10 xl:translate-x-1/4 -bottom-16 right-6" : "opacity-0 xl:translate-x-1/2 -bottom-24 xl:bottom-10"}`}>
                 <p className="text-2xl font-medium font-display text-sky-50">
                   <span className="text-[28px] font-bold text-white">55+</span>{' '}
                   Clients have loved my work

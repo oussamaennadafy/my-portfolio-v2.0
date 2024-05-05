@@ -6,44 +6,31 @@ import { Container } from './Container'
 import adobe from '@/images/logos/icons/adobe.png'
 import dropbox from '@/images/logos/icons/dropbox.png'
 import gumroad from '@/images/logos/icons/gumroad.png'
-import mailchimp from '@/images/logos/icons/mailchimp.png'
-import shopify from '@/images/logos/icons/shopify.png'
+import ora from '@/images/logos/icons/ora.png'
+import virtualMinds from '@/images/logos/icons/virtual-minds.png'
+import youcode from '@/images/logos/icons/youcode.jpeg'
 
 const companies = [
   {
-    name: 'Adobe',
-    dates: 'Dec 2016 - Oct 2017',
+    name: 'youcode',
+    dates: 'Nov 2021 - Jul 2023',
     description:
       'Breve macchiato bar cortado dripper shot sweet robust qui. Et café whipped go white that espresso fair origin pot cream est cup.',
-    logo: adobe,
+    logo: youcode,
   },
   {
-    name: 'Dropbox',
-    dates: 'Nov 2017 - Apr 2018',
+    name: 'virtual minds',
+    dates: 'Jul 2022 - Aug 2022',
     description:
       'Breve macchiato bar cortado dripper shot sweet robust qui. Et café whipped go white that espresso fair origin pot cream est cup.',
-    logo: dropbox,
+    logo: virtualMinds,
   },
   {
-    name: 'Gumroad',
-    dates: 'Apr 2018 - Jan 2019',
+    name: 'Ora technologies',
+    dates: 'Nov 2023 - Present',
     description:
       'Breve macchiato bar cortado dripper shot sweet robust qui. Et café whipped go white that espresso fair origin pot cream est cup.',
-    logo: gumroad,
-  },
-  {
-    name: 'Mailchimp',
-    dates: 'Jan 2019 - Mar 2020',
-    description:
-      'Breve macchiato bar cortado dripper shot sweet robust qui. Et café whipped go white that espresso fair origin pot cream est cup.',
-    logo: mailchimp,
-  },
-  {
-    name: 'Shopify',
-    dates: 'Mar 2020 - Present',
-    description:
-      'Breve macchiato bar cortado dripper shot sweet robust qui. Et café whipped go white that espresso fair origin pot cream est cup.',
-    logo: shopify,
+    logo: ora,
   },
 ]
 
@@ -109,7 +96,7 @@ export function WorkExperience() {
                 className="relative [counter-increment:section] before:absolute before:-top-7 before:right-0 before:font-mono before:text-9xl before:font-black before:leading-none before:text-slate-50 before:content-[counter(section,decimal-leading-zero)]"
               >
                 <div>
-                  <div className="mb-6 flex h-11 w-11 items-center justify-center rounded-lg bg-gradient-to-br from-sky-50 via-slate-50 to-sky-50 ring-1 ring-slate-900/5">
+                  <div className="mb-6 flex h-11 w-11 items-center justify-center rounded-lg bg-gradient-to-br from-sky-50 via-slate-50 to-sky-50 ring-1 ring-slate-900/5 overflow-hidden">
                     <Image src={company.logo} alt={company.name} />
                   </div>
                   <p className="text-sm font-medium text-sky-700">
