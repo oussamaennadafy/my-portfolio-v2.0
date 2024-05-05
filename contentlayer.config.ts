@@ -1,8 +1,8 @@
-import { defineDocumentType, makeSource } from 'contentlayer/source-files'
+import { ComputedFields, defineDocumentType, makeSource } from 'contentlayer/source-files'
 import remarkGfm from 'remark-gfm'
-import rehypePrism from '@mapbox/rehype-prism'
+import rehypePrism from '@mapbox/rehype-prism';
 
-const computedFields = {
+const computedFields: ComputedFields = {
   url: {
     type: 'string',
     resolve: (doc) => `/${doc._raw.flattenedPath}`,
