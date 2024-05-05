@@ -32,6 +32,18 @@ const socialLinks = [
     href: 'mailto:oussama.ennadafy@gmail.com',
   },
   {
+    label: 'LinkedIn',
+    icon: LinkedInIcon,
+    href: 'https://www.linkedin.com/in/oussama-ennadafy/',
+    target: "_blank"
+  },
+  {
+    label: 'Github',
+    icon: GitHubIcon,
+    href: 'https://github.com/oussamaennadafy',
+    target: "_blank"
+  },
+  {
     label: 'Dribbble',
     icon: DribbbleIcon,
     href: '#',
@@ -45,18 +57,6 @@ const socialLinks = [
     label: 'Twitter',
     icon: TwitterIcon,
     href: '#',
-  },
-  {
-    label: 'LinkedIn',
-    icon: LinkedInIcon,
-    href: 'https://www.linkedin.com/in/oussama-ennadafy/',
-    target: "_blank"
-  },
-  {
-    label: 'Github',
-    icon: GitHubIcon,
-    href: 'https://github.com/oussamaennadafy',
-    target: "_blank"
   },
 ]
 
@@ -160,8 +160,7 @@ export function Footer({ newsletter = true }) {
             </div>
             <div className={`flex flex-col items-center lg:col-span-5 lg:items-start transition-all duration-500 ${footerInView ? "lg:opacity-100 lg:translate-x-0" : "lg:opacity-0 lg:translate-x-1/2"}`}>
               <p className="text-center text-lg text-slate-50 lg:max-w-sm lg:text-left">
-                Iced pumpkin ristretto irish trifecta robusta trade froth
-                affogato barista con barista cappuccino filter roast.
+              Let&apos;s collaborate and innovate something truly great together, Feel free to connect with me on my various social media accounts.
               </p>
 
               <Button

@@ -67,7 +67,7 @@ function Form() {
 
   function CheckboxField({ label, name }) {
     return (
-      <div className="flex items-start">
+      <div className="flex items-start select-none">
         <div className="flex h-6 items-center">
           <input
             id={name}
@@ -122,7 +122,7 @@ function Form() {
           </legend>
           <div className="mt-4 space-y-3">
             <CheckboxField label="Web development" name="web-development" />
-            <CheckboxField label="Web design" name="web-design" />
+            <CheckboxField label="Mobile development" name="mobile-developmen" />
             <CheckboxField label="Consulting" name="consulting" />
             <CheckboxField label="Other" name="other" />
           </div>
@@ -247,7 +247,7 @@ export default function ContactPage() {
                         I&lsquo;m available weekdays from 9AM to 5PM
                       </p>
                       <Link
-                        href="tel:+13234567891"
+                        href="tel:+212 688-744076"
                         className="mt-6 inline-block text-sky-700 duration-200 ease-in-out hover:text-sky-600"
                       >
                         +212 688-744076
