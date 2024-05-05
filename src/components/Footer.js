@@ -73,20 +73,26 @@ function SocialLink({ icon: Icon, label, ...props }) {
 }
 
 export function Footer({ newsletter = true }) {
-  const [ref, inView, entry] = useInView({
+  const [newsletterRef, newsletterInView] = useInView({
     root: null,
     rootMargin: "0px",
-    threshold: 0,
+    threshold: 0.3,
     triggerOnce: true,
-    delay: 500,
-  })
+  });
+
+  const [footerRef, footerInView] = useInView({
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.1,
+    triggerOnce: true,
+  });
 
   return (
     <section className={clsx(newsletter && 'pt-12 sm:pt-16')}>
       {newsletter && (
         <div className="relative">
           <div className="absolute inset-x-0 bottom-0 h-1/2 bg-slate-900"></div>
-          <div ref={ref} className={`relative mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 transition-all duration-500 ${inView ? "translate-y-0 opacity-100" : "-translate-y-20 opacity-0"}`}>
+          <div ref={newsletterRef} className={`relative mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 transition-all duration-500 ${newsletterInView ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"}`}>
             <div className="relative overflow-hidden rounded-2xl bg-sky-700 px-5 py-12 sm:px-16 lg:py-14">
               <Image
                 src={newsletterBg}
@@ -127,10 +133,10 @@ export function Footer({ newsletter = true }) {
           </div>
         </div>
       )}
-      <footer className="overflow-hidden bg-slate-900 pb-8 pt-20 sm:pb-12 sm:pt-24 lg:pt-32">
+      <footer ref={footerRef} className="overflow-hidden bg-slate-900 pb-8 pt-20 sm:pb-12 sm:pt-24 lg:pt-32">
         <Container>
           <div className="mx-auto grid max-w-xl items-center gap-5 lg:mx-0 lg:max-w-none lg:grid-cols-12 lg:gap-12 xl:gap-20">
-            <div className="lg:col-span-7">
+            <div className={`lg:col-span-7 transition-all duration-500 ${footerInView ? "lg:opacity-100 lg:translate-x-0" : "lg:opacity-0 lg:-translate-x-1/2"}`}>
               <h3 className="text-center font-display text-4xl font-semibold text-white sm:text-5xl lg:max-w-xl lg:text-left">
                 Lets make something great together
               </h3>
@@ -152,7 +158,7 @@ export function Footer({ newsletter = true }) {
                 </Button>
               </div>
             </div>
-            <div className="flex flex-col items-center lg:col-span-5 lg:items-start">
+            <div className={`flex flex-col items-center lg:col-span-5 lg:items-start transition-all duration-500 ${footerInView ? "lg:opacity-100 lg:translate-x-0" : "lg:opacity-0 lg:translate-x-1/2"}`}>
               <p className="text-center text-lg text-slate-50 lg:max-w-sm lg:text-left">
                 Iced pumpkin ristretto irish trifecta robusta trade froth
                 affogato barista con barista cappuccino filter roast.
