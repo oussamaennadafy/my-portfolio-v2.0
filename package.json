@@ -24,15 +24,20 @@
     "swiper": "^10.2.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.2.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.6",
     "@tailwindcss/typography": "^0.5.10",
+    "@types/react": "18.3.1",
     "autoprefixer": "^10.4.15",
-    "eslint": "^8.43.0",
+    "eslint": "^8.57.0",
     "eslint-config-next": "^13.5.1",
+    "eslint-plugin-react": "^7.34.1",
+    "globals": "^15.1.0",
     "postcss": "^8.4.29",
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.3.0",
-    "tailwindcss": "^3.3.3"
+    "tailwindcss": "^3.3.3",
+    "typescript-eslint": "^7.8.0"
   }
 }
