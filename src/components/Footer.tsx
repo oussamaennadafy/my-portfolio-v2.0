@@ -64,6 +64,7 @@ function SocialLink({ icon: Icon, label, ...props }) {
   return (
     <Link
       className="flex items-center justify-center gap-2.5 rounded-full border border-slate-600/90 py-2.5 text-sm text-slate-50 duration-200 ease-in-out hover:bg-slate-800 hover:text-white lg:gap-2 xl:gap-2.5"
+      href={props.href}
       {...props}
     >
       <Icon className="h-4 w-4 shrink-0 text-slate-200 duration-200 ease-in-out group-hover:fill-slate-100" />

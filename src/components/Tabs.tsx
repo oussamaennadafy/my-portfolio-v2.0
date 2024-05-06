@@ -5,7 +5,12 @@ import Link from 'next/link'
 import clsx from 'clsx'
 import { usePathname } from 'next/navigation'
 
-function Tab({ tabName, directory }) {
+type TabProps = {
+  tabName?: string,
+  directory: string
+}
+
+function Tab({ tabName, directory }: TabProps) {
   const isDefaultTab = tabName == null
   let tabSlug
   let nestedDirectory = ''

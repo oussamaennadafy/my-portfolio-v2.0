@@ -10,9 +10,10 @@ const variantStyles = {
 
 type ButtonProps = {
   variant?: 'primary' | "secondary" | "primaryOnDark",
-  className: string,
+  className?: string,
   href?: string,
   children?: React.ReactNode,
+  target?: string,
 }
 
 export function Button({ variant = 'primary', className, href, ...props }: ButtonProps): JSX.Element {

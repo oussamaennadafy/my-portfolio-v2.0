@@ -22,7 +22,6 @@ export function Pagination() {
         3
       </Link>
       <span
-        href="#"
         className="inline-flex items-center justify-center w-10 h-10 text-sm font-medium rounded-full shadow-sm bg-slate-50 text-slate-500/60 shadow-sky-100/50 ring-1 ring-slate-900/5"
       >
         ...

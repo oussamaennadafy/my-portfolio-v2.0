@@ -17,10 +17,18 @@ import tailwind from '@/images/logos/icons/tailwindcss.png'
 import nodejs from '@/images/logos/icons/nodejs.png'
 import { useInView } from "react-intersection-observer"
 
-function SocialLink({ icon: Icon, styles, ...props }) {
+type SocialLinkProps = {
+  href: string,
+  target?: string
+  icon?: (props: any) => React.JSX.Element,
+  styles?: string,
+}
+
+function SocialLink({ icon: Icon, styles, ...props }: SocialLinkProps) {
   return (
     <Link
       className="flex items-center justify-center duration-200 border rounded-full h-11 w-11 border-slate-200 hover:bg-slate-50"
+      href={props.href}
       {...props}
     >
       <Icon className={`w-4 h-4 transition fill-slate-600 group-hover:fill-slate-700 ${styles}`} />
@@ -29,7 +37,7 @@ function SocialLink({ icon: Icon, styles, ...props }) {
 }
 
 export function Hero() {
-  const [ref, inView, entry] = useInView({
+  const [ref, inView] = useInView({
     root: null,
     rootMargin: "0px",
     threshold: 0,
@@ -81,8 +89,8 @@ export function Hero() {
               <SocialLink
                 href="https://www.linkedin.com/in/oussama-ennadafy/"
                 aria-label="Follow on linkedIn"
-                icon={LinkedInIcon}
                 target="_blank"
+                icon={LinkedInIcon}
                 />
               <SocialLink
                 aria-label="contact me on email"

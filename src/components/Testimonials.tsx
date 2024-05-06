@@ -148,7 +148,7 @@ export function Testimonials() {
   let [carouselProgress, setCarouselProgress] = useState(0)
 
   useEffect(() => {
-    const testimonialsCount = parseFloat(testimonials.length)
+    const testimonialsCount = testimonials.length;
     const indexOffset = 3
 
     setCarouselProgress(((swiperIndex + indexOffset) / testimonialsCount) * 100)
