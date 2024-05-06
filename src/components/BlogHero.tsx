@@ -1,11 +1,20 @@
+"use client"
+
 import { Container } from './Container'
 import Image from 'next/image'
 
 import bgGradient from '@/images/blog-hero-bg.png'
+import { useInView } from 'react-intersection-observer'
 
 export function BlogHero() {
+  const [ref, inView] = useInView({
+    root: null,
+    rootMargin: "0px",
+    threshold: 0,
+    triggerOnce: true,
+  })
   return (
-    <section className="relative overflow-hidden bg-white lg:px-8">
+    <section ref={ref} className={`relative overflow-hidden bg-white lg:px-8 transition-all duration-500 -z-10 ${inView ? "lg:translate-y-0 lg:opacity-100" : "lg:-translate-y-1/2 lg:opacity-0"}`}>
       <Container className="relative bg-slate-50 py-16 sm:py-24 lg:rounded-b-3xl lg:py-32">
         <Image
           src={bgGradient}
