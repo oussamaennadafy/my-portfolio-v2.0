@@ -13,8 +13,8 @@ export default function Contact() {
     rootMargin: "0px",
     threshold: 0,
     triggerOnce: true,
-  })
-
+  });
+  
   return (
     <section className="relative overflow-hidden">
       <div ref={ref} className="mx-auto max-w-screen-xl">
