@@ -4,7 +4,6 @@ import CheckboxField from './CheckboxField'
 import { useState } from 'react';
 import { contactFormDataType } from '@/types/contact';
 import sendEmail from '@/services/sendEmail';
-import chalk from 'chalk';
 
 export default function Form() {
   const [formData, setFormData] = useState<contactFormDataType>({

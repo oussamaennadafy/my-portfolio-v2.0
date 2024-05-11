@@ -1,5 +1,4 @@
 import { contactFormDataType } from '@/types/contact';
-import chalk from 'chalk';
 import { type NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 import Mail from 'nodemailer/lib/mailer';
@@ -16,7 +15,7 @@ export async function POST(request: NextRequest) {
       consulting,
       other,
     } }: contactFormDataType = await request.json();    
-    
+
   const transport = nodemailer.createTransport({
     service: 'gmail',
     /* 
