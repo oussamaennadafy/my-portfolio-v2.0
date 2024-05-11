@@ -1,5 +1,7 @@
 import Label from "../Label"
 
+export type TextFieldOnChangeType = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+
 type TextFieldProps = {
   label: string,
   name: string,
@@ -7,7 +9,8 @@ type TextFieldProps = {
   rows?: number,
   className?: string,
   autoComplete?: string, 
-  placeholder?: string, 
+  placeholder?: string,
+  onChange?: TextFieldOnChangeType,
 }
 
 const inputClasses =

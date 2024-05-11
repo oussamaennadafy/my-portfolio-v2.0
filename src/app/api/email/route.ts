@@ -1,10 +1,22 @@
+import { contactFormDataType } from '@/types/contact';
+import chalk from 'chalk';
 import { type NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 import Mail from 'nodemailer/lib/mailer';
 
 export async function POST(request: NextRequest) {
-  const { email, name, message } = await request.json();
-
+  let {
+    name,
+    email,
+    phone,
+    message,
+    expectedServices: {
+      webDevelopment,
+      mobileDevelopment,
+      consulting,
+      other,
+    } }: contactFormDataType = await request.json();    
+    
   const transport = nodemailer.createTransport({
     service: 'gmail',
     /* 
@@ -18,16 +30,33 @@ export async function POST(request: NextRequest) {
   */
     auth: {
       user: process.env.MY_EMAIL,
-      pass: process.env.MY_PASSWORD,
+      pass: process.env.MY_EMAIL_PASSWORD,
     },
   });
 
   const mailOptions: Mail.Options = {
     from: process.env.MY_EMAIL,
     to: process.env.MY_EMAIL,
-    // cc: email, (uncomment this line if you want to send a copy to the sender)
-    subject: `Message from ${name} (${email})`,
-    text: message,
+    subject: `Message from portfolio form`,
+    html: `
+      <strong>name</strong>: <h1>${name}</h1>,
+
+      <strong>email</strong>: <h1>${email}</h1>,
+
+      <strong>phone</strong>: <h1>${phone}</h1>,
+      
+      <strong>message</strong>: <h1>${message}</h1>,
+
+      <strong>expectedServices: </strong> 
+      <h2>
+      {
+        webDevelopment: ${webDevelopment},
+        mobileDevelopment: ${mobileDevelopment},
+        consulting: ${consulting},
+        other: ${other},
+      }
+      </h2>
+    `,
   };
 
   const sendMailPromise = () =>
@@ -43,7 +72,7 @@ export async function POST(request: NextRequest) {
 
   try {
     await sendMailPromise();
-    return NextResponse.json({ message: 'Email sent' });
+    return NextResponse.json({ message: 'success' }, { status: 201 });
   } catch (err) {
     return NextResponse.json({ error: err }, { status: 500 });
   }

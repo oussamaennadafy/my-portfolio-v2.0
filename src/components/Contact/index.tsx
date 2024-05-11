@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import image from '@/images/contact.jpg'
 import { useInView } from 'react-intersection-observer'
 import Form from '@/components/Contact/Form'

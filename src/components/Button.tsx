@@ -14,6 +14,7 @@ type ButtonProps = {
   href?: string,
   children?: React.ReactNode,
   target?: string,
+  onClick: (e: any) => void,
 }
 
 export function Button({ variant = 'primary', className, href, ...props }: ButtonProps): JSX.Element {

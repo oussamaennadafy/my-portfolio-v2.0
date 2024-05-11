@@ -1,9 +1,11 @@
 type CheckboxFieldProps = {
   label: string, 
   name: string,
+  checked: boolean,
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export default function CheckboxField({ label, name }: CheckboxFieldProps): JSX.Element {
+export default function CheckboxField({ label, name, checked, onChange }: CheckboxFieldProps): JSX.Element {
   return (
     <div className="flex items-start select-none">
       <div className="flex h-6 items-center">
@@ -11,6 +13,8 @@ export default function CheckboxField({ label, name }: CheckboxFieldProps): JSX.
           id={name}
           name={name}
           type="checkbox"
+          checked={checked}
+          onChange={onChange}
           className="h-4 w-4 rounded border-slate-300/80 bg-slate-50 text-sky-600 shadow-sm shadow-sky-100/50 focus:outline-none focus:ring-transparent"
         />
       </div>
