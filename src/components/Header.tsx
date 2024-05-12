@@ -9,8 +9,13 @@ import { Menu, Popover, Transition, Disclosure } from '@headlessui/react'
 
 import { Button } from './Button'
 import { Container } from './Container'
-import logo from '@/images/logo1.png'
+// import logo from '@/images/logo1.png'
+import logo from '@/images/logo.png'
 import logoIcon from '@/images/logo-icon.png'
+import logoWhite from '@/images/logo-white.png'
+import logoIconWhite from '@/images/logo-icon-white.png'
+import { useModeStore } from '@/store'
+import { useShallow } from 'zustand/react/shallow'
 
 const links = [
   { label: 'Home', href: '/' },
@@ -18,7 +23,7 @@ const links = [
   { label: 'Work', href: '/work' },
   { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '/contact' },
-]
+];
 
 const pages = [
   { label: 'Home', href: '/' },
@@ -35,9 +40,10 @@ const pages = [
 
 export function Header() {
   const pathname = usePathname();
+  const { mode, toggleMode } = useModeStore(useShallow((state) => ({ toggleMode: state.toggleMode, mode: state.mode })));
 
   const handleModeSwitch = () => {
-    console.log(document.getElementsByTagName("html").item(0)?.classList.toggle("dark"));
+    toggleMode();
   };
 
   function MenuIcon({ open }) {
@@ -186,16 +192,38 @@ export function Header() {
               aria-label="Home"
               className="flex flex-shrink-0 items-center"
             >
-              <Image
-                src={logo}
-                alt=""
-                className="hidden h-8 w-auto midSm:block sm:h-9 md:hidden lg:block lg:h-10"
-              />
-              <Image
-                src={logoIcon}
-                alt=""
-                className="block midSm:hidden h-8 w-auto md:block lg:hidden"
-              />
+              {
+                mode === "light" ?
+                  <>
+                    <Image
+                      src={logo}
+                      alt=""
+                      className="hidden h-8 w-auto midSm:block sm:h-9 md:hidden lg:block lg:h-10"
+                    />
+
+                    <Image
+                      src={logoIcon}
+                      alt=""
+                      className="block midSm:hidden h-8 w-auto md:block lg:hidden"
+                    />
+                  </>
+                  :
+                  <>
+                    <Image
+                      src={logoWhite}
+                      alt=""
+                      className="hidden h-8 w-auto midSm:block sm:h-9 md:hidden lg:block lg:h-10"
+                    />
+
+                    <Image
+                      src={logoIconWhite}
+                      alt=""
+                      className="block midSm:hidden h-8 w-auto md:block lg:hidden"
+                    />
+                  </>
+              }
+
+
             </Link>
           </div>
           <div className="hidden items-center md:flex md:space-x-6 lg:space-x-8">

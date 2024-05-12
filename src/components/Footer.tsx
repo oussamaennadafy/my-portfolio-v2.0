@@ -165,7 +165,7 @@ export function Footer({ newsletter = true }) {
               </p>
 
               <Button
-                href="#"
+                href="/contact"
                 variant="primaryOnDark"
                 className="mt-10 lg:hidden"
               >

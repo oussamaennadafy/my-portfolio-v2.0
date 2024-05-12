@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { contactFormDataType } from '@/types/contact';
 import sendEmail from '@/services/api/sendEmail';
 import DefaultResponseType from '@/types/common/responseType';
-import { useStore } from '@/store';
+import { useToastStore } from '@/store';
 
 const formInitialState: contactFormDataType = {
   name: "",
@@ -24,7 +24,7 @@ export default function Form() {
   const [formData, setFormData] = useState<contactFormDataType>(formInitialState);
   const [loading, setLoading] = useState<boolean>(false);
   // const [error, setError] = useState<string>("");
-  const showToast = useStore(state => state.showToast)
+  const showToast = useToastStore(state => state.showToast)
 
   const handleSubmit: TextFieldOnChangeType = async (e) => {
     // prevent default form behavior
@@ -72,7 +72,7 @@ export default function Form() {
   };
 
   return (
-    <form action="#" className="mt-10">
+    <form className="mt-10">
       <div className="space-y-7">
         <TextField
           label="Name"
