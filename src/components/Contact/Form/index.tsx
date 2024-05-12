@@ -23,32 +23,35 @@ const formInitialState: contactFormDataType = {
 export default function Form() {
   const [formData, setFormData] = useState<contactFormDataType>(formInitialState);
   const [loading, setLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string>("");
+  // const [error, setError] = useState<string>("");
   const showToast = useStore(state => state.showToast)
 
   const handleSubmit: TextFieldOnChangeType = async (e) => {
     // prevent default form behavior
     e.preventDefault();
 
-    showToast("success", "email has been sent!")
-
     // start loading
-    // setLoading(true);
+    setLoading(true);
     
-    // try {
-    //   const res = await sendEmail(formData);
-    //   const responseData: DefaultResponseType = await res.json();
+    try {
+      const res = await sendEmail(formData);
+      const responseData: DefaultResponseType = await res.json();
 
-    //   console.log(responseData);
+      if(responseData.status !== "success") {
+        throw new Error(responseData.message);
+      }
 
-    //   if(responseData.status !== "success") {
-    //     throw new Error(responseData.message);
-    //   }
-    // } catch (error) {
-    //   setError(error);
-    // } finally {
-    //   setLoading(false);
-    // }
+      // show success message
+      showToast("success", "email has been sent!");
+
+      // clear form
+      setFormData(formInitialState);
+
+    } catch (error) {
+      showToast("error", error.message);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleInputChange: TextFieldOnChangeType = (e) => {

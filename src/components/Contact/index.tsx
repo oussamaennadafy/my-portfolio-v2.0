@@ -6,9 +6,6 @@ import { useInView } from 'react-intersection-observer'
 import Form from '@/components/Contact/Form'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Toast } from "flowbite-react";
-import { HiCheck, HiExclamation, HiX } from "react-icons/hi";
-import { ErrorToast } from '../common/toasts'
 
 export default function Contact() {
   const [ref, inView] = useInView({
