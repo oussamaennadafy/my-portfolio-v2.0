@@ -9,7 +9,6 @@ import { Menu, Popover, Transition, Disclosure } from '@headlessui/react'
 
 import { Button } from './Button'
 import { Container } from './Container'
-// import logo from '@/images/logo1.png'
 import logo from '@/images/logo.png'
 import logoIcon from '@/images/logo-icon.png'
 import logoWhite from '@/images/logo-white.png'
@@ -183,7 +182,7 @@ export function Header() {
   }
 
   return (
-    <header className="h-24 border-b border-slate-200/80 bg-white dark:bg-slate-900 transition-all duration-500">
+    <header className="h-24 border-b border-slate-200/80 dark:border-gray-800 bg-white dark:bg-gray-900 transition-all duration-500">
       <Container className="flex h-full w-full items-center">
         <nav className="relative z-40 flex w-full items-center justify-between">
           <div className="flex shrink-0 items-center">
@@ -222,8 +221,6 @@ export function Header() {
                     />
                   </>
               }
-
-
             </Link>
           </div>
           <div className="hidden items-center md:flex md:space-x-6 lg:space-x-8">
@@ -232,10 +229,10 @@ export function Header() {
                 key={`${link.label}-desktop`}
                 href={link.href}
                 className={clsx(
-                  'relative duration-200 after:absolute after:-bottom-2.5 after:left-1/2 after:h-0.5 after:w-4 after:-translate-x-1/2 after:rounded-full after:bg-slate-900 after:opacity-0 after:content-[""]',
+                  'relative duration-200 after:absolute after:-bottom-2.5 after:left-1/2 after:h-0.5 after:w-4 after:-translate-x-1/2 after:rounded-full after:bg-slate-900 dark:after:bg-slate-200 after:opacity-0 after:content-[""] text-slate-100',
                   pathname == link.href
-                    ? 'font-semibold text-slate-900 after:opacity-100'
-                    : 'font-medium text-slate-700 hover:text-slate-900 hover:after:opacity-25'
+                    ? 'font-semibold text-slate-900 dark:text-slate-100 after:opacity-100'
+                    : 'font-medium text-slate-700 hover:text-slate-900 dark:text-slate-500 hover:after:opacity-25'
                 )}
               >
                 {link.label}
@@ -247,10 +244,10 @@ export function Header() {
                 <>
                   <Menu.Button
                     className={clsx(
-                      'group flex items-center font-medium outline-none duration-200 ease-in-out focus:outline-none',
+                      'flex items-center font-medium outline-none duration-200 ease-in-out focus:outline-none',
                       open
-                        ? 'text-slate-900'
-                        : 'text-slate-700  hover:text-slate-900'
+                        ? 'text-slate-900 dark:text-slate-300'
+                        : 'text-slate-700  hover:text-slate-900 dark:text-slate-500'
                     )}
                   >
                     <span>Pages</span>
@@ -262,8 +259,8 @@ export function Header() {
                       className={clsx(
                         'ml-2 h-5 w-5 duration-300',
                         open
-                          ? 'rotate-180 text-slate-900'
-                          : 'text-slate-600 group-hover:text-slate-800'
+                          ? 'rotate-180 text-slate-900 dark:text-slate-500'
+                          : 'text-slate-600'
                       )}
                     >
                       <path
@@ -273,7 +270,7 @@ export function Header() {
                       />
                     </svg>
                   </Menu.Button>
-
+                    
                   <Menu.Items className="absolute right-0 z-20 mt-3 w-52 space-y-1 rounded-lg bg-white p-2.5 outline-none drop-shadow filter focus:outline-none">
                     {pages.map((subLink, i) => (
                       <Menu.Item key={`${subLink.label}-dropdown-desktop`}>

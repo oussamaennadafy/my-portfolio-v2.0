@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { useInView } from "react-intersection-observer"
 import { Button } from './Button'
 import { Container } from './Container'
-import { DribbbleIcon, InstagramIcon, TwitterIcon, GitHubIcon, LinkedInIcon, EmailIcon } from './SocialIcons'
+import { GitHubIcon, LinkedInIcon, EmailIcon } from './SocialIcons'
 import heroPortrait from '@/images/portrait-01.jpg'
 import heroBG from '@/images/home-hero-gradient.svg'
 import figma from '@/images/logos/icons/figma.png'
@@ -23,7 +23,7 @@ type SocialLinkProps = {
 function SocialLink({ icon: Icon, styles, ...props }: SocialLinkProps) {
   return (
     <Link
-      className="flex items-center justify-center duration-200 border rounded-full h-11 w-11 border-slate-200 hover:bg-slate-50"
+      className="flex items-center justify-center duration-200 border rounded-full h-11 w-11 border-slate-200 bg-white dark:bg-slate-100 hover:bg-slate-50"
       href={props.href}
       {...props}
     >
@@ -69,7 +69,7 @@ export function Hero() {
             businesses.
           </p>
           <div className="flex flex-wrap items-center justify-center mt-10 gap-x-10 gap-y-6 lg:justify-start">
-            <Button href="/contact" className="h-11">
+            <Button variant='primary' href="/contact" className="h-11">
               Book a call with me
             </Button>
 
@@ -107,7 +107,7 @@ export function Hero() {
             />
             <div>
               <div className="absolute hidden w-max md:left-full md:top-16 md:block lg:-left-28 lg:-top-8 2xl:left-full 2xl:top-16">
-                <span className="inline-block transform font-writing text-2xl tracking-wide text-slate-600 md:rotate-[16deg] lg:translate-x-6 lg:rotate-[-18deg] 2xl:rotate-12">
+                <span className="inline-block transform font-writing text-2xl select-none tracking-wide text-slate-600 dark:text-slate-200 md:rotate-[16deg] lg:translate-x-6 lg:rotate-[-18deg] 2xl:rotate-12">
                   Hi, I&apos;m oussama!
                 </span>
                 <svg
@@ -116,7 +116,7 @@ export function Hero() {
                   height="102"
                   viewBox="0 0 103 102"
                   fill="none"
-                  className="h-auto w-28 text-slate-600 md:-translate-x-1/2 md:-translate-y-6 md:rotate-0 lg:-translate-y-3 lg:translate-x-3/4 lg:rotate-12 lg:-scale-x-100 2xl:-translate-x-1/2 2xl:-translate-y-6 2xl:rotate-0 2xl:scale-x-100"
+                  className="h-auto w-28 text-slate-600 dark:text-slate-200 md:-translate-x-1/2 md:-translate-y-6 md:rotate-0 lg:-translate-y-3 lg:translate-x-3/4 lg:rotate-12 lg:-scale-x-100 2xl:-translate-x-1/2 2xl:-translate-y-6 2xl:rotate-0 2xl:scale-x-100"
                 >
                   <g>
                     <path
