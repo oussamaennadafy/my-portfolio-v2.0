@@ -179,7 +179,7 @@ export function Header() {
   return (
     <header className="h-24 border-b border-slate-200/80 bg-white dark:bg-slate-900 transition-all duration-500">
       <Container className="flex h-full w-full items-center">
-        <nav className="relative z-50 flex w-full items-center justify-between">
+        <nav className="relative z-40 flex w-full items-center justify-between">
           <div className="flex shrink-0 items-center">
             <Link
               href="/"

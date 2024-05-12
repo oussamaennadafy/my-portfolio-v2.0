@@ -3,39 +3,52 @@ import TextField, { TextFieldOnChangeType } from './TextField'
 import CheckboxField from './CheckboxField'
 import { useState } from 'react';
 import { contactFormDataType } from '@/types/contact';
-import sendEmail from '@/services/sendEmail';
+import sendEmail from '@/services/api/sendEmail';
+import DefaultResponseType from '@/types/common/responseType';
+import { useStore } from '@/store';
+
+const formInitialState: contactFormDataType = {
+  name: "",
+  email: "",
+  phone: "",
+  message: "",
+  expectedServices: {
+    webDevelopment: false,
+    mobileDevelopment: false,
+    consulting: false,
+    other: false,
+  }
+}
 
 export default function Form() {
-  const [formData, setFormData] = useState<contactFormDataType>({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-    expectedServices: {
-      webDevelopment: false,
-      mobileDevelopment: false,
-      consulting: false,
-      other: false,
-    }
-  });
+  const [formData, setFormData] = useState<contactFormDataType>(formInitialState);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>("");
+  const showToast = useStore(state => state.showToast)
 
   const handleSubmit: TextFieldOnChangeType = async (e) => {
     // prevent default form behavior
     e.preventDefault();
 
-    // start loading
-    setLoading(true);
+    showToast("success", "email has been sent!")
 
-    try {
-      const res = await sendEmail(formData);
-      console.log(res);
-    } catch (error) {
-      setError(error.message);
-    } finally {
-      setLoading(false);
-    }
+    // start loading
+    // setLoading(true);
+    
+    // try {
+    //   const res = await sendEmail(formData);
+    //   const responseData: DefaultResponseType = await res.json();
+
+    //   console.log(responseData);
+
+    //   if(responseData.status !== "success") {
+    //     throw new Error(responseData.message);
+    //   }
+    // } catch (error) {
+    //   setError(error);
+    // } finally {
+    //   setLoading(false);
+    // }
   };
 
   const handleInputChange: TextFieldOnChangeType = (e) => {
@@ -62,7 +75,7 @@ export default function Form() {
           label="Name"
           name="name"
           autoComplete="name"
-          placeholder="oussama ennadafy"
+          placeholder="john doe"
           onChange={handleInputChange}
         />
         <TextField
@@ -77,6 +90,7 @@ export default function Form() {
           label="Phone"
           name="phone"
           type="tel"
+          required={false}
           autoComplete="tel"
           aria-describedby="phone-description"
           placeholder="+1 (800) 123-4567"
@@ -103,9 +117,17 @@ export default function Form() {
         </fieldset>
       </div>
       <div className="mt-10 border-t border-slate-200 pt-8">
-        <Button onClick={handleSubmit} className="w-full !text-base sm:!text-lg">
+        <Button onClick={handleSubmit} className="w-full !text-base sm:!text-lg group">
           {
-            loading ? <span>Loading...</span>: <span>Get in touch</span>
+            loading ?
+              <div role="status">
+                <svg aria-hidden="true" className="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-slate-900 group-hover:fill-sky-800" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor" />
+                  <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill" />
+                </svg>
+                <span className="sr-only">Loading...</span>
+              </div>
+              : <span className='h-8 flex items-center'>Get in touch</span>
           }
         </Button>
       </div>

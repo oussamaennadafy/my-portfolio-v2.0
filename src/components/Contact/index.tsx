@@ -6,6 +6,9 @@ import { useInView } from 'react-intersection-observer'
 import Form from '@/components/Contact/Form'
 import Link from 'next/link'
 import Image from 'next/image'
+import { Toast } from "flowbite-react";
+import { HiCheck, HiExclamation, HiX } from "react-icons/hi";
+import { ErrorToast } from '../common/toasts'
 
 export default function Contact() {
   const [ref, inView] = useInView({
@@ -14,7 +17,7 @@ export default function Contact() {
     threshold: 0,
     triggerOnce: true,
   });
-  
+
   return (
     <section className="relative overflow-hidden">
       <div ref={ref} className="mx-auto max-w-screen-xl">

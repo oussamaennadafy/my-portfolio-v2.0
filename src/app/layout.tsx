@@ -2,6 +2,7 @@ import { Header } from '@/components/Header'
 import clsx from 'clsx'
 import { Inter, Lexend, Gochi_Hand } from 'next/font/google'
 import '@/styles/globals.css'
+import { ToastSlot } from '@/components/common/toasts'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -39,6 +40,7 @@ export default function RootLayout({ children }) {
           gochiHand.variable
         )}
       >
+        <ToastSlot />
         <Header />
         {children}
       </body>

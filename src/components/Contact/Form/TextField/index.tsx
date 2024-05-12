@@ -11,6 +11,7 @@ type TextFieldProps = {
   autoComplete?: string, 
   placeholder?: string,
   onChange?: TextFieldOnChangeType,
+  required?: boolean,
 }
 
 const inputClasses =
@@ -23,11 +24,12 @@ export default function TextField({
   type = 'text',
   rows = 5,
   className,
+  required = true,
   ...props
 }: TextFieldProps): JSX.Element {
   return (
     <div className={className}>
-      {label && <Label name={name}>{label}</Label>}
+      {label && <Label description={!required && "optional"} name={name}>{label}</Label>}
       <div className="mt-2">
         {type === 'textarea' ? (
           <textarea

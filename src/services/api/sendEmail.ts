@@ -1,7 +1,7 @@
 import { contactFormDataType } from "@/types/contact";
 
-async function sendEmail(contactFormData: contactFormDataType) {
-  const apiEndpoint: RequestInfo | URL = '/api/email';
+async function sendEmail(contactFormData: contactFormDataType): Promise<Response> {
+  const apiEndpoint: RequestInfo | URL = '/api/contact/email';
 
   const options: RequestInit = {
     method: 'POST',
@@ -9,8 +9,7 @@ async function sendEmail(contactFormData: contactFormDataType) {
   };
 
   const res: Response = await fetch(apiEndpoint, options);
-  const responseData = await res.json();
-  return responseData;
+  return res;
 }
 
 export default sendEmail;

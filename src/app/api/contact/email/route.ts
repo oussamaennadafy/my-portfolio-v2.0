@@ -1,10 +1,13 @@
+import contactFormSchema from '@/services/schemas/contactFormSchema';
+import DefaultResponseType from '@/types/common/responseType';
 import { contactFormDataType } from '@/types/contact';
-import { type NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 import Mail from 'nodemailer/lib/mailer';
 
-export async function POST(request: NextRequest) {
-  let {
+export async function POST(request: NextRequest): Promise<NextResponse<DefaultResponseType>> {
+  // validate request
+  const {
     name,
     email,
     phone,
@@ -14,7 +17,7 @@ export async function POST(request: NextRequest) {
       mobileDevelopment,
       consulting,
       other,
-    } }: contactFormDataType = await request.json();    
+    } }: contactFormDataType = await request.json();
 
   const transport = nodemailer.createTransport({
     service: 'gmail',
@@ -70,9 +73,9 @@ export async function POST(request: NextRequest) {
     });
 
   try {
-    await sendMailPromise();
-    return NextResponse.json({ message: 'success' }, { status: 201 });
+    const message = await sendMailPromise();
+    return NextResponse.json({ status: 'success', message }, { status: 201 });
   } catch (err) {
-    return NextResponse.json({ error: err }, { status: 500 });
+    return NextResponse.json({ status: "fail", message: err }, { status: 500 });
   }
 };

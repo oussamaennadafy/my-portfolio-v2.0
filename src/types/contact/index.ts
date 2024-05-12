@@ -3,7 +3,7 @@
 export type contactFormDataType = {
   name: string;
   email: string;
-  phone: string;
+  phone?: string;
   message: string;
   expectedServices: {
     webDevelopment: boolean,

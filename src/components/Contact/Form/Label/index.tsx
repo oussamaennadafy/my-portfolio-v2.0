@@ -15,7 +15,7 @@ export default function Label({ name, description, children }: LabelProps): JSX.
       </label>
       {description && (
         <p id={`${name}-description`} className="text-slate-500/80">
-          {description}test
+          {description}
         </p>
       )}
     </div>
