@@ -2,20 +2,16 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-
+import { useInView } from "react-intersection-observer"
 import { Button } from './Button'
 import { Container } from './Container'
 import { DribbbleIcon, InstagramIcon, TwitterIcon, GitHubIcon, LinkedInIcon, EmailIcon } from './SocialIcons'
-// import heroPortrait from '@/images/hero-portrait.jpg'
-// import heroPortrait from '../images/pro_pic.jpg'
 import heroPortrait from '@/images/portrait-01.jpg'
 import heroBG from '@/images/home-hero-gradient.svg'
 import figma from '@/images/logos/icons/figma.png'
 import reactjs from '@/images/logos/icons/reactjs.png'
-// import reactjs from '@/images/logos/reactjs.svg'
 import tailwind from '@/images/logos/icons/tailwindcss.png'
 import nodejs from '@/images/logos/icons/nodejs.png'
-import { useInView } from "react-intersection-observer"
 
 type SocialLinkProps = {
   href: string,
@@ -43,16 +39,14 @@ export function Hero() {
     threshold: 0,
     triggerOnce: true,
   })
-  
 
   return (
-    <section ref={ref} className="relative py-20 overflow-hidden lg:py-24">
-      {/* Light blue gradient background */}
+    <section ref={ref} className="relative py-20 overflow-hidden lg:py-24 dark:bg-gray-900 transition-all duration-500">
       <Image src={heroBG} alt="" className="absolute inset-x-0 w-auto top-56 lg:inset-y-0" />
 
       <Container className="relative z-10 grid items-center gap-16 lg:grid-cols-2 lg:gap-8">
         <div className={`flex flex-col items-center max-w-2xl mx-auto transition-all duration-500 lg:items-start ${!inView ? "lg:-translate-x-1/2 lg:opacity-0" : ""}`}>
-          <h1 className="text-5xl font-semibold text-center font-display text-slate-900 sm:text-6xl lg:text-left">
+          <h1 className="text-5xl font-semibold text-center font-display text-slate-900 sm:text-6xl lg:text-left dark:text-white">
             <span className="relative whitespace-nowrap">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +62,7 @@ export function Hero() {
             </span>{' '}
             businesses turn their ideas into reality
           </h1>
-          <p className="mt-6 text-lg leading-8 text-center text-slate-700 lg:text-left">
+          <p className="mt-6 text-lg leading-8 text-center text-slate-700 lg:text-left dark:text-gray-300">
             I&#39;m a passionate developer, Freelancer, and general technology
             enthusiast living in morocco. I&#39;ve worked with hundreds of
             startups to help them develop their ideas into profitable
@@ -85,13 +79,13 @@ export function Hero() {
                 aria-label="Follow on Github"
                 target="_blank"
                 icon={GitHubIcon}
-                />
+              />
               <SocialLink
                 href="https://www.linkedin.com/in/oussama-ennadafy/"
                 aria-label="Follow on linkedIn"
                 target="_blank"
                 icon={LinkedInIcon}
-                />
+              />
               <SocialLink
                 aria-label="contact me on email"
                 href="mailto:oussama.ennadafy@gmail.com"

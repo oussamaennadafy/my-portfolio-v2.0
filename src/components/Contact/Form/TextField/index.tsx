@@ -12,6 +12,7 @@ type TextFieldProps = {
   placeholder?: string,
   onChange?: TextFieldOnChangeType,
   required?: boolean,
+  value?: string,
 }
 
 const inputClasses =
