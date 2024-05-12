@@ -80,7 +80,8 @@ export default function Form() {
           autoComplete="name"
           placeholder="john doe"
           onChange={handleInputChange}
-        />
+          value={formData.name}
+          />
         <TextField
           label="Email"
           name="email"
@@ -88,7 +89,8 @@ export default function Form() {
           autoComplete="email"
           placeholder="foobar@email.com"
           onChange={handleInputChange}
-        />
+          value={formData.email}
+          />
         <TextField
           label="Phone"
           name="phone"
@@ -98,7 +100,8 @@ export default function Form() {
           aria-describedby="phone-description"
           placeholder="+1 (800) 123-4567"
           onChange={handleInputChange}
-        />
+          value={formData.phone}
+          />
         <TextField
           label="Message"
           name="message"
@@ -106,6 +109,7 @@ export default function Form() {
           aria-describedby="message-description"
           placeholder="Tell me a little bit about your project..."
           onChange={handleInputChange}
+          value={formData.message}
         />
         <fieldset>
           <legend className="block text-md font-medium leading-6 text-slate-900">
