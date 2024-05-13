@@ -232,7 +232,7 @@ export function Testimonials() {
               {testimonials.map((testimonial, testimonialIndex) => (
                 <SwiperSlide
                   key={`testimonial-${testimonialIndex}`}
-                  className="swiper-slide !h-auto !w-auto shrink-0 border-b border-l border-t border-slate-200 dark:border-slate-900/50 p-10 shadow-sm shadow-sky-100/50 first:rounded-l-2xl last:rounded-r-2xl last:border-r dark:border-0"
+                  className="swiper-slide !h-auto !w-auto shrink-0 border-b border-l border-t dark:border border-slate-200 dark:border-gray-800 p-10 shadow-sm shadow-sky-100/50 dark:shadow-sky-100/0 first:rounded-l-2xl last:rounded-r-2xl last:border-r"
                 >
                   <div className="flex h-full w-full max-w-[272px] flex-1 flex-col">
                     <div className="flex-1">
@@ -285,7 +285,7 @@ export function Testimonials() {
             </div>
           </Swiper>
         </Container>
-        <div className="absolute inset-y-0 right-0 z-10 hidden bg-gradient-to-r from-slate-50/0 to-slate-50/80 dark:from-slate-900/0 dark:to-slate-900/90 2xl:block 2xl:w-64"></div>
+        <div className="absolute inset-y-0 right-0 z-10 hidden bg-gradient-to-r from-slate-50/0 to-slate-50/80 dark:from-slate-900/0 dark:to-slate-900/70 2xl:block 2xl:w-64"></div>
       </div>
       <Container className="mt-16 sm:mt-20">
         <div className="max-w-xl mx-auto lg:mx-0 lg:max-w-none">

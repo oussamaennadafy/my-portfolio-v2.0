@@ -147,7 +147,12 @@ export function Footer({ newsletter = true }) {
                 Lets make something great together
               </h3>
               <div className="hidden lg:block">
-                <Button href="/contact" variant="primary" className="mt-12">
+                <Button
+                  href="/contact"
+                  variant="primary"
+                  className="mt-12"
+                  explicitMode='dark'
+                >
                   Book a call
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -172,6 +177,7 @@ export function Footer({ newsletter = true }) {
               <Button
                 href="/contact"
                 variant="primary"
+                explicitMode='dark'
                 className="mt-10 lg:hidden"
               >
                 Book a call
