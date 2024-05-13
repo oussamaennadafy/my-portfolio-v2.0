@@ -31,7 +31,7 @@ function CategoryIcon({ category, ...props }) {
 
 function CaseStudy({ caseStudy, i }) {
 
-  const [ref, inView, entry] = useInView({
+  const [ref, inView] = useInView({
     root: null,
     rootMargin: "0px",
     threshold: 0,
@@ -45,7 +45,7 @@ function CaseStudy({ caseStudy, i }) {
     <div
       key={caseStudy.title}
       ref={ref}
-      className={`relative grid items-center gap-8 overflow-hidden rounded-2xl bg-slate-50 dark:bg-gray-900 px-4 pb-14 pt-5 shadow-sm shadow-sky-100/50 ring-1 ring-slate-100 dark:ring-gray-800 sm:gap-12 sm:px-8 sm:pt-8 lg:grid-cols-12 lg:px-0 lg:py-0 xl:gap-16 xl:pt-16 transition-all duration-500 ${inView ? "translate-x-0 opacity-100" : translateXDirection === 1 ? "opacity-0 translate-x-1/2" : "opacity-0 -translate-x-1/2"}`}
+      className={`relative grid items-center gap-8 overflow-hidden rounded-2xl bg-slate-50 dark:bg-gray-950 px-4 pb-14 pt-5 shadow-sm shadow-sky-100/50 ring-1 ring-slate-100 dark:ring-gray-800 sm:gap-12 sm:px-8 sm:pt-8 lg:grid-cols-12 lg:px-0 lg:py-0 xl:gap-16 xl:pt-16 transition-all duration-500 ${inView ? "translate-x-0 opacity-100" : translateXDirection === 1 ? "opacity-0 translate-x-1/2" : "opacity-0 -translate-x-1/2"}`}
     >
       <Image
         src={workBG}
@@ -107,7 +107,7 @@ export function FeaturedWork() {
     .slice(0, 4)
 
   return (
-    <section className="overflow-x-clip bg-white dark:bg-gray-900 pb-16 pt-8 sm:pb-24 sm:pt-12 md:pt-16">
+    <section className="overflow-x-clip bg-white dark:bg-gray-950 pb-16 pt-8 sm:pb-24 sm:pt-12 md:pt-16">
       <Container>
         <div className="text-center">
           <h2 className="font-display text-4xl font-semibold text-slate-900 dark:text-gray-100 sm:text-5xl">

@@ -8,7 +8,6 @@ import { Container } from './Container'
 import { GitHubIcon, LinkedInIcon, EmailIcon } from './SocialIcons'
 import heroPortrait from '@/images/portrait-01.jpg'
 import heroBG from '@/images/home-hero-gradient.svg'
-import figma from '@/images/logos/icons/figma.png'
 import reactjs from '@/images/logos/icons/reactjs.png'
 import tailwind from '@/images/logos/icons/tailwindcss.png'
 import nodejs from '@/images/logos/icons/nodejs.png'
@@ -41,7 +40,7 @@ export function Hero() {
   })
 
   return (
-    <section ref={ref} className="relative py-20 overflow-hidden lg:py-24 dark:bg-gray-900 transition-all mt-24">
+    <section ref={ref} className="relative py-20 overflow-hidden lg:py-24 dark:bg-gray-950 transition-all mt-24">
       <Image src={heroBG} alt="" className="absolute inset-x-0 w-auto top-56 lg:inset-y-0" />
       
       <Container className="relative z-10 grid items-center gap-16 lg:grid-cols-2 lg:gap-8">

@@ -89,12 +89,12 @@ export function Footer({ newsletter = true }) {
   });
 
   return (
-    <section className={clsx(newsletter && 'pt-12 sm:pt-16 dark:border-t dark:border-gray-700/50')}>
+    <section className={clsx(newsletter && 'pt-12 sm:pt-16 dark:border-t dark:border-gray-900')}>
       {newsletter && (
         <div className="relative">
-          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-slate-900"></div>
+          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-slate-900 dark:bg-gray-950"></div>
           <div ref={newsletterRef} className={`relative mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 transition-all duration-500 ${newsletterInView ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"}`}>
-            <div className="relative overflow-hidden rounded-2xl bg-sky-700 px-5 py-12 sm:px-16 lg:py-14">
+            <div className="relative overflow-hidden rounded-2xl bg-sky-700 dark:bg-sky-950 px-5 py-12 sm:px-16 lg:py-14">
               <Image
                 src={newsletterBg}
                 alt=""
@@ -134,7 +134,7 @@ export function Footer({ newsletter = true }) {
           </div>
         </div>
       )}
-      <footer ref={footerRef} className="overflow-hidden bg-slate-900 pb-8 pt-20 sm:pb-12 sm:pt-24 lg:pt-32">
+      <footer ref={footerRef} className="overflow-hidden bg-slate-900 dark:bg-gray-950 pb-8 pt-20 sm:pb-12 sm:pt-24 lg:pt-32">
         <Container>
           <div className="mx-auto grid max-w-xl items-center gap-5 lg:mx-0 lg:max-w-none lg:grid-cols-12 lg:gap-12 xl:gap-20">
             <div className={`lg:col-span-7 transition-all duration-500 ${footerInView ? "lg:opacity-100 lg:translate-x-0" : "lg:opacity-0 lg:-translate-x-1/2"}`}>
