@@ -10,11 +10,11 @@ const mrDafoe = Mr_Dafoe({
   subsets: ['latin'],
   variable: '--font-mr-dafoe',
   weight: '400',
-})
+});
 
 export function AboutHero() {
   return (
-    <section className="relative bg-slate-50/50">
+    <section className="relative bg-slate-50 pt-24">
       <Image src={heroBG} alt="" className="absolute inset-0 object-cover object-left w-full h-full lg:w-2/3" />
       <Container className="relative py-16 sm:py-24 lg:py-32">
         <div className="max-w-3xl px-4 mx-auto sm:px-6 lg:mx-0 lg:w-2/3 lg:max-w-none lg:px-8 lg:pr-16">

@@ -20,7 +20,7 @@ export function Post({ post }) {
   const CategoryIcon = iconOptions[post.category]
 
   return (
-    <article className="flex flex-col items-start justify-between rounded-2xl bg-slate-50 shadow-sm shadow-sky-100/50 ring-1 ring-slate-100">
+    <article className="flex flex-col items-start justify-between rounded-2xl bg-slate-50 dark:bg-slate-800 shadow-sm shadow-sky-100/50 dark:shadow-sky-100/10 ring-1 ring-slate-100 dark:ring-slate-900">
       <div className="w-full px-4 pt-4">
         <Link
           href={post.url}
@@ -30,7 +30,7 @@ export function Post({ post }) {
             src={post.image}
             alt={post.title}
             fill={true}
-            className="w-full rounded-xl bg-slate-100 object-cover transition duration-300 group-hover:scale-105"
+            className="w-full rounded-xl bg-slate-100 object-cover transition duration-300 group-hover:scale-105 dark:brightness-75"
             sizes="(min-width: 1280px) 22.5rem, (min-width: 1024px) 33vw, (min-width: 768px) calc(50vw - 2.5rem), (min-width: 640px) 30rem, calc(100vw - 4.5rem)"
           />
           <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-slate-900/5"></div>
@@ -46,13 +46,13 @@ export function Post({ post }) {
           {post.category}
         </Link>
         <div className="flex-1">
-          <h3 className="mt-4 font-display text-xl font-medium leading-normal text-slate-900 decoration-slate-400 transition duration-200 ease-in-out group-hover:text-sky-900">
+          <h3 className="mt-4 font-display text-xl font-medium leading-normal text-slate-900 dark:text-gray-200 decoration-slate-400 transition duration-200 ease-in-out group-hover:text-sky-900 dark:group-hover:text-gray-200">
             <Link href={post.url}>
               <span className="absolute inset-0"></span>
               {post.title}
             </Link>
           </h3>
-          <p className="mt-3.5 line-clamp-3 text-md leading-7 text-slate-700">
+          <p className="mt-3.5 line-clamp-3 text-md leading-7 text-slate-700 dark:text-slate-400">
             {post.description}
           </p>
         </div>

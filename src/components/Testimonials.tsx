@@ -176,14 +176,14 @@ export function Testimonials() {
             </p>
             <div className="mt-14 flex gap-2.5 lg:mt-12">
               <button
-                className="inline-flex items-center justify-center w-12 h-12 duration-200 bg-white rounded-full shadow-sm carousel-prev shadow-sky-200/75 ring-1 ring-slate-200/60 hover:bg-sky-50/50"
+                className="inline-flex items-center justify-center w-12 h-12 duration-200 bg-white dark:bg-white/20 rounded-full shadow-sm carousel-prev shadow-sky-200/75 dark:shadow-sky-200/20 ring-1 ring-slate-200/60 dark:ring-slate-600/80 hover:bg-sky-50/50"
                 aria-label="Previous testimonials"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
                   fill="currentColor"
-                  className="w-6 h-6 text-sky-700/70"
+                  className="w-6 h-6 text-sky-700/70 dark:text-gray-300/80"
                 >
                   <path
                     fillRule="evenodd"
@@ -193,14 +193,14 @@ export function Testimonials() {
                 </svg>
               </button>
               <button
-                className="inline-flex items-center justify-center w-12 h-12 duration-200 bg-white rounded-full shadow-sm carousel-next shadow-sky-200/75 ring-1 ring-slate-200/60 hover:bg-sky-50/50"
+                className="inline-flex items-center justify-center w-12 h-12 duration-200 bg-white dark:bg-white/20 rounded-full shadow-sm carousel-next shadow-sky-200/75 dark:shadow-sky-200/20 ring-1 ring-slate-200/60 dark:ring-slate-600/80 hover:bg-sky-50/50"
                 aria-label="Next testimonials"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
                   fill="currentColor"
-                  className="w-6 h-6 text-sky-700/70"
+                  className="w-6 h-6 text-sky-700/70 dark:text-gray-300/80"
                 >
                   <path
                     fillRule="evenodd"
@@ -232,7 +232,7 @@ export function Testimonials() {
               {testimonials.map((testimonial, testimonialIndex) => (
                 <SwiperSlide
                   key={`testimonial-${testimonialIndex}`}
-                  className="swiper-slide !h-auto !w-auto shrink-0 border-b border-l border-t border-slate-200 p-10 shadow-sm shadow-sky-100/50 first:rounded-l-2xl last:rounded-r-2xl last:border-r"
+                  className="swiper-slide !h-auto !w-auto shrink-0 border-b border-l border-t border-slate-200 dark:border-slate-900/50 p-10 shadow-sm shadow-sky-100/50 first:rounded-l-2xl last:rounded-r-2xl last:border-r dark:border-0"
                 >
                   <div className="flex h-full w-full max-w-[272px] flex-1 flex-col">
                     <div className="flex-1">
@@ -253,15 +253,15 @@ export function Testimonials() {
                           </svg>
                         ))}
                       </div>
-                      <p className="text-xl font-medium mt-7 font-display text-slate-900">
+                      <p className="text-xl font-medium mt-7 font-display text-slate-900 dark:text-gray-200">
                         {testimonial.headline}
                       </p>
-                      <p className="mt-3 text-sm leading-7 text-slate-700">
+                      <p className="mt-3 text-sm leading-7 text-slate-700 dark:text-gray-400">
                         {testimonial.content}
                       </p>
                     </div>
                     <div>
-                      <hr className="w-full h-px my-6 bg-slate-200" />
+                      <hr className="w-full h-px my-6 bg-slate-200 dark:bg-slate-300 dark:opacity-20" />
                       <div className="flex items-center justify-between">
                         <div className="">
                           <p className="font-medium font-display text-md text-slate-900">
@@ -285,11 +285,11 @@ export function Testimonials() {
             </div>
           </Swiper>
         </Container>
-        <div className="absolute inset-y-0 right-0 z-10 hidden bg-gradient-to-r from-slate-50/0 to-slate-50/80 2xl:block 2xl:w-64"></div>
+        <div className="absolute inset-y-0 right-0 z-10 hidden bg-gradient-to-r from-slate-50/0 to-slate-50/80 dark:from-slate-900/0 dark:to-slate-900/90 2xl:block 2xl:w-64"></div>
       </div>
       <Container className="mt-16 sm:mt-20">
         <div className="max-w-xl mx-auto lg:mx-0 lg:max-w-none">
-          <h3 className="relative max-w-xs font-writing text-[27px] tracking-wide text-slate-600">
+          <h3 className="relative max-w-xs font-writing text-[27px] tracking-wide text-slate-600 dark:text-slate-500">
             These are some <span className="text-sky-700">companies</span> I
             have worked with
             <svg
@@ -298,7 +298,7 @@ export function Testimonials() {
               height="101"
               viewBox="0 0 124 101"
               fill="none"
-              className="absolute top-0 hidden h-auto translate-x-full -right-1 w-28 text-slate-600 sm:block"
+              className="absolute top-0 hidden h-auto translate-x-full -right-1 w-28 text-slate-600 dark:text-slate-500 sm:block"
             >
               <g clipPath="url(#clip0_46_948)">
                 <path
@@ -325,7 +325,7 @@ export function Testimonials() {
             {companies.map((company) => (
               <div
                 key={company.name}
-                className="flex items-center justify-center border shadow-sm rounded-xl border-slate-200/90 py-7 shadow-sky-100/50"
+                className="flex items-center justify-center border shadow-sm rounded-xl border-slate-200/90 dark:border-gray-600/50 py-7 shadow-sky-100/50 dark:shadow-sky-100/10"
               >
                 <Image
                   src={company.logo}

@@ -89,7 +89,7 @@ export function Footer({ newsletter = true }) {
   });
 
   return (
-    <section className={clsx(newsletter && 'pt-12 sm:pt-16')}>
+    <section className={clsx(newsletter && 'pt-12 sm:pt-16 dark:border-t dark:border-gray-700/50')}>
       {newsletter && (
         <div className="relative">
           <div className="absolute inset-x-0 bottom-0 h-1/2 bg-slate-900"></div>

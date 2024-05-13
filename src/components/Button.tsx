@@ -9,7 +9,7 @@ const variantStyles = {
   secondaryClassName:
     'text-slate-900 shadow-sm shadow-sky-100/50 ring-1 ring-slate-100 hover:bg-slate-200/60 hover:shadow-sky-100/50 bg-slate-100/80',
   primaryOnDarkClassName: 'bg-white hover:bg-sky-50 text-slate-700',
-  secondaryOnDarkClassName: 'bg-gray-900 hover:bg-gray-50 text-gray-200 ring-1 ring-gray-600 hover:text-gray-900',
+  secondaryOnDarkClassName: 'bg-gray-900 hover:bg-gray-50 text-gray-200 ring-1 ring-gray-800 hover:text-gray-900',
 };
 
 type ButtonProps = {
