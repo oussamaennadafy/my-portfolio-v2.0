@@ -10,7 +10,7 @@ export function FeaturedPosts() {
     .slice(0, 3)
 
   return (
-    <section className="py-16 overflow-hidden bg-white dark:bg-slate-900 sm:pt-24 lg:pt-28">
+    <section className="py-16 overflow-hidden bg-white dark:bg-gray-950 sm:pt-24 lg:pt-28">
       <Container>
         <h2 className="max-w-2xl mx-auto text-4xl font-semibold leading-tight text-center font-display text-slate-900 dark:text-gray-200 sm:text-5xl sm:leading-tight">
           <span className="relative whitespace-nowrap">

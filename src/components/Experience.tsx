@@ -15,7 +15,7 @@ export function Experience() {
   })
 
   return (
-    <section className="relative pt-20 pb-40 overflow-hidden bg-white dark:bg-gray-900 lg:bg-gradient-to-b lg:from-slate-50 lg:via-slate-50 lg:to-white lg:dark:from-gray-900 lg:dark:via-slate-800/20 lg:dark:to-gray-900 sm:pt-24 lg:pb-64 lg:pt-32">
+    <section className="relative pt-20 pb-40 overflow-hidden bg-white dark:bg-gray-950 lg:bg-gradient-to-b lg:from-slate-50 lg:via-slate-50 lg:to-white lg:dark:from-gray-950 lg:dark:via-slate-900/20 lg:dark:to-gray-950 sm:pt-24 lg:pb-64 lg:pt-32">
       <Container>
         <div className="grid items-center max-w-xl gap-6 mx-auto lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:gap-16">
           <div>

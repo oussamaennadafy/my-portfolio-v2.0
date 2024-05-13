@@ -8,7 +8,6 @@ import { Container } from './Container'
 import { GitHubIcon, LinkedInIcon, EmailIcon } from './SocialIcons'
 import heroPortrait from '@/images/portrait-01.jpg'
 import heroBG from '@/images/home-hero-gradient.svg'
-import figma from '@/images/logos/icons/figma.png'
 import reactjs from '@/images/logos/icons/reactjs.png'
 import tailwind from '@/images/logos/icons/tailwindcss.png'
 import nodejs from '@/images/logos/icons/nodejs.png'
@@ -23,11 +22,11 @@ type SocialLinkProps = {
 function SocialLink({ icon: Icon, styles, ...props }: SocialLinkProps) {
   return (
     <Link
-      className="flex items-center justify-center duration-200 border rounded-full h-11 w-11 border-slate-200 bg-white dark:bg-slate-100 hover:bg-slate-50"
+      className="flex items-center justify-center duration-200 border rounded-full h-11 w-11 border-slate-200 bg-white dark:bg-slate-950 hover:bg-slate-50"
       href={props.href}
       {...props}
     >
-      <Icon className={`w-4 h-4 transition fill-slate-600 group-hover:fill-slate-700 ${styles}`} />
+      <Icon className={`w-4 h-4 transition fill-slate-600 group-hover:fill-slate-700 dark:fill-gray-200 ${styles}`} />
     </Link>
   )
 }
@@ -41,12 +40,12 @@ export function Hero() {
   })
 
   return (
-    <section ref={ref} className="relative py-20 overflow-hidden lg:py-24 dark:bg-gray-900 transition-all mt-24">
+    <section ref={ref} className="relative py-20 overflow-hidden lg:py-24 dark:bg-gray-950 transition-all mt-24">
       <Image src={heroBG} alt="" className="absolute inset-x-0 w-auto top-56 lg:inset-y-0" />
       
       <Container className="relative z-10 grid items-center gap-16 lg:grid-cols-2 lg:gap-8">
         <div className={`flex flex-col items-center max-w-2xl mx-auto transition-all duration-500 lg:items-start ${!inView ? "lg:-translate-x-1/2 lg:opacity-0" : ""}`}>
-          <h1 className="text-5xl font-semibold text-center font-display text-slate-900 sm:text-6xl lg:text-left dark:text-gray-100">
+          <h1 className="text-5xl font-semibold text-center font-display text-slate-900 sm:text-6xl lg:text-left dark:text-gray-300">
             <span className="relative whitespace-nowrap">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +61,7 @@ export function Hero() {
             </span>{' '}
             businesses turn their ideas into reality
           </h1>
-          <p className="mt-6 text-lg leading-8 text-center text-slate-700 lg:text-left dark:text-gray-300">
+          <p className="mt-6 text-lg leading-8 text-center text-slate-700 lg:text-left dark:text-gray-400">
             I&#39;m a passionate developer, Freelancer, and general technology
             enthusiast living in morocco. I&#39;ve worked with hundreds of
             startups to help them develop their ideas into profitable
@@ -89,7 +88,7 @@ export function Hero() {
               <SocialLink
                 aria-label="contact me on email"
                 href="mailto:oussama.ennadafy@gmail.com"
-                styles={"fill-white stroke-slate-600"}
+                styles={"fill-white stroke-slate-600 dark:stroke-gray-950"}
                 icon={EmailIcon}
               />
             </div>
@@ -107,7 +106,7 @@ export function Hero() {
             />
             <div>
               <div className="absolute hidden w-max md:left-full md:top-16 md:block lg:-left-28 lg:-top-8 2xl:left-full 2xl:top-16">
-                <span className="inline-block transform font-writing text-2xl select-none tracking-wide text-slate-600 dark:text-slate-200 md:rotate-[16deg] lg:translate-x-6 lg:rotate-[-18deg] 2xl:rotate-12">
+                <span className="inline-block transform font-writing text-2xl select-none tracking-wide text-slate-600 dark:text-slate-400 md:rotate-[16deg] lg:translate-x-6 lg:rotate-[-18deg] 2xl:rotate-12">
                   Hi, I&apos;m oussama!
                 </span>
                 <svg
@@ -116,7 +115,7 @@ export function Hero() {
                   height="102"
                   viewBox="0 0 103 102"
                   fill="none"
-                  className="h-auto w-28 text-slate-600 dark:text-slate-200 md:-translate-x-1/2 md:-translate-y-6 md:rotate-0 lg:-translate-y-3 lg:translate-x-3/4 lg:rotate-12 lg:-scale-x-100 2xl:-translate-x-1/2 2xl:-translate-y-6 2xl:rotate-0 2xl:scale-x-100"
+                  className="h-auto w-28 text-slate-600 dark:text-slate-400 md:-translate-x-1/2 md:-translate-y-6 md:rotate-0 lg:-translate-y-3 lg:translate-x-3/4 lg:rotate-12 lg:-scale-x-100 2xl:-translate-x-1/2 2xl:-translate-y-6 2xl:rotate-0 2xl:scale-x-100"
                 >
                   <g>
                     <path
@@ -128,15 +127,15 @@ export function Hero() {
                   </g>
                 </svg>
               </div>
-              <div className="absolute -top-6 right-12 inline-flex h-12 w-max items-center justify-center gap-3.5 rounded-2xl bg-white/90 px-8 text-sm font-semibold text-slate-700 shadow-lg shadow-sky-100/50 dark:shadow-sky-100/30 ring-1 ring-slate-900/5 backdrop-blur-md md:-left-28 md:top-14 lg:-top-6 lg:left-44 lg:px-10 2xl:-left-48 2xl:top-14">
+              <div className="absolute -top-6 right-12 inline-flex h-12 w-max items-center justify-center gap-3.5 rounded-2xl bg-white/90 dark:bg-gray-300 px-8 text-sm font-semibold text-slate-700 shadow-lg shadow-sky-100/50 dark:shadow-sky-100/30 ring-1 ring-slate-900/5 backdrop-blur-md md:-left-28 md:top-14 lg:-top-6 lg:left-44 lg:px-10 2xl:-left-48 2xl:top-14">
                 <Image src={reactjs} alt="react js" className="w-5 h-auto" priority />3
                 years of experience
               </div>
-              <div className="absolute left-12 top-full inline-flex h-12 w-max -translate-y-6 items-center justify-center gap-3.5 rounded-2xl bg-white/90 px-8 text-sm font-semibold text-slate-700 shadow-lg shadow-sky-100/50 dark:shadow-sky-100/30 ring-1 ring-slate-900/5 backdrop-blur-md md:left-0 md:-translate-x-20 md:-translate-y-24 lg:-left-3 lg:-translate-y-24 lg:px-10 xl:-left-6 xl:-translate-x-28 xl:-translate-y-32">
+              <div className="absolute left-12 top-full inline-flex h-12 w-max -translate-y-6 items-center justify-center gap-3.5 rounded-2xl bg-white/90 dark:bg-gray-300 px-8 text-sm font-semibold text-slate-700 shadow-lg shadow-sky-100/50 dark:shadow-sky-100/30 ring-1 ring-slate-900/5 backdrop-blur-md md:left-0 md:-translate-x-20 md:-translate-y-24 lg:-left-3 lg:-translate-y-24 lg:px-10 xl:-left-6 xl:-translate-x-28 xl:-translate-y-32">
                 <Image src={nodejs} alt="" className="w-auto h-6" priority />2
                 years of experience
               </div>
-              <div className="absolute top-[350px] hidden h-12 w-max items-center justify-center gap-3.5 rounded-2xl bg-white/90 px-8 text-sm font-semibold text-slate-700 shadow-lg shadow-sky-100/50 dark:shadow-sky-100/30 ring-1 ring-slate-900/5 backdrop-blur-md md:left-full md:inline-flex md:-translate-x-32 lg:left-48 lg:hidden lg:px-10 2xl:left-full 2xl:inline-flex 2xl:-translate-x-28">
+              <div className="absolute top-[350px] hidden h-12 w-max items-center justify-center gap-3.5 rounded-2xl bg-white/90 dark:bg-gray-300 px-8 text-sm font-semibold text-slate-700 shadow-lg shadow-sky-100/50 dark:shadow-sky-100/30 ring-1 ring-slate-900/5 backdrop-blur-md md:left-full md:inline-flex md:-translate-x-32 lg:left-48 lg:hidden lg:px-10 2xl:left-full 2xl:inline-flex 2xl:-translate-x-28">
                 <Image src={tailwind} alt="" className="h-auto w-7" priority />
                 <span className="">2 years of experience</span>
               </div>

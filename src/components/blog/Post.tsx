@@ -20,7 +20,7 @@ export function Post({ post }) {
   const CategoryIcon = iconOptions[post.category]
 
   return (
-    <article className="flex flex-col items-start justify-between rounded-2xl bg-slate-50 dark:bg-slate-800 shadow-sm shadow-sky-100/50 dark:shadow-sky-100/10 ring-1 ring-slate-100 dark:ring-slate-900">
+    <article className="flex flex-col items-start justify-between rounded-2xl bg-slate-50 dark:bg-slate-900 shadow-sm shadow-sky-100/50 dark:shadow-sky-100/10 ring-1 ring-slate-100 dark:ring-slate-900">
       <div className="w-full px-4 pt-4">
         <Link
           href={post.url}

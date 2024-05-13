@@ -155,7 +155,7 @@ export function Testimonials() {
   }, [swiperIndex])
 
   return (
-    <section className="relative py-20 overflow-hidden bg-slate-50 dark:bg-slate-900 sm:py-24 lg:pt-32">
+    <section className="relative py-20 overflow-hidden bg-slate-50 dark:bg-gray-950 sm:py-24 lg:pt-32">
       <Container className="relative">
         <div className="grid max-w-xl gap-6 mx-auto lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:gap-16">
           <div>
@@ -264,7 +264,7 @@ export function Testimonials() {
                       <hr className="w-full h-px my-6 bg-slate-200 dark:bg-slate-300 dark:opacity-20" />
                       <div className="flex items-center justify-between">
                         <div className="">
-                          <p className="font-medium font-display text-md text-slate-900">
+                          <p className="font-medium font-display text-md text-slate-900 dark:text-gray-400">
                             {testimonial.author.name}
                           </p>
                           <p className="mt-1.5 text-sm text-slate-600">
