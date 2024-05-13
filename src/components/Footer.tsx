@@ -129,7 +129,7 @@ export function Footer({ newsletter = true }) {
                   />
                   <button
                     type="submit"
-                    className="absolute right-1.5 top-1.5 inline-flex h-11 items-center rounded-full bg-sky-900 px-5 py-3 text-sm font-semibold text-sky-50 outline-none transition duration-200 ease-in-out hover:bg-sky-800 focus:outline-none sm:px-7 sm:text-md"
+                    className="absolute right-1.5 top-1.5 inline-flex h-11 items-center rounded-full bg-sky-900 px-5 py-3 text-sm font-semibold text-sky-50 outline-none transition duration-200 ease-in-out hover:bg-sky-800 dark:bg-sky-700 dark:hover:bg-sky-600 focus:outline-none sm:px-7 sm:text-md"
                   >
                     Subscribe
                   </button>
