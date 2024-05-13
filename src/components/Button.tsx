@@ -19,13 +19,18 @@ type ButtonProps = {
   children?: React.ReactNode,
   target?: string,
   onClick?: (e: any) => void,
+  explicitMode?: "dark" | "light",
 };
 
-export function Button({ variant = 'primary', className, href, ...props }: ButtonProps): JSX.Element {
+export function Button({ variant = 'primary', className, href, explicitMode,...props }: ButtonProps): JSX.Element {  
+  let buttonMode: "dark" | "light";
   const mode = useModeStore((state) => state.mode);
+
+  buttonMode = explicitMode || mode;
+
   className = clsx(
     'inline-flex items-center rounded-full gap-2.5 justify-center px-7 py-3 text-md font-semibold leading-none outline-offset-2 transition-all duration-200 ease-in-out active:transition-none',
-    variantStyles[`${variant}${mode === "dark" ? "OnDark" : ""}ClassName`],
+    variantStyles[`${variant}${buttonMode === "dark" ? "OnDark" : ""}ClassName`],
     className
   );
 

@@ -52,7 +52,7 @@ export function Experience() {
               <li>
                 <div className="relative pb-24 lg:pb-20">
                   <span
-                    className="absolute -ml-px border border-dashed bottom-4 left-10 top-24 border-slate-300"
+                    className="absolute -ml-px border border-dashed bottom-4 left-10 top-24 border-slate-300 dark:border-gray-500"
                     aria-hidden="true"
                   ></span>
                   <div className="relative flex space-x-7">
@@ -105,7 +105,7 @@ export function Experience() {
               <li>
                 <div className="relative pb-24 lg:pb-20">
                   <span
-                    className="absolute -ml-px border border-dashed bottom-4 left-10 top-24 border-slate-300"
+                    className="absolute -ml-px border border-dashed bottom-4 left-10 top-24 border-slate-300 dark:border-gray-500"
                     aria-hidden="true"
                   ></span>
                   <div className="relative flex space-x-7">
