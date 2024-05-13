@@ -264,7 +264,7 @@ export function Testimonials() {
                       <hr className="w-full h-px my-6 bg-slate-200 dark:bg-slate-300 dark:opacity-20" />
                       <div className="flex items-center justify-between">
                         <div className="">
-                          <p className="font-medium font-display text-md text-slate-900">
+                          <p className="font-medium font-display text-md text-slate-900 dark:text-gray-400">
                             {testimonial.author.name}
                           </p>
                           <p className="mt-1.5 text-sm text-slate-600">

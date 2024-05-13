@@ -16,6 +16,7 @@ import {
   EmailIcon,
 } from './SocialIcons'
 import { useInView } from 'react-intersection-observer'
+import { useModeStore } from '@/store'
 
 const links = [
   { label: 'Home', href: '/' },
@@ -87,6 +88,7 @@ export function Footer({ newsletter = true }) {
     threshold: 0.1,
     triggerOnce: true,
   });
+  const mode = useModeStore((state) => state.mode);
 
   return (
     <section className={clsx(newsletter && 'pt-12 sm:pt-16 dark:border-t dark:border-gray-900')}>
@@ -95,11 +97,14 @@ export function Footer({ newsletter = true }) {
           <div className="absolute inset-x-0 bottom-0 h-1/2 bg-slate-900 dark:bg-gray-950"></div>
           <div ref={newsletterRef} className={`relative mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 transition-all duration-500 ${newsletterInView ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"}`}>
             <div className="relative overflow-hidden rounded-2xl bg-sky-700 dark:bg-sky-950 px-5 py-12 sm:px-16 lg:py-14">
-              <Image
-                src={newsletterBg}
-                alt=""
-                className="absolute inset-0 h-full w-full object-cover object-right"
-              />
+              {
+                mode === "light" ?
+                  <Image
+                    src={newsletterBg}
+                    alt=""
+                    className="dark:none absolute inset-0 h-full w-full object-cover object-right"
+                  /> : null
+              }
               <div className="relative flex w-full flex-col items-center lg:flex-row">
                 <div className="max-w-2xl text-center lg:pr-4 lg:text-left">
                   <h3 className="font-display text-4xl font-semibold text-white sm:text-5xl">
@@ -161,7 +166,7 @@ export function Footer({ newsletter = true }) {
             </div>
             <div className={`flex flex-col items-center lg:col-span-5 lg:items-start transition-all duration-500 ${footerInView ? "lg:opacity-100 lg:translate-x-0" : "lg:opacity-0 lg:translate-x-1/2"}`}>
               <p className="text-center text-lg text-slate-50 lg:max-w-sm lg:text-left">
-              Let&apos;s collaborate and innovate something truly great together, Feel free to connect with me on my various social media accounts.
+                Let&apos;s collaborate and innovate something truly great together, Feel free to connect with me on my various social media accounts.
               </p>
 
               <Button
