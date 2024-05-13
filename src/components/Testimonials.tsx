@@ -155,22 +155,22 @@ export function Testimonials() {
   }, [swiperIndex])
 
   return (
-    <section className="relative py-20 overflow-hidden bg-slate-50 sm:py-24 lg:pt-32 ">
+    <section className="relative py-20 overflow-hidden bg-slate-50 dark:bg-slate-900 sm:py-24 lg:pt-32">
       <Container className="relative">
         <div className="grid max-w-xl gap-6 mx-auto lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:gap-16">
           <div>
-            <h2 className="text-4xl font-semibold font-display text-slate-900 sm:text-5xl">
+            <h2 className="text-4xl font-semibold font-display text-slate-900 dark:text-gray-200 sm:text-5xl">
               Here’s what past clients are saying about me
             </h2>
-            <div className="mt-10 hidden h-[7px] w-full rounded-full bg-slate-200 lg:mt-16 lg:block">
+            <div className="mt-10 hidden h-[7px] w-full rounded-full bg-slate-200 dark:bg-slate-800 lg:mt-16 lg:block">
               <div
-                className="h-full duration-200 rounded-full bg-slate-900"
+                className="h-full duration-200 rounded-full bg-slate-900 dark:bg-slate-200"
                 style={{ width: `${carouselProgress}%` }}
               ></div>
             </div>
           </div>
           <div className="lg:ml-auto lg:max-w-sm">
-            <p className="text-lg text-slate-700">
+            <p className="text-lg text-slate-700 dark:text-gray-400">
               Iced pumpkin ristretto irish trifecta robusta trade froth affogato
               barista con barista cappuccino filter roast.
             </p>

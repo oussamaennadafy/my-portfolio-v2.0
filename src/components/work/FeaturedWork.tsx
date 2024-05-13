@@ -45,25 +45,25 @@ function CaseStudy({ caseStudy, i }) {
     <div
       key={caseStudy.title}
       ref={ref}
-      className={`relative grid items-center gap-8 overflow-hidden rounded-2xl bg-slate-50 px-4 pb-14 pt-5 shadow-sm shadow-sky-100/50 ring-1 ring-slate-100 sm:gap-12 sm:px-8 sm:pt-8 lg:grid-cols-12 lg:px-0 lg:py-0 xl:gap-16 xl:pt-16 transition-all duration-500 ${inView ? "translate-x-0 opacity-100" : translateXDirection === 1 ? "opacity-0 translate-x-1/2" : "opacity-0 -translate-x-1/2"}`}
+      className={`relative grid items-center gap-8 overflow-hidden rounded-2xl bg-slate-50 dark:bg-gray-900 px-4 pb-14 pt-5 shadow-sm shadow-sky-100/50 ring-1 ring-slate-100 dark:ring-gray-800 sm:gap-12 sm:px-8 sm:pt-8 lg:grid-cols-12 lg:px-0 lg:py-0 xl:gap-16 xl:pt-16 transition-all duration-500 ${inView ? "translate-x-0 opacity-100" : translateXDirection === 1 ? "opacity-0 translate-x-1/2" : "opacity-0 -translate-x-1/2"}`}
     >
       <Image
         src={workBG}
         alt=""
-        className="absolute inset-x-0 bottom-0 h-auto w-full lg:top-6 lg:h-full"
+        className="absolute inset-x-0 bottom-0 w-full h-full object-cover"
       />
       <div className="relative order-2 px-1 sm:px-4 lg:order-1 lg:col-span-6 lg:pb-16 lg:pl-12 lg:pt-16 xl:col-span-5 xl:pb-24 xl:pl-16 xl:pt-8">
-        <div className="inline-flex items-center gap-2.5  text-sm font-medium leading-[16px] text-sky-900/80 sm:text-md">
+        <div className="inline-flex items-center gap-2.5  text-sm font-medium leading-[16px] text-sky-900/80 dark:text-gray-200 sm:text-md">
           <CategoryIcon
             category={caseStudy.tags[0]}
-            className="h-4 w-4 text-sky-900/75"
+            className="h-4 w-4 text-sky-900/75 dark:text-gray-200"
           />
           {caseStudy.tags[0]}
         </div>
-        <h3 className="mt-5 font-display text-2xl font-medium text-slate-900 sm:mt-6 sm:text-3xl">
+        <h3 className="mt-5 font-display text-2xl font-medium text-slate-900 dark:text-gray-200 sm:mt-6 sm:text-3xl">
           {caseStudy.title}
         </h3>
-        <p className="mt-3 text-md leading-8 text-slate-700 sm:mt-4 sm:text-base sm:leading-8">
+        <p className="mt-3 text-md leading-8 text-slate-700 dark:text-slate-500 sm:mt-4 sm:text-base sm:leading-8">
           {caseStudy.description}
         </p>
         <Link
@@ -87,12 +87,12 @@ function CaseStudy({ caseStudy, i }) {
       </div>
       <Link
         href={caseStudy.url}
-        className="group aspect-h-9 aspect-w-16 relative order-1 h-full w-full overflow-hidden rounded-2xl ring-1 ring-slate-100/75 lg:order-2 lg:col-span-6 lg:rounded-l-none lg:rounded-r-none xl:col-span-7 xl:rounded-tl-2xl"
+        className="group aspect-h-9 aspect-w-16 relative order-1 h-full w-full overflow-hidden rounded-2xl ring-1 ring-slate-100/75 dark:ring-gray-600 lg:order-2 lg:col-span-6 lg:rounded-l-none lg:rounded-r-none xl:col-span-7 xl:rounded-tl-2xl"
       >
         <Image
           src={caseStudy.thumbnail}
           alt={caseStudy.title}
-          className="absolute inset-0 object-cover object-top transition duration-300 group-hover:scale-105"
+          className="absolute inset-0 object-cover object-top transition duration-300 group-hover:scale-105 dark:brightness-90"
           fill
           sizes="(min-width: 1280px) 43rem, (min-width: 1024px) calc(50vw - 3.5rem), (min-width: 640px) 32rem, calc(100vw - 4.5rem)"
         />
@@ -107,13 +107,13 @@ export function FeaturedWork() {
     .slice(0, 4)
 
   return (
-    <section className="overflow-x-clip bg-white pb-16 pt-8 sm:pb-24 sm:pt-12 md:pt-16">
+    <section className="overflow-x-clip bg-white dark:bg-gray-900 pb-16 pt-8 sm:pb-24 sm:pt-12 md:pt-16">
       <Container>
         <div className="text-center">
-          <h2 className="font-display text-4xl font-semibold text-slate-900 sm:text-5xl">
+          <h2 className="font-display text-4xl font-semibold text-slate-900 dark:text-gray-100 sm:text-5xl">
             Check out my latest work
           </h2>
-          <p className="mx-auto mt-4 max-w-md text-lg leading-8 text-slate-700 sm:mt-5">
+          <p className="mx-auto mt-4 max-w-md text-lg leading-8 text-slate-700 dark:text-gray-300 sm:mt-5">
             My goal is to create effective digital experiences that make
             people’s lives easier and better. I hope my work is a reflection of
             this.

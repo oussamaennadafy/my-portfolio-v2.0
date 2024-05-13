@@ -37,7 +37,8 @@ export default function RootLayout({ children }) {
           'font-sans',
           inter.variable,
           lexend.variable,
-          gochiHand.variable
+          gochiHand.variable,
+          "bg-white dark:bg-gray-900"
         )}
       >
         <ToastSlot />

@@ -15,7 +15,7 @@ export function Experience() {
   })
 
   return (
-    <section className="relative pt-20 pb-40 overflow-hidden bg-gradient-to-b from-slate-50 via-slate-50 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 sm:pt-24 lg:pb-64 lg:pt-32">
+    <section className="relative pt-20 pb-40 overflow-hidden bg-white dark:bg-gray-900 lg:bg-gradient-to-b lg:from-slate-50 lg:via-slate-50 lg:to-white lg:dark:from-gray-900 lg:dark:via-slate-800/20 lg:dark:to-gray-900 sm:pt-24 lg:pb-64 lg:pt-32">
       <Container>
         <div className="grid items-center max-w-xl gap-6 mx-auto lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:gap-16">
           <div>
@@ -57,7 +57,7 @@ export function Experience() {
                   ></span>
                   <div className="relative flex space-x-7">
                     <div>
-                      <span className="flex items-center justify-center w-20 h-20 rounded-full shadow-lg bg-slate-900">
+                      <span className="flex items-center justify-center w-20 h-20 rounded-full shadow-lg dark:shadow-gray-800/10 bg-slate-900 ring-1 ring-gray-700/30">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="24"
@@ -110,7 +110,7 @@ export function Experience() {
                   ></span>
                   <div className="relative flex space-x-7">
                     <div>
-                      <span className="flex items-center justify-center w-20 h-20 rounded-full shadow-lg bg-slate-900">
+                      <span className="flex items-center justify-center w-20 h-20 rounded-full shadow-lg dark:shadow-gray-800/10 bg-slate-900 ring-1 ring-gray-700/30">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="24"
@@ -177,7 +177,7 @@ export function Experience() {
                 <div className="relative">
                   <div className="relative flex space-x-7">
                     <div>
-                      <span className="flex items-center justify-center w-20 h-20 rounded-full shadow-lg bg-slate-900">
+                      <span className="flex items-center justify-center w-20 h-20 rounded-full shadow-lg dark:shadow-gray-800/10 bg-slate-900 ring-1 ring-gray-700/30">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="24"
@@ -280,7 +280,7 @@ export function Experience() {
           <div className="lg:col-span-8 lg:pl-8 xl:pl-24">
             <div className="relative w-full aspect-h-2 aspect-w-3">
               <Image
-                className="object-cover object-center w-full h-full rounded-3xl"
+                className="object-cover object-center w-full h-full rounded-3xl dark:brightness-90"
                 src={image}
                 alt=""
                 fill
