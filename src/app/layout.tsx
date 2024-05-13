@@ -3,6 +3,7 @@ import clsx from 'clsx'
 import { Inter, Lexend, Gochi_Hand } from 'next/font/google'
 import '@/styles/globals.css'
 import { ToastSlot } from '@/components/common/toasts'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({
   subsets: ['latin'],
@@ -42,6 +43,7 @@ export default function RootLayout({ children }) {
         )}
       >
         <ToastSlot />
+        <SpeedInsights />
         <Header />
         {children}
       </body>
