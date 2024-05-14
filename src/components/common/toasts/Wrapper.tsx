@@ -1,10 +1,10 @@
 "use client"
 
-import { useToastStore } from '@/store';
+import { useToast } from '@/store';
 import { Toast } from 'flowbite-react'
 
 function Wrapper({ Icon, message, background, text }) {
-  const hideToast = useToastStore((state) =>  state.hideToast);
+  const hideToast = useToast((state) =>  state.hideToast);
   
   return (
     <div className="flex flex-col items-center gap-4 fixed top-24 right-5 z-50 transition-all">

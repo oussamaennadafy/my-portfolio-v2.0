@@ -14,11 +14,11 @@ const mrDafoe = Mr_Dafoe({
 
 export function AboutHero() {
   return (
-    <section className="relative bg-slate-50 pt-24">
+    <section className="relative bg-slate-50 dark:bg-gray-950 pt-24">
       <Image src={heroBG} alt="" className="absolute inset-0 object-cover object-left w-full h-full lg:w-2/3" />
       <Container className="relative py-16 sm:py-24 lg:py-32">
         <div className="max-w-3xl px-4 mx-auto sm:px-6 lg:mx-0 lg:w-2/3 lg:max-w-none lg:px-8 lg:pr-16">
-          <h1 className="text-5xl font-semibold font-display text-slate-900 sm:text-6xl">
+          <h1 className="text-5xl font-semibold font-display text-slate-900 dark:text-gray-400 sm:text-6xl">
             Hi,{' '}
             <span className="relative whitespace-nowrap">
               <svg
@@ -27,15 +27,15 @@ export function AboutHero() {
                 height="22"
                 viewBox="0 0 249 22"
                 fill="currentColor"
-                className="absolute left-0 top-2/3 h-[0.6em] w-full fill-sky-200/75"
+                className="absolute left-0 top-2/3 h-[0.6em] w-full fill-sky-200/75 dark:text-gray-100"
               >
                 <path d="M247.564 18.5807C241.772 13.3568 232.473 12.7526 225.225 11.4427C217.124 9.97395 208.996 8.57031 200.846 7.46093C186.542 5.51302 172.169 4.08854 157.79 3.01562C126.033 0.645827 94.0929 0.0338481 62.3387 2.36979C42.1785 3.85416 22.008 5.90885 2.32917 10.8463C-0.0155171 11.4349 0.207047 14.6719 2.6889 14.7083C22.0261 14.9896 41.3866 12.6406 60.7109 11.8568C79.9471 11.0807 99.2274 10.6719 118.484 10.9557C142.604 11.3125 166.719 12.8333 190.722 15.5156C199.956 16.5469 209.195 17.6016 218.411 18.8255C227.864 20.0807 237.259 22 246.767 20.7422C247.709 20.6198 248.426 19.3568 247.564 18.5807Z" />
               </svg>
-              <span className="relative">I’m oussama</span>
+              <span className="relative dark:text-gray-300">I’m oussama</span>
             </span>{' '}
-            and I’m a developer & freelancer
+            and I’m a developer & a freelancer
           </h1>
-          <p className="mt-8 text-lg leading-8 text-slate-700">
+          <p className="mt-8 text-lg leading-8 text-slate-700 dark:text-gray-400">
             Pumpkin seasonal rich froth decaffeinated trifecta organic blue
             panna doppio. Body a whipped lungo variety spice seasonal body press
             mountain con macchiato. Medium coffee single white to caramelization
@@ -43,7 +43,7 @@ export function AboutHero() {
             cinnamon breve turkish organic. Lait black kopi dripper spice lait
             cultivar robusta panna whipped and sit aromatic sugar.
           </p>
-          <p className="mt-6 text-lg leading-8 text-slate-700">
+          <p className="mt-6 text-lg leading-8 text-slate-700 dark:text-gray-400">
             And café frappuccino extraction filter froth sugar siphon coffee
             pumpkin press milk ristretto et au. Trade instant aged as wings bar
             seasonal pumpkin barista turkish shot go seasonal robusta. Strong
@@ -53,7 +53,7 @@ export function AboutHero() {
             frappuccino go luwak single mazagran.
           </p>
           <p
-            className={clsx('mt-16 text-3xl text-slate-700', mrDafoe.className)}
+            className={clsx('mt-16 text-3xl text-slate-700 dark:text-gray-400', mrDafoe.className)}
           >
             oussama ennadafy
           </p>
@@ -63,7 +63,7 @@ export function AboutHero() {
         <Image
           src={heroImage}
           alt=""
-          className="absolute inset-0 object-cover object-top w-full h-full"
+          className="absolute inset-0 object-cover object-top w-full h-full dark:brightness-75"
           sizes="(min-width: 1024px) 33vw, 100vw"
           priority
         />

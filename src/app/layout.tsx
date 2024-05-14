@@ -1,27 +1,30 @@
-import { Header } from '@/components/Header'
-import clsx from 'clsx'
-import { Inter, Lexend, Gochi_Hand } from 'next/font/google'
-import '@/styles/globals.css'
-import { ToastSlot } from '@/components/common/toasts'
-import { SpeedInsights } from "@vercel/speed-insights/next"
-import { Analytics } from "@vercel/analytics/react"
+import { Header } from '@/components/Header';
+import clsx from 'clsx';
+import { Inter, Lexend, Gochi_Hand } from 'next/font/google';
+import '@/styles/globals.css';
+import { ToastSlot } from '@/components/common/toasts';
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
+import Script from 'next/script';
 
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-inter',
-})
+});
+
 const lexend = Lexend({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-lexend',
-})
+});
+
 const gochiHand = Gochi_Hand({
   subsets: ['latin'],
   variable: '--font-gochi-hand',
   display: 'swap',
   weight: '400',
-})
+});
 
 export const metadata = {
   title: {
@@ -29,11 +32,14 @@ export const metadata = {
     default:
       'oussama - Developer, freelancer, and general technology enthusiast',
   },
-}
+};
 
 export default function RootLayout({ children }) {
   return (
-    <html className='dark' lang="en">
+    <html lang="en">
+      <head>
+        <Script defer src='/assets/scripts/syncTheme.js' />
+      </head>
       <body
         className={clsx(
           'font-sans',
@@ -51,4 +57,4 @@ export default function RootLayout({ children }) {
       </body>
     </html>
   )
-}
+};

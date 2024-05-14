@@ -16,7 +16,7 @@ import {
   EmailIcon,
 } from './SocialIcons'
 import { useInView } from 'react-intersection-observer'
-import { useModeStore } from '@/store'
+import { useTheme } from '@/store'
 
 const links = [
   { label: 'Home', href: '/' },
@@ -88,7 +88,7 @@ export function Footer({ newsletter = true }) {
     threshold: 0.1,
     triggerOnce: true,
   });
-  const mode = useModeStore((state) => state.mode);
+  const theme = useTheme((state) => state.theme);
 
   return (
     <section className={clsx(newsletter && 'pt-12 sm:pt-16 dark:border-t dark:border-gray-900')}>
@@ -98,7 +98,7 @@ export function Footer({ newsletter = true }) {
           <div ref={newsletterRef} className={`relative mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 transition-all duration-500 ${newsletterInView ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"}`}>
             <div className="relative overflow-hidden rounded-2xl bg-sky-700 dark:bg-sky-950 px-5 py-12 sm:px-16 lg:py-14">
               {
-                mode === "light" ?
+                theme === "light" ?
                   <Image
                     src={newsletterBg}
                     alt=""

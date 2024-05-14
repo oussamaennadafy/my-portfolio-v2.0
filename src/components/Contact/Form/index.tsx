@@ -1,11 +1,11 @@
-import { Button } from '@/components/Button'
-import TextField, { TextFieldOnChangeType } from './TextField'
-import CheckboxField from './CheckboxField'
+import { Button } from '@/components/Button';
+import TextField, { TextFieldOnChangeType } from './TextField';
+import CheckboxField from './CheckboxField';
 import { useState } from 'react';
 import { contactFormDataType } from '@/types/contact';
 import sendEmail from '@/services/api/sendEmail';
 import DefaultResponseType from '@/types/common/responseType';
-import { useToastStore } from '@/store';
+import { useToast } from '@/store';
 
 const formInitialState: contactFormDataType = {
   name: "",
@@ -17,14 +17,14 @@ const formInitialState: contactFormDataType = {
     mobileDevelopment: false,
     consulting: false,
     other: false,
-  }
-}
+  },
+};
 
 export default function Form() {
   const [formData, setFormData] = useState<contactFormDataType>(formInitialState);
   const [loading, setLoading] = useState<boolean>(false);
   // const [error, setError] = useState<string>("");
-  const showToast = useToastStore(state => state.showToast)
+  const showToast = useToast(state => state.showToast);
 
   const handleSubmit: TextFieldOnChangeType = async (e) => {
     // prevent default form behavior
