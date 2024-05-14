@@ -49,7 +49,7 @@ export const useTheme = create(
       },
     }),
     {
-      name: 'theme-storage', // name of the item in the storage (must be unique)
+      name: 'theme', // name of the item in the storage (must be unique)
       storage: createJSONStorage(() => localStorage), // (optional) by default, 'localStorage' is used
     },
   ),
