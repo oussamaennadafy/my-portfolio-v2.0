@@ -13,7 +13,7 @@ interface themeStoreType {
 };
 
 const getInitialUserTheme = (): themeType => {
-  const theme: any = JSON.parse(localStorage?.getItem("theme")) || getBrowserDefaultTheme();
+  const theme: any = JSON.parse(localStorage?.getItem("theme"))?.state?.theme || getBrowserDefaultTheme();
   return theme;
 };
 
@@ -21,28 +21,34 @@ export const useTheme = create(
   persist<themeStoreType>(
     (set, get) => ({
       theme: getInitialUserTheme(),
-      setTheme: (theme) => {
+      setTheme: (newTheme) => {
         // get html element
         const htmlElement = document.getElementsByTagName("html").item(0);
 
+        // get current theme
+        const currentTheme = get().theme;
+
         // re-paint the ui for the user
-        theme === "light" ? htmlElement.classList.remove("dark") : htmlElement.classList.add("dark");
+        htmlElement.classList.replace(currentTheme, newTheme);
 
         // update store data
-        set({ theme });
+        set({ theme: newTheme });
       },
       toggleTheme: () => {
         // get html element
         const htmlElement = document.getElementsByTagName("html").item(0);
 
-        // re-paint the ui for the user
-        htmlElement.classList.toggle("dark");
 
         // get current theme
         const currentTheme = get().theme;
 
         // derived toggled theme
-        const newTheme = currentTheme === "light" ? "dark" : "light"
+        const newTheme = currentTheme === "light" ? "dark" : "light";
+
+        // re-paint the ui for the user
+        htmlElement.classList.replace(currentTheme, newTheme);
+
+        console.log({ currentTheme, newTheme });
 
         // update store data
         set({ theme: newTheme });
@@ -54,24 +60,3 @@ export const useTheme = create(
     },
   ),
 )
-// export const useThemee = create<themeStoreType>((set, get) => ({
-//   theme: getInitialUserTheme(),
-//   setTheme: (theme: themeType) => {
-//     // get html element
-//     const htmlElement = document.getElementsByTagName("html").item(0);
-
-//     // re-paint the ui for the user
-//     theme === "light" ? htmlElement.classList.remove("dark") : htmlElement.classList.add("dark");
-
-//     // update store data
-//     set({ theme });
-
-//     // sync localStorage with store data
-//     localStorage.setItem("theme", JSON.stringify(theme));
-//   },
-//   toggleTheme: () => {
-
-//     // sync localStorage with store data
-//     localStorage.setItem("theme", JSON.stringify(newTheme));
-//   }
-// }));
