@@ -183,7 +183,7 @@ export function Header() {
   }
 
   return (
-    <header className="h-20 sm:h-24 border-b border-slate-200/80 dark:border-gray-800 bg-white dark:bg-gray-950">
+    <header className="h-20 sm:h-24 border-b border-slate-200/80 dark:border-gray-800 bg-white dark:bg-gray-950 transition-all">
       <Container className="flex h-full w-full items-center">
         <nav className="relative z-40 flex w-full items-center justify-between gap-4">
           <div className="flex shrink-0 items-center">
