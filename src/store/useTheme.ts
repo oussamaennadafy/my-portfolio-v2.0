@@ -12,7 +12,8 @@ interface themeStoreType {
 };
 
 const getInitialUserTheme = (): themeType => {
-  const theme: any = JSON.parse(localStorage?.getItem("theme")) || getBrowserDefaultTheme();
+  // const theme: any = JSON.parse(localStorage?.getItem("theme")) || getBrowserDefaultTheme();
+  const theme: any = getBrowserDefaultTheme();
   return theme;
 };
 
