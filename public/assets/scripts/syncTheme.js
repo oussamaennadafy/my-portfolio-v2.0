@@ -4,7 +4,7 @@ const getBrowserDefaultTheme = () => {
   return "dark";
 }
 
-const theme = JSON.parse(localStorage?.getItem("theme")) || getBrowserDefaultTheme();
+const theme = JSON.parse(window.localStorage?.getItem("theme")) || getBrowserDefaultTheme();
 
 const htmlElement = document.getElementsByTagName("html").item(0);
 
