@@ -1,4 +1,4 @@
-import { create } from 'zustand'
+import { create } from 'zustand';
 
 interface useToastType {
   show: boolean,
@@ -8,7 +8,7 @@ interface useToastType {
   hideToast: () => void,
 }
 
-export const useToastStore = create<useToastType>((set) => ({
+export const useToast = create<useToastType>((set) => ({
   show: false,
   type: null,
   message: "",

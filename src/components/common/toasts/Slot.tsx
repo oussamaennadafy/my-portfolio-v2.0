@@ -1,12 +1,11 @@
 "use client"
 
-import { useToastStore } from '@/store';
+import { useToast } from '@/store';
 import { useEffect } from 'react';
-import { useShallow } from 'zustand/react/shallow'
 import { ToastError, ToastInfo, ToastSuccess } from '.';
 
 function Slot() {
-  const { show, type, message, hideToast } = useToastStore();
+  const { show, type, message, hideToast } = useToast();
   
   useEffect(() => {
     if(!show) return;

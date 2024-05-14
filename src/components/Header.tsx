@@ -13,7 +13,7 @@ import logo from '@/images/logo.png'
 import logoIcon from '@/images/logo-icon.png'
 import logoWhite from '@/images/logo-white.png'
 import logoIconWhite from '@/images/logo-icon-white.png'
-import { useModeStore } from '@/store'
+import { useTheme } from '@/store'
 import { useShallow } from 'zustand/react/shallow'
 import DarkModeIcon from "@/images/dark-mode-icon.svg"
 import LightModeIcon from "@/images/light-mode-icon.svg"
@@ -41,10 +41,10 @@ const pages = [
 
 export function Header() {
   const pathname = usePathname();
-  const { mode, toggleMode } = useModeStore(useShallow((state) => ({ toggleMode: state.toggleMode, mode: state.mode })));
+  const { theme, toggleTheme } = useTheme(useShallow((state) => ({ toggleTheme: state.toggleTheme, theme: state.theme })));
 
   const handleModeSwitch = () => {
-    toggleMode();
+    toggleTheme();
   };
 
   function MenuIcon({ open }) {
@@ -183,7 +183,7 @@ export function Header() {
   }
 
   return (
-    <header className="h-20 sm:h-24 border-b border-slate-200/80 dark:border-gray-800 bg-white dark:bg-gray-950 transition-all">
+    <header className="h-20 sm:h-24 border-b border-slate-200/80 dark:border-gray-800 bg-white dark:bg-gray-950">
       <Container className="flex h-full w-full items-center">
         <nav className="relative z-40 flex w-full items-center justify-between gap-4">
           <div className="flex shrink-0 items-center">
@@ -193,7 +193,7 @@ export function Header() {
               className="flex flex-shrink-0 items-center"
             >
               {
-                mode === "light" ?
+                theme === "light" ?
                   <>
                     <Image
                       src={logo}
@@ -311,7 +311,7 @@ export function Header() {
             className='p-2 rounded-full'
           >
             <Image
-              src={mode === "light" ? DarkModeIcon : LightModeIcon}
+              src={theme === "light" ? DarkModeIcon : LightModeIcon}
               alt='theme mode icon'
             />
           </button>

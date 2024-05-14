@@ -36,11 +36,11 @@ const companies = [
 
 export function WorkExperience() {
   return (
-    <section className="relative overflow-x-clip bg-white py-16 sm:py-24 lg:py-32">
+    <section className="relative overflow-x-clip bg-white dark:bg-gray-950 py-16 sm:py-24 lg:py-32">
       <Container className="relative">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           <div>
-            <h2 className="font-display text-4xl font-semibold text-slate-900 sm:text-5xl">
+            <h2 className="font-display text-4xl font-semibold text-slate-900 dark:text-gray-200 sm:text-5xl">
               My career{' '}
               <span className="relative whitespace-nowrap">
                 <svg
@@ -49,7 +49,7 @@ export function WorkExperience() {
                   height="24"
                   viewBox="0 0 167 24"
                   fill="currentColor"
-                  className="absolute left-0 top-2/3 h-[0.6em] w-full fill-sky-200/75"
+                  className="absolute left-0 top-2/3 h-[0.6em] w-full fill-sky-200/75 dark:fill-sky-200/40"
                 >
                   <g clipPath="url(#clip0_257_225)">
                     <path d="M166.409 20.2699C162.515 14.571 156.265 13.9119 151.392 12.4829C145.948 10.8807 140.484 9.3494 135.006 8.13918C125.391 6.01418 115.729 4.4602 106.064 3.28974C84.7177 0.704517 63.2477 0.036903 41.9031 2.5852C28.3517 4.20452 14.7934 6.44599 1.5656 11.8324C-0.0104672 12.4744 0.139137 16.0057 1.8074 16.0454C14.8056 16.3522 27.8194 13.7897 40.8089 12.9346C53.7392 12.088 66.6991 11.642 79.6433 11.9517C95.8562 12.3409 112.066 14 128.2 16.9261C134.407 18.0511 140.617 19.2017 146.812 20.5369C153.167 21.9062 159.481 24 165.873 22.6278C166.506 22.4943 166.988 21.1164 166.409 20.2699Z" />
@@ -61,7 +61,7 @@ export function WorkExperience() {
                   </defs>
                 </svg>
 
-                <span className="relative text-sky-700">journey</span>
+                <span className="relative text-sky-700 dark:text-gray-100">journey</span>
               </span>{' '}
               so far
             </h2>

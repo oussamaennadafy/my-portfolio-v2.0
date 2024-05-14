@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import clsx from 'clsx'
-import { useModeStore } from '@/store';
+import { useTheme } from '@/store';
 
 const variantStyles = {
   primaryClassName: 'bg-slate-900 text-white hover:bg-sky-800',
@@ -24,7 +24,7 @@ type ButtonProps = {
 
 export function Button({ variant = 'primary', className, href, explicitMode,...props }: ButtonProps): JSX.Element {  
   let buttonMode: "dark" | "light";
-  const mode = useModeStore((state) => state.mode);
+  const mode = useTheme((state) => state.theme);
 
   buttonMode = explicitMode || mode;
 

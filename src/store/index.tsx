@@ -1,2 +1,2 @@
-export { useToastStore } from "./useToastStore";
-export { useModeStore } from "./useModeStore";
+export { useToast } from "./useToast";
+export { useTheme } from "./useTheme";
