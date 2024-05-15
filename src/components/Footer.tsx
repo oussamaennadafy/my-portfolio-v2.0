@@ -16,7 +16,6 @@ import {
   EmailIcon,
 } from './SocialIcons'
 import { useInView } from 'react-intersection-observer'
-import { useTheme } from '@/store'
 
 const links = [
   { label: 'Home', href: '/' },
@@ -81,14 +80,13 @@ export function Footer({ newsletter = true }) {
     threshold: 0.3,
     triggerOnce: true,
   });
-
+  
   const [footerRef, footerInView] = useInView({
     root: null,
     rootMargin: "0px",
     threshold: 0.1,
     triggerOnce: true,
   });
-  const theme = useTheme((state) => state.theme);
 
   return (
     <section className={clsx(newsletter && 'pt-12 sm:pt-16 dark:border-t dark:border-gray-900')}>
@@ -97,20 +95,17 @@ export function Footer({ newsletter = true }) {
           <div className="absolute inset-x-0 bottom-0 h-1/2 bg-slate-900 dark:bg-gray-950"></div>
           <div ref={newsletterRef} className={`relative mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 transition-all duration-500 ${newsletterInView ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"}`}>
             <div className="relative overflow-hidden rounded-2xl bg-sky-700 dark:bg-sky-950 px-5 py-12 sm:px-16 lg:py-14">
-              {
-                theme === "light" ?
-                  <Image
-                    src={newsletterBg}
-                    alt=""
-                    className="dark:none absolute inset-0 h-full w-full object-cover object-right"
-                  /> : null
-              }
+              <Image
+                src={newsletterBg}
+                alt=""
+                className="dark:none absolute inset-0 h-full w-full object-cover object-right dark:brightness-75"
+              />
               <div className="relative flex w-full flex-col items-center lg:flex-row">
                 <div className="max-w-2xl text-center lg:pr-4 lg:text-left">
-                  <h3 className="font-display text-4xl font-semibold text-white sm:text-5xl">
+                  <h3 className="font-display text-4xl font-semibold text-white dark:text-gray-200 sm:text-5xl">
                     Subscribe to my newsletter
                   </h3>
-                  <p className="mx-auto mt-4 max-w-lg text-lg text-sky-50 lg:mx-0 lg:mt-6">
+                  <p className="mx-auto mt-4 max-w-lg text-lg text-sky-50 dark:text-gray-300 lg:mx-0 lg:mt-6">
                     Join 10,000+ freelancers and get creative site breakdowns,
                     design musings and tips every Monday.
                   </p>

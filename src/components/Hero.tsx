@@ -8,7 +8,7 @@ import { Container } from './Container'
 import { GitHubIcon, LinkedInIcon, EmailIcon } from './SocialIcons'
 import heroPortrait from '@/images/portrait-01.jpg'
 import heroBG from '@/images/home-hero-gradient.svg'
-import reactjs from '@/images/logos/icons/reactjs.png'
+import reactjs from '@/images/logos/next-js.svg'
 import tailwind from '@/images/logos/icons/tailwindcss.png'
 import nodejs from '@/images/logos/icons/nodejs.png'
 
@@ -17,18 +17,18 @@ type SocialLinkProps = {
   target?: string
   icon?: (props: any) => React.JSX.Element,
   styles?: string,
-}
+};
 
 function SocialLink({ icon: Icon, styles, ...props }: SocialLinkProps) {
   return (
     <Link
-      className="flex items-center justify-center duration-200 border rounded-full h-11 w-11 border-slate-200 bg-white dark:bg-slate-950 hover:bg-slate-50"
+      className="flex items-center justify-center duration-200 border rounded-full h-11 w-11 border-slate-200 bg-white dark:bg-slate-950 hover:bg-slate-50 dark:border-gray-600"
       href={props.href}
       {...props}
     >
       <Icon className={`w-4 h-4 transition fill-slate-600 group-hover:fill-slate-700 dark:fill-gray-200 ${styles}`} />
     </Link>
-  )
+  );
 };
 
 export function Hero() {
@@ -97,7 +97,7 @@ export function Hero() {
         <div className={`w-full max-w-lg transition-all duration-500 mx-auto lg:mr-0 ${!inView ? "lg:translate-x-96 lg:opacity-0" : ""}`}>
           <div className="relative aspect-h-5 aspect-w-4 rounded-2xl bg-slate-50">
             <Image
-              className="object-cover object-center w-full h-full rounded-2xl transition-all dark:brightness-90"
+              className="object-cover object-center w-full h-full rounded-2xl transition-all dark:brightness-90 ng-white dark:bg-gray-950"
               src={heroPortrait}
               alt=""
               sizes="(min-width: 552px) 32rem, calc(100vw - 2.5rem)"
@@ -128,7 +128,7 @@ export function Hero() {
                 </svg>
               </div>
               <div className="absolute -top-6 right-12 inline-flex h-12 w-max items-center justify-center gap-3.5 rounded-2xl bg-white/90 dark:bg-gray-300 px-8 text-sm font-semibold text-slate-700 shadow-lg shadow-sky-100/50 dark:shadow-sky-100/30 ring-1 ring-slate-900/5 backdrop-blur-md md:-left-28 md:top-14 lg:-top-6 lg:left-44 lg:px-10 2xl:-left-48 2xl:top-14">
-                <Image src={reactjs} alt="react js" className="w-5 h-auto" priority />3
+                <Image src={reactjs} alt="react js" className="w-5 h-auto" priority />1
                 years of experience
               </div>
               <div className="absolute left-12 top-full inline-flex h-12 w-max -translate-y-6 items-center justify-center gap-3.5 rounded-2xl bg-white/90 dark:bg-gray-300 px-8 text-sm font-semibold text-slate-700 shadow-lg shadow-sky-100/50 dark:shadow-sky-100/30 ring-1 ring-slate-900/5 backdrop-blur-md md:left-0 md:-translate-x-20 md:-translate-y-24 lg:-left-3 lg:-translate-y-24 lg:px-10 xl:-left-6 xl:-translate-x-28 xl:-translate-y-32">

@@ -13,7 +13,7 @@ import logo from '@/images/logo.png'
 import logoIcon from '@/images/logo-icon.png'
 import logoWhite from '@/images/logo-white.png'
 import logoIconWhite from '@/images/logo-icon-white.png'
-import { useTheme } from '@/store'
+import { useTheme, useToast } from '@/store'
 import { useShallow } from 'zustand/react/shallow'
 import DarkModeIcon from "@/images/dark-mode-icon.svg"
 import LightModeIcon from "@/images/light-mode-icon.svg"
@@ -42,7 +42,7 @@ const pages = [
 export function Header() {
   const pathname = usePathname();
   const { theme, toggleTheme } = useTheme(useShallow((state) => ({ toggleTheme: state.toggleTheme, theme: state.theme })));
-
+  const showToast = useToast(state => state.showToast)
   const handleModeSwitch = () => {
     toggleTheme();
   };
