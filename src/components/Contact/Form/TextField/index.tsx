@@ -16,7 +16,7 @@ type TextFieldProps = {
 }
 
 const inputClasses =
-'block w-full px-4 py-4 leading-4 transition-colors duration-200 ease-in-out border-0 shadow-sm rounded-xl bg-slate-50 dark:bg-gray-950 text-md text-slate-900 dark:text-gray-200 shadow-sky-100/50 dark:shadow-none ring-1 ring-inset ring-slate-200 dark:ring-gray-700 placeholder:text-slate-400 hover:bg-white focus:border-0 focus:bg-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-600/60'
+'block w-full px-4 py-4 leading-4 transition-colors duration-200 ease-in-out border-0 shadow-sm rounded-xl bg-slate-50 dark:bg-gray-950 text-md text-slate-900 dark:text-gray-200 shadow-sky-100/50 dark:shadow-none ring-1 ring-inset ring-slate-200 dark:ring-gray-700 placeholder:text-slate-400 dark:placeholder:text-slate-600 hover:bg-white focus:border-0 focus:bg-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-600/60';
 
 
 export default function TextField({
