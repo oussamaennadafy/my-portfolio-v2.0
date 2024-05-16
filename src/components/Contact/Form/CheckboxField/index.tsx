@@ -19,7 +19,7 @@ export default function CheckboxField({ label, name, checked, onChange }: Checkb
         />
       </div>
       <div className="ml-3 text-sm leading-6">
-        <label htmlFor={name} className="text-slate-700">
+        <label htmlFor={name} className="text-slate-700 dark:text-gray-400">
           {label}
         </label>
       </div>

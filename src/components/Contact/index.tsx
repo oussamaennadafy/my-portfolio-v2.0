@@ -90,7 +90,7 @@ export default function Contact() {
                     <p className="font-display text-lg text-slate-900 dark:text-gray-200">
                       Email me
                     </p>
-                    <p className="mt-1.5 text-base text-slate-600 sm:mt-2">
+                    <p className="mt-1.5 text-base text-slate-600 dark:text-gray-400 sm:mt-2">
                       I will usually email you back within a day
                     </p>
                     <Link
@@ -121,7 +121,7 @@ export default function Contact() {
                     <p className="font-display text-lg text-slate-900 dark:text-gray-200">
                       Call me
                     </p>
-                    <p className="mt-2 text-base text-slate-600">
+                    <p className="mt-2 text-base text-slate-600 dark:text-gray-400">
                       I&lsquo;m available weekdays from 9AM to 5PM
                     </p>
                     <Link
