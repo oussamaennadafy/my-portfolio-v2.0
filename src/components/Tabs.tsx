@@ -36,7 +36,7 @@ function Tab({ tabName, directory }: TabProps) {
           'inline-block rounded-full px-5 py-1.5 text-md font-medium transition',
           isActive
             ? 'bg-slate-50 text-sky-800 shadow-sm shadow-sky-100/50 ring-1 ring-slate-900/5'
-            : 'bg-white dark:bg-gray-950 text-slate-700 dark:text-gray-400 duration-200 ease-in-out ring-1 ring-white dark:ring-gray-600 hover:bg-slate-50/95 '
+            : 'bg-white dark:bg-gray-950 text-slate-700 dark:text-gray-400 duration-200 ease-in-out ring-1 ring-white dark:ring-gray-700 hover:bg-slate-50/95 '
         )}
       >
         {tabName}

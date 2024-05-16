@@ -26,7 +26,7 @@ export function BlogHero() {
         <Image
           src={workBG}
           alt=""
-          className="absolute inset-x-0 bottom-0 w-full h-full object-cover brightness-50"
+          className="absolute inset-x-0 bottom-0 w-full h-full object-cover dark:brightness-50"
         />
         <div className="relative flex flex-col items-center justify-center">
           <h1 className="text-center font-display text-5xl font-semibold text-slate-900 dark:text-gray-200 sm:text-6xl">
