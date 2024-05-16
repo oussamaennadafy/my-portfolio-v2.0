@@ -38,8 +38,8 @@ export default function BlogPost({ params }) {
       <main>
         <article>
           {/* Article Header */}
-          <header className="relative bg-slate-50 py-16 sm:pt-24 lg:pt-28">
-            <div className="absolute inset-x-0 bottom-0 h-1/4 bg-white" />
+          <header className="relative bg-slate-50 dark:bg-gray-950 py-16 sm:pt-24 lg:pt-28">
+            <div className="absolute inset-x-0 bottom-0 h-1/4 bg-white dark:bg-gray-950" />
             <div className="relative mx-auto max-w-6xl px-4 text-center sm:px-6 lg:px-8">
               <Link
                 href={`/blog/categories/${categorySlug}`}
@@ -48,13 +48,13 @@ export default function BlogPost({ params }) {
                 <CategoryIcon className="h-[18px] w-[18px] text-sky-700/90 transition duration-200 group-hover:text-sky-600 sm:h-5 sm:w-5" />
                 {post.category}
               </Link>
-              <h1 className="mt-6 text-center font-display text-4xl font-semibold leading-tight text-slate-900 sm:text-5xl sm:leading-tight">
+              <h1 className="mt-6 text-center font-display text-4xl font-semibold leading-tight text-slate-900 dark:text-gray-200 sm:text-5xl sm:leading-tight">
                 {post.title}
               </h1>
-              <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-slate-700">
+              <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-slate-700 dark:text-gray-400">
                 {post.description}
               </p>
-              <div className="mt-8 flex items-center justify-center gap-4 text-md text-slate-500">
+              <div className="mt-8 flex items-center justify-center gap-4 text-md text-slate-500 dark:text-gray-700">
                 <span className="flex items-center gap-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +62,7 @@ export default function BlogPost({ params }) {
                     viewBox="0 0 24 24"
                     strokeWidth="1.75"
                     stroke="currentColor"
-                    className="h-6 w-6 text-slate-400"
+                    className="h-6 w-6 text-slate-400 dark:text-gray-600"
                   >
                     <path
                       strokeLinecap="round"
@@ -81,7 +81,7 @@ export default function BlogPost({ params }) {
                     viewBox="0 0 24 24"
                     strokeWidth="1.75"
                     stroke="currentColor"
-                    className="h-6 w-6 text-slate-400"
+                    className="h-6 w-6 text-slate-400 dark:text-gray-600"
                   >
                     <path
                       strokeLinecap="round"
@@ -93,23 +93,23 @@ export default function BlogPost({ params }) {
                 </span>
               </div>
               <div className="mx-auto mt-16 w-full max-w-4xl">
-                <div className="aspect-h-9 aspect-w-16 relative block w-full overflow-hidden rounded-3xl shadow-lg shadow-sky-100/50 md:aspect-h-2 md:aspect-w-3">
+                <div className="aspect-h-9 aspect-w-16 relative block w-full overflow-hidden rounded-3xl shadow-lg shadow-sky-100/50 dark:shadow-none dark:brightness-75 md:aspect-h-2 md:aspect-w-3">
                   <Image
                     src={post.image}
                     alt={post.title}
                     fill={true}
-                    className="w-full rounded-3xl bg-slate-100 object-cover"
+                    className="w-full rounded-3xl bg-slate-100 dark:bg-gray-950 object-cover"
                     sizes="(min-width: 1024px) 56rem, calc(100vw - 2.5rem)"
                   />
-                  <div className="absolute inset-0 rounded-3xl ring-1 ring-inset ring-slate-900/10"></div>
+                  <div className="absolute inset-0 rounded-3xl ring-1 ring-inset ring-sky-100/10 dark:ring-gray-700"></div>
                 </div>
               </div>
             </div>
           </header>
 
           {/* Article Content */}
-          <div className="bg-white px-4 sm:px-6 lg:px-8">
-            <div className="prose prose-lg mx-auto max-w-2xl">
+          <div className="bg-white dark:bg-gray-950 px-4 sm:px-6 lg:px-8">
+            <div className="prose prose-lg mx-auto max-w-2xl dark:text-gray-400">
               <MdxContent code={post.body.code} />
             </div>
             <PostFooter />

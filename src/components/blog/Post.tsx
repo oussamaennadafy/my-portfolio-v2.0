@@ -7,6 +7,8 @@ import {
   BusinessIcon,
   ContentCreationIcon,
 } from '../CategoryIcons'
+import workBG from '@/images/featured-work-item-bg.svg'
+
 
 const iconOptions = {
   'Web Development': WebDevelopmentIcon,
@@ -20,7 +22,12 @@ export function Post({ post }) {
   const CategoryIcon = iconOptions[post.category]
 
   return (
-    <article className="flex flex-col items-start justify-between rounded-2xl bg-slate-50 dark:bg-slate-900 shadow-sm shadow-sky-100/50 dark:shadow-sky-100/10 ring-1 ring-slate-100 dark:ring-slate-900">
+    <article className="relative flex flex-col items-start justify-between rounded-2xl bg-slate-50 dark:bg-slate-950 shadow-sm shadow-sky-100/50 dark:shadow-sky-100/10 ring-1 ring-slate-100 dark:ring-gray-900 overflow-hidden">
+      <Image
+        src={workBG}
+        alt=""
+        className="absolute inset-x-0 bottom-0 w-full h-full object-cover opacity-0 dark:opacity-100 dark:brightness-90"
+      />
       <div className="w-full px-4 pt-4">
         <Link
           href={post.url}

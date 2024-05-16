@@ -4,7 +4,7 @@ import { Container } from '@/components/Container'
 
 export function CaseStudyGallery({ images }) {
   return (
-    <section className="py-16 overflow-hidden bg-slate-50 sm:py-24 lg:py-28 xl:py-32">
+    <section className="py-16 overflow-hidden bg-slate-50 dark:bg-gray-950 sm:py-24 lg:py-28 xl:py-32">
       <Container>
         <div className="grid max-w-lg gap-8 mx-auto sm:max-w-2xl sm:grid-cols-2 lg:mx-0 lg:max-w-none">
           {images.map((image, index) => (
@@ -16,7 +16,7 @@ export function CaseStudyGallery({ images }) {
                 src={image}
                 alt=""
                 fill
-                className="object-cover object-center w-full rounded-3xl bg-slate-100"
+                className="object-cover object-center w-full rounded-3xl bg-slate-100 dark:bg-gray-950 dark:brightness-75"
                 quality={90}
                 sizes="(min-width: 1280px) 37rem, (min-width: 1024px) calc(50vw - 3rem), (min-width: 640px) 20rem, calc(100vw - 2.5rem)"
               />

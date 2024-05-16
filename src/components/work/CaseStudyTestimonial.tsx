@@ -5,21 +5,21 @@ import testimonialBG from '@/images/testimonial-bg.jpg'
 
 export function CaseStudyTestimonial({ testimonial, clientName }) {
   return (
-    <section className="py-16 overflow-hidden bg-white sm:py-20 lg:py-28">
+    <section className="py-16 overflow-hidden bg-white dark:bg-gray-950 sm:py-20 lg:py-28">
       <Container>
         <div className="max-w-6xl mx-auto">
-          <h2 className="max-w-3xl mx-auto text-4xl font-semibold leading-tight text-center font-display text-slate-900 sm:text-5xl sm:leading-tight">
+          <h2 className="max-w-3xl mx-auto text-4xl font-semibold leading-tight text-center font-display text-slate-900 dark:text-gray-200 sm:text-5xl sm:leading-tight">
             Hear it straight from{' '}
             <span className="relative sm:whitespace-nowrap">
               <span className="relative text-sky-700">{clientName}</span>
             </span>{' '}
           </h2>
 
-          <div className="relative w-full max-w-4xl px-6 py-10 mx-auto overflow-hidden mt-14 rounded-3xl bg-slate-50 sm:mt-16 sm:p-12 md:px-16 md:py-14 lg:mt-20 lg:px-20 lg:py-16">
+          <div className="relative w-full max-w-4xl px-6 py-10 mx-auto overflow-hidden mt-14 rounded-3xl bg-slate-50 dark:bg-gray-950 sm:mt-16 sm:p-12 md:px-16 md:py-14 lg:mt-20 lg:px-20 lg:py-16 dark:shadow-md dark:shadow-gray-800/60">
             <Image
               src={testimonialBG}
               alt=""
-              className="absolute inset-0 object-cover object-left w-full h-full"
+              className="absolute inset-0 object-cover object-left w-full h-full dark:opacity-10"
             />
 
             <blockquote className="relative">
@@ -28,7 +28,7 @@ export function CaseStudyTestimonial({ testimonial, clientName }) {
                 width="48"
                 height="48"
                 viewBox="0 0 48 48"
-                className="absolute w-20 h-20 -left-3 -top-6 text-slate-500/10 sm:-left-8 sm:-top-10 sm:h-28 sm:w-28"
+                className="absolute w-20 h-20 -left-3 -top-6 text-slate-500/10 dark:text-gray-800 sm:-left-8 sm:-top-10 sm:h-28 sm:w-28"
               >
                 <g>
                   <path
@@ -37,15 +37,15 @@ export function CaseStudyTestimonial({ testimonial, clientName }) {
                   ></path>
                 </g>
               </svg>
-              <p className="relative text-lg font-medium leading-8 text-slate-900 sm:text-xl sm:leading-10">
+              <p className="relative text-lg font-medium leading-8 text-slate-900 dark:text-gray-400 sm:text-xl sm:leading-10">
                 &quot;{testimonial.text}&quot;
               </p>
             </blockquote>
             <div className="relative">
-              <hr className="w-full h-px my-6 bg-slate-200" />
+              <hr className="w-full h-px my-6 border-gray-200 dark:border-gray-600" />
               <div className="flex items-center justify-between">
                 <div className="flex items-center w-auto gap-5">
-                  <div className="relative overflow-hidden rounded-full shadow-sm h-14 w-14 ring-1 ring-slate-100/80">
+                  <div className="relative overflow-hidden rounded-full shadow-sm h-14 w-14 ring-1 ring-slate-100/80 dark:ring-gray-500">
                     <Image
                       src={testimonial.author.image}
                       alt={testimonial.author.name}
@@ -55,10 +55,10 @@ export function CaseStudyTestimonial({ testimonial, clientName }) {
                     />
                   </div>
                   <div>
-                    <p className="text-base font-medium font-display text-slate-900">
+                    <p className="text-base font-medium font-display text-slate-900 dark:text-gray-200">
                       {testimonial.author.name}
                     </p>
-                    <p className="mt-1 text-md text-slate-600">
+                    <p className="mt-1 text-md text-slate-600 dark:text-gray-400">
                       {testimonial.author.role}
                     </p>
                   </div>
@@ -70,7 +70,7 @@ export function CaseStudyTestimonial({ testimonial, clientName }) {
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
                       fill="currentColor"
-                      className="w-5 h-5 text-yellow-400"
+                      className="w-5 h-5 dark:text-yellow-400 text-yellow-300"
                     >
                       <path
                         fillRule="evenodd"

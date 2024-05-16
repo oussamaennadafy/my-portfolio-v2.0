@@ -28,7 +28,7 @@ export function FeaturedPosts() {
           </span>{' '}
           on design, business and indie-hacking
         </h2>
-
+      
         <BlogGrid posts={posts} featured={true} />
       </Container>
     </section>

@@ -14,13 +14,13 @@ import {
 function SocialIcon({ icon: Icon, ...props }) {
   return (
     <span
-      className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 duration-200 hover:bg-slate-50"
+      className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 dark:border-gray-700 duration-200 hover:bg-slate-50 dark:hover:bg-gray-800"
       {...props}
     >
-      <Icon className="h-3.5 w-3.5 fill-slate-500 transition group-hover:fill-slate-600" />
+      <Icon className="h-3.5 w-3.5 fill-slate-500 dark:fill-gray-400 transition group-hover:fill-slate-600" />
     </span>
   )
-}
+};
 
 export function PostFooter() {
   const IS_SERVER = typeof window === 'undefined'
@@ -28,13 +28,13 @@ export function PostFooter() {
 
   return (
     <footer className="mx-auto max-w-2xl">
-      <hr className="mt-14 h-px w-full pb-6 text-slate-300/75 sm:pb-4" />
+      <hr className="mt-14 h-px w-full pb-6 border-slate-300/75 dark:border-gray-700 sm:pb-4" />
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
         <p className="pl-0.5 text-lg font-semibold tracking-wide text-slate-900 sm:pl-0">
           Share article
         </p>
         <div className="mt-2.5 flex gap-3 sm:mt-0 sm:gap-4">
-          <button className="group flex h-10 items-center justify-center gap-3 rounded-full border border-slate-200 px-6 text-sm font-medium text-slate-600 duration-200 ease-in-out hover:bg-slate-50">
+          <button className="group flex h-10 items-center justify-center gap-3 rounded-full border border-slate-200 dark:border-gray-700 px-6 text-sm font-medium text-slate-600 duration-200 ease-in-out hover:bg-slate-50">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
