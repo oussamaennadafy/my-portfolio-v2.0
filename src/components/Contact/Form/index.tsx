@@ -112,7 +112,7 @@ export default function Form() {
           value={formData.message}
         />
         <fieldset>
-          <legend className="block text-md font-medium leading-6 text-slate-900">
+          <legend className="block text-md font-medium leading-6 text-slate-900 dark:text-gray-200">
             Expected services
           </legend>
           <div className="mt-4 space-y-3">
@@ -123,8 +123,8 @@ export default function Form() {
           </div>
         </fieldset>
       </div>
-      <div className="mt-10 border-t border-slate-200 pt-8">
-        <Button onClick={handleSubmit} className="w-full !text-base sm:!text-lg group">
+      <div className="mt-10 border-t border-slate-200 dark:border-gray-700 pt-8">
+        <Button variant='secondary' onClick={handleSubmit} className="w-full !text-base sm:!text-lg group">
           {
             loading ?
               <div role="status">

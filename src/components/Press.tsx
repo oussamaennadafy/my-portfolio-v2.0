@@ -209,13 +209,13 @@ const items = [
 
 export function Press() {
   return (
-    <section className="py-16 overflow-hidden bg-white sm:py-24 lg:pt-32">
+    <section className="py-16 overflow-hidden bg-white dark:bg-gray-950 sm:py-24 lg:pt-32">
       <Container>
         <div className="text-center">
-          <h2 className="text-4xl font-semibold font-display text-slate-900 sm:text-5xl">
+          <h2 className="text-4xl font-semibold font-display text-slate-900 dark:text-gray-200 sm:text-5xl">
             Press and Interviews
           </h2>
-          <p className="max-w-md mx-auto mt-6 text-lg leading-8 text-slate-700">
+          <p className="max-w-md mx-auto mt-6 text-lg leading-8 text-slate-700 dark:text-gray-300">
             Recognitions are like tattoos, you only show them off to people you
             want to impress.
           </p>
@@ -224,13 +224,13 @@ export function Press() {
           {items.map((item, index) => (
             <div key={`press-item-${index}`} className="py-px break-inside-avoid-column">
               <div 
-                className="shadow-sm rounded-xl bg-slate-50/75 p-7 shadow-sky-100/50 ring-1 ring-slate-900/5 lg:p-10"
+                className="shadow-sm rounded-xl bg-slate-50/75 dark:bg-gray-800/75 p-7 shadow-sky-100/50 dark:shadow-none ring-1 ring-slate-900/5 dark:ring-gray-700 lg:p-10"
               >
-                <div className="flex items-center gap-2 text-md text-slate-600">
-                  <item.icon className="w-4 h-4 text-slate-500" />
+                <div className="flex items-center gap-2 text-md text-slate- dark:text-gray-400">
+                  <item.icon className="w-4 h-4 text-slate-500 dark:text-gray-400" />
                   {item.category}
                 </div>
-                <h3 className="mt-6 text-lg font-medium font-display text-slate-900 lg:text-xl">
+                <h3 className="mt-6 text-lg font-medium font-display text-slate-900 dark:text-gray-300 lg:text-xl">
                   {item.title}
                 </h3>
                 <div className="space-y-1 mt-9">

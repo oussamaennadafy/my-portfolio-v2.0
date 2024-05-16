@@ -3,12 +3,11 @@ import Image from 'next/image'
 import { Button } from './Button'
 import { Container } from './Container'
 
-import adobe from '@/images/logos/icons/adobe.png'
-import dropbox from '@/images/logos/icons/dropbox.png'
-import gumroad from '@/images/logos/icons/gumroad.png'
 import ora from '@/images/logos/icons/ora.png'
 import virtualMinds from '@/images/logos/icons/virtual-minds.png'
 import youcode from '@/images/logos/icons/youcode.jpeg'
+
+import heroBG from '@/images/about-hero-gradient.svg'
 
 const companies = [
   {
@@ -32,7 +31,7 @@ const companies = [
       'Breve macchiato bar cortado dripper shot sweet robust qui. Et café whipped go white that espresso fair origin pot cream est cup.',
     logo: ora,
   },
-]
+];
 
 export function WorkExperience() {
   return (
@@ -40,7 +39,7 @@ export function WorkExperience() {
       <Container className="relative">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           <div>
-            <h2 className="font-display text-4xl font-semibold text-slate-900 dark:text-gray-200 sm:text-5xl">
+            <h2 className="font-display text-4xl font-semibold text-slate-900 dark:text-gray-300 sm:text-5xl">
               My career{' '}
               <span className="relative whitespace-nowrap">
                 <svg
@@ -61,11 +60,11 @@ export function WorkExperience() {
                   </defs>
                 </svg>
 
-                <span className="relative text-sky-700 dark:text-gray-100">journey</span>
+                <span className="relative text-sky-700 dark:text-gray-200">journey</span>
               </span>{' '}
               so far
             </h2>
-            <p className="mt-6 text-lg leading-relaxed text-slate-700">
+            <p className="mt-6 text-lg leading-relaxed text-slate-700 dark:text-gray-600">
               Panna french americano macchiato breve roast cinnamon cortado
               strong white pumpkin et single press aftertaste.
             </p>
@@ -93,16 +92,16 @@ export function WorkExperience() {
             {companies.map((company) => (
               <li
                 key={company.name}
-                className="relative [counter-increment:section] before:absolute before:-top-7 before:right-0 before:font-mono before:text-9xl before:font-black before:leading-none before:text-slate-50 before:content-[counter(section,decimal-leading-zero)]"
+                className="relative [counter-increment:section] before:absolute before:-top-7 before:right-0 before:font-mono before:text-9xl before:font-black before:leading-none before:text-slate-50 dark:before:text-gray-900/30 before:content-[counter(section,decimal-leading-zero)]"
               >
                 <div>
-                  <div className="mb-6 flex h-11 w-11 items-center justify-center rounded-lg bg-gradient-to-br from-sky-50 via-slate-50 to-sky-50 ring-1 ring-slate-900/5 overflow-hidden">
+                  <div className="mb-6 flex h-11 w-11 items-center justify-center rounded-lg bg-gradient-to-br from-sky-50 via-slate-50 to-sky-50 ring-1 ring-slate-900/5 overflow-hidden dark:brightness-90">
                     <Image src={company.logo} alt={company.name} />
                   </div>
-                  <p className="text-sm font-medium text-sky-700">
+                  <p className="text-sm font-medium text-sky-700 dark:text-gray-400">
                     {company.dates}
                   </p>
-                  <p className="mt-2 font-display text-lg font-semibold text-slate-900">
+                  <p className="mt-2 font-display text-lg font-semibold text-slate-900 dark:text-gray-300">
                     {company.name}
                   </p>
                 </div>

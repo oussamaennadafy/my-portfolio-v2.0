@@ -62,12 +62,12 @@ export function Stack() {
   });
 
   return (
-    <section className="py-16 overflow-hidden bg-white sm:py-24 lg:py-32">
+    <section className="py-16 overflow-hidden bg-white dark:bg-gradient-to-b dark:from-gray-950 dark:via-gray-950 dark:to-gray-900 sm:py-24 lg:py-32">
       <Container>
         <div className="grid grid-cols-1 gap-y-16 gap-x-8 sm:gap-y-20 lg:grid-cols-2">
           <div className="lg:order-2">
             <div className="max-w-2xl mx-auto lg:mx-0">
-              <h2 className="text-4xl font-semibold font-display text-slate-900 sm:text-5xl">
+              <h2 className="text-4xl font-semibold font-display text-slate-900 dark:text-gray-300 sm:text-5xl">
                 A simple stack that you can{' '}
                 <span className="relative whitespace-nowrap">
                   <svg
@@ -100,7 +100,7 @@ export function Stack() {
                   <span className="relative text-sky-700">always trust</span>
                 </span>
               </h2>
-              <p className="mt-6 text-lg leading-8 text-slate-700">
+              <p className="mt-6 text-lg leading-8 text-slate-700 dark:text-gray-400">
                 I&apos;ve been a software developer for over 13 years, and while my
                 stack has shifted over the years, I kept coming back to the same
                 technologies. The following is the stack that I&apos;ve developed &
@@ -110,10 +110,10 @@ export function Stack() {
                 {stack.map((tech) => (
                   <div
                     key={tech.name}
-                    className="px-4 py-6 overflow-hidden rounded-lg bg-slate-50 ring-1 ring-slate-900/5 sm:px-6"
+                    className="px-4 py-6 overflow-hidden rounded-lg bg-slate-50 dark:bg-gray-900 ring-1 ring-slate-900/5 sm:px-6"
                   >
                     <div className="flex gap-4 sm:gap-6">
-                      <div className="flex items-center justify-center bg-white rounded-lg shadow-sm h-9 w-9 shrink-0 shadow-sky-100/75 ring-1 ring-slate-100/95 sm:h-11 sm:w-11">
+                      <div className="flex items-center justify-center bg-white dark:bg-slate-700 rounded-lg shadow-sm h-9 w-9 shrink-0 shadow-sky-100/75 ring-1 ring-slate-100/95 dark:ring-gray-600 sm:h-11 sm:w-11">
                         <Image
                           src={tech.logo}
                           alt={tech.name}
@@ -122,10 +122,10 @@ export function Stack() {
                         />
                       </div>
                       <div className="overflow-hidden">
-                        <p className="text-base font-semibold font-display text-slate-900 sm:text-lg">
+                        <p className="text-base font-semibold font-display text-slate-900 dark:text-gray-300 sm:text-lg">
                           {tech.name}
                         </p>
-                        <p className="mt-1 truncate text-md text-slate-600 sm:text-base">
+                        <p className="mt-1 truncate text-md text-slate-600 dark:text-gray-500 sm:text-base">
                           {tech.experience}
                         </p>
                       </div>
@@ -141,13 +141,13 @@ export function Stack() {
                 <Image
                   src={image}
                   alt=""
-                  className="object-cover object-left w-full h-full rounded-2xl"
+                  className="object-cover object-left w-full h-full rounded-2xl dark:brightness-75"
                   sizes="(min-width: 640px) 32rem, calc(100vw - 2.5rem)"
                 />
               </div>
-              <div ref={ref} className={`absolute max-w-xs p-8 rounded-2xl bg-sky-700/95 backdrop-blur-sm transition-all duration-500 ${inView ? "opacity-100 xl:right-0 xl:bottom-10 xl:translate-x-1/4 -bottom-16 right-6" : "opacity-0 xl:translate-x-1/2 -bottom-24 xl:bottom-10"}`}>
-                <p className="text-2xl font-medium font-display text-sky-50">
-                  <span className="text-[28px] font-bold text-white">55+</span>{' '}
+              <div ref={ref} className={`absolute max-w-xs p-8 rounded-2xl bg-sky-700/95 dark:bg-sky-800/95 backdrop-blur-sm transition-all duration-500 ${inView ? "opacity-100 xl:right-0 xl:bottom-10 xl:translate-x-1/4 -bottom-16 right-6" : "opacity-0 xl:translate-x-1/2 -bottom-24 xl:bottom-10"}`}>
+                <p className="text-2xl font-medium font-display text-sky-50 dark:text-gray-300">
+                  <span className="text-[28px] font-bold text-white dark:text-gray-300">55+</span>{' '}
                   Clients have loved my work
                 </p>
                 <div className="mt-6 flex -space-x-1.5 overflow-hidden">

@@ -1,18 +1,25 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import clsx from 'clsx'
+import workBG from '@/images/featured-work-item-bg.svg'
+
 
 function CaseStudy({ caseStudy, index }) {
   return (
     <div
       key={caseStudy.title}
       className={clsx(
-        'flex flex-col gap-12 rounded-3xl bg-slate-50 px-7 py-12 sm:gap-14 sm:p-16 lg:px-10 lg:py-14 xl:gap-16 xl:p-16',
+        'relative flex flex-col gap-12 rounded-3xl overflow-hidden bg-slate-50 dark:bg-gray-950 ring-1 ring-white dark:ring-gray-700 px-7 py-12 sm:gap-14 sm:p-16 lg:px-10 lg:py-14 xl:gap-16 xl:p-16',
         index % 2 === 0
           ? 'rounded-tl-[64px]'
           : 'transform rounded-br-[64px] lg:translate-y-24 xl:translate-y-32'
       )}
     >
+      <Image
+        src={workBG}
+        alt=""
+        className="absolute inset-x-0 bottom-0 w-full h-full object-cover"
+      />
       <Link
         href={caseStudy.url}
         className={clsx(
@@ -24,7 +31,7 @@ function CaseStudy({ caseStudy, index }) {
           src={caseStudy.thumbnail}
           alt={caseStudy.title}
           fill
-          className="object-cover object-top w-full transition duration-300 rounded-xl bg-slate-100 group-hover:scale-105"
+          className="object-cover object-top w-full transition duration-300 rounded-xl bg-slate-100 group-hover:scale-105 dark:brightness-75"
           sizes="(min-width: 1280px) 27rem, (min-width: 1024px) calc(50vw - 8.25rem), (min-width: 640px) 28rem, calc(100vw - 6rem)"
         />
         <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-slate-900/5"></div>
@@ -35,10 +42,10 @@ function CaseStudy({ caseStudy, index }) {
           index % 2 === 0 ? 'order-2' : 'order-1'
         )}
       >
-        <h3 className="text-center font-display text-[28px] font-medium text-slate-900">
+        <h3 className="text-center font-display text-[28px] font-medium text-slate-900 dark:text-gray-300">
           {caseStudy.title}
         </h3>
-        <p className="mt-5 text-base leading-8 text-center text-slate-700">
+        <p className="mt-5 text-base leading-8 text-center text-slate-700 dark:text-gray-500">
           {caseStudy.description}
         </p>
         <Link

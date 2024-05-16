@@ -5,6 +5,8 @@ import Image from 'next/image'
 
 import bgGradient from '@/images/blog-hero-bg.png'
 import { useInView } from 'react-intersection-observer'
+import workBG from '@/images/featured-work-item-bg.svg'
+
 
 export function BlogHero() {
   const [ref, inView] = useInView({
@@ -14,15 +16,20 @@ export function BlogHero() {
     triggerOnce: true,
   })
   return (
-    <section ref={ref} className={`relative overflow-hidden bg-white lg:px-8 transition-all duration-500 -z-10 ${inView ? "lg:translate-y-0 lg:opacity-100" : "lg:-translate-y-1/2 lg:opacity-0"}`}>
-      <Container className="relative bg-slate-50 py-16 sm:py-24 lg:rounded-b-3xl lg:py-32">
-        <Image
+    <section ref={ref} className={`relative overflow-hidden bg-white dark:bg-gray-950 lg:px-8 transition-all duration-500 -z-10 ${inView ? "lg:translate-y-0 lg:opacity-100" : "lg:-translate-y-1/2 lg:opacity-0"}`}>
+      <Container className="relative bg-slate-50 dark:bg-slate-900/50 py-16 sm:py-24 lg:rounded-b-3xl lg:py-32">
+        {/* <Image
           src={bgGradient}
           alt=""
-          className="absolute inset-0 h-full w-full opacity-75"
+          className="absolute inset-0 h-full w-full opacity-50"
+        /> */}
+        <Image
+          src={workBG}
+          alt=""
+          className="absolute inset-x-0 bottom-0 w-full h-full object-cover brightness-50"
         />
         <div className="relative flex flex-col items-center justify-center">
-          <h1 className="text-center font-display text-5xl font-semibold text-slate-900 sm:text-6xl">
+          <h1 className="text-center font-display text-5xl font-semibold text-slate-900 dark:text-gray-200 sm:text-6xl">
             Welcome to{' '}
             <span className="relative whitespace-nowrap">
               <svg
@@ -38,7 +45,7 @@ export function BlogHero() {
               <span className="relative">my blog</span>
             </span>
           </h1>
-          <p className="mx-auto mt-6 max-w-xl text-center text-lg leading-8 text-slate-700">
+          <p className="mx-auto mt-6 max-w-xl text-center text-lg leading-8 text-slate-700 dark:text-gray-400">
             Join me on my journey as I share my insights and experiences on web
             development, business, and content creation.
           </p>
@@ -81,14 +88,14 @@ export function BlogHero() {
             </div>
             <input
               type="email"
-              className="h-12 w-full rounded-full border-0 bg-white/95 py-3.5 pl-5 pr-32 text-sm leading-5 text-slate-900 placeholder-slate-400 shadow-md shadow-sky-100/50 outline-none ring-1  ring-slate-900/5 duration-200 ease-in-out focus:border-0 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-900/20 sm:pl-6 sm:text-md"
+              className="h-12 w-full rounded-full border-0 bg-white/95 dark:bg-gray-950 py-3.5 pl-5 pr-32 text-sm leading-5 text-slate-900 placeholder-slate-400 shadow-md shadow-sky-100/50 dark:shadow-gray-800/50 outline-none ring-1  ring-slate-900/5 dark:ring-gray-700 duration-200 ease-in-out focus:border-0 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-900/20 sm:pl-6 sm:text-md"
               required
               placeholder="Enter your email"
               autoComplete="email"
             />
             <button
               type="submit"
-              className="absolute right-1 top-1 inline-flex h-10 items-center rounded-full bg-slate-900 px-5 text-sm font-semibold text-sky-50 outline-none transition duration-200 ease-in-out hover:bg-sky-800 focus:outline-none sm:px-7 sm:text-md"
+              className="absolute right-1 top-1 inline-flex h-10 items-center rounded-full bg-slate-900 px-5 text-sm font-semibold text-sky-50 dark:text-gray-200 outline-none transition duration-200 ease-in-out hover:bg-sky-800 focus:outline-none sm:px-7 sm:text-md"
             >
               Subscribe
             </button>

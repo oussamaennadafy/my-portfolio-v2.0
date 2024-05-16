@@ -15,7 +15,7 @@ export default function CheckboxField({ label, name, checked, onChange }: Checkb
           type="checkbox"
           checked={checked}
           onChange={onChange}
-          className="h-4 w-4 rounded border-slate-300/80 bg-slate-50 text-sky-600 shadow-sm shadow-sky-100/50 focus:outline-none focus:ring-transparent"
+          className="h-4 w-4 rounded border-slate-300/80 bg-slate-50 dark:bg-gray-950 text-sky-600 shadow-sm dark:shadow-none shadow-sky-100/50 focus:outline-none focus:ring-transparent"
         />
       </div>
       <div className="ml-3 text-sm leading-6">

@@ -6,6 +6,8 @@ import { useInView } from 'react-intersection-observer'
 import Form from '@/components/Contact/Form'
 import Link from 'next/link'
 import Image from 'next/image'
+import workBG from '@/images/featured-work-item-bg.svg'
+
 
 export default function Contact() {
   const [ref, inView] = useInView({
@@ -19,10 +21,10 @@ export default function Contact() {
     <section className="relative overflow-hidden">
       <div ref={ref} className="mx-auto max-w-screen-xl">
         <div className="lg:columns-2 lg:gap-8">
-          <div className={`relative bg-slate-50 px-5 py-16 sm:px-6 sm:py-24 lg:col-span-6 lg:rounded-br-[64px] lg:px-8 lg:pt-32 2xl:pl-0 transition-all duration-500 ${inView ? "lg:translate-x-0 lg:opacity-100" : "lg:-translate-x-1/2 lg:opacity-0"}`}>
-            <div className="absolute inset-y-0 -left-full hidden w-full bg-slate-50 lg:block" />
+          <div className={`relative bg-slate-50 dark:bg-gray-900/50 px-5 py-16 sm:px-6 sm:py-24 lg:col-span-6 lg:rounded-br-[64px] lg:px-8 lg:pt-32 2xl:pl-0 transition-all duration-500 ${inView ? "lg:translate-x-0 lg:opacity-100" : "lg:-translate-x-1/2 lg:opacity-0"}`}>
+            <div className="absolute inset-y-0 -left-full hidden w-full bg-slate-50 dark:bg-gray-900/50 lg:block" />
             <div className="relative mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-              <h2 className="font-display text-4xl font-semibold leading-tight text-slate-900 sm:text-5xl sm:leading-tight lg:text-[40px] lg:leading-tight xl:text-5xl xl:leading-tight">
+              <h2 className="font-display text-4xl font-semibold leading-tight text-slate-900 dark:text-gray-200 sm:text-5xl sm:leading-tight lg:text-[40px] lg:leading-tight xl:text-5xl xl:leading-tight">
                 How can I help you? Let’s get in touch
                 <span className="ml-4 sm:ml-6">👋</span>
               </h2>
@@ -85,7 +87,7 @@ export default function Contact() {
                     />
                   </svg>
                   <div className="sm:pt-0.5">
-                    <p className="font-display text-lg text-slate-900">
+                    <p className="font-display text-lg text-slate-900 dark:text-gray-200">
                       Email me
                     </p>
                     <p className="mt-1.5 text-base text-slate-600 sm:mt-2">
@@ -116,7 +118,7 @@ export default function Contact() {
                   </svg>
 
                   <div className="sm:pt-0.5">
-                    <p className="font-display text-lg text-slate-900">
+                    <p className="font-display text-lg text-slate-900 dark:text-gray-200">
                       Call me
                     </p>
                     <p className="mt-2 text-base text-slate-600">
@@ -136,10 +138,10 @@ export default function Contact() {
 
           <div className={`px-5 py-16 sm:px-6 sm:py-24 lg:col-span-6 lg:pl-0 lg:pr-8 lg:pt-32 xl:col-span-5 xl:col-start-8 2xl:pr-0 transition-all duration-500 ${inView ? "lg:translate-x-0 lg:opacity-100" : "lg:translate-x-1/2 lg:opacity-0"}`}>
             <div className="mx-auto max-w-lg lg:mr-0">
-              <h3 className="font-display text-3xl font-semibold text-slate-900">
+              <h3 className="font-display text-3xl font-semibold text-slate-900 dark:text-gray-200">
                 Fill our the form below to get started
               </h3>
-              <p className="mt-4 text-lg text-slate-600">
+              <p className="mt-4 text-lg text-slate-600 dark:text-gray-400">
                 Turkish cortado mazagran skinny macchiato espresso trade
                 medium aromatic.
               </p>

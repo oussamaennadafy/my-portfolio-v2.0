@@ -13,7 +13,7 @@ const variantStyles = {
 };
 
 type ButtonProps = {
-  variant?: 'primary' | "secondary" | "primaryOnDark",
+  variant?: 'primary' | "secondary",
   className?: string,
   href?: string,
   children?: React.ReactNode,

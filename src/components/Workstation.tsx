@@ -9,15 +9,15 @@ import workstationImage2 from '@/images/workstation-02.jpg'
 
 export function Workstation() {
   return (
-    <section className="py-16 overflow-hidden bg-slate-50 sm:py-24 lg:py-32">
+    <section className="py-16 overflow-hidden bg-slate-50 dark:bg-gray-950 sm:py-24 lg:py-32">
       <Container>
         <div className="grid grid-cols-1 gap-y-16 gap-x-8 sm:gap-y-20 lg:grid-cols-2 lg:items-center">
           <div>
             <div className="max-w-2xl mx-auto lg:mx-0">
-              <h2 className="text-4xl font-semibold font-display text-slate-900 sm:text-5xl">
+              <h2 className="text-4xl font-semibold font-display text-slate-900 dark:text-gray-300 sm:text-5xl">
                 A tour of my gadgets and workstation
               </h2>
-              <p className="max-w-lg mt-6 text-lg leading-8 text-slate-700">
+              <p className="max-w-lg mt-6 text-lg leading-8 text-slate-700 dark:text-gray-400">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Maiores impedit perferendis suscipit eaque, iste dolor
                 cupiditate blanditiis ratione. Instant extraction mazagran milk
@@ -25,7 +25,7 @@ export function Workstation() {
               </p>
               <Button
                 href="https://twitter.com/raguila8"
-                className="mt-10 gap-x-3.5 bg-slate-200/75"
+                className="mt-10 gap-x-3.5"
                 variant="secondary"
               >
                 <TwitterIcon className="w-4 h-4 text-sky-500" />

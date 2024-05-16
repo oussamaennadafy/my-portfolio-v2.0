@@ -22,10 +22,10 @@ export default async function BlogLayout({ children }) {
       <BlogHero />
       <section
         id="articles"
-        className="overflow-hidden bg-white py-16 sm:py-24 lg:py-28"
+        className="overflow-hidden bg-white dark:bg-gray-950 py-16 sm:py-24 lg:py-28"
       >
         <Container>
-          <h2 className="text-center font-display text-4xl font-semibold text-slate-900 sm:text-5xl">
+          <h2 className="text-center font-display text-4xl font-semibold text-slate-900 dark:text-gray-200 sm:text-5xl">
             Latest Articles
           </h2>
           <Tabs
