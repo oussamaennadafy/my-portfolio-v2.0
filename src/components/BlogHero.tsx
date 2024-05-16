@@ -3,7 +3,6 @@
 import { Container } from './Container'
 import Image from 'next/image'
 
-import bgGradient from '@/images/blog-hero-bg.png'
 import { useInView } from 'react-intersection-observer'
 import workBG from '@/images/featured-work-item-bg.svg'
 
@@ -18,11 +17,6 @@ export function BlogHero() {
   return (
     <section ref={ref} className={`relative overflow-hidden bg-white dark:bg-gray-950 lg:px-8 transition-all duration-500 -z-10 ${inView ? "lg:translate-y-0 lg:opacity-100" : "lg:-translate-y-1/2 lg:opacity-0"}`}>
       <Container className="relative bg-slate-50 dark:bg-slate-900/50 py-16 sm:py-24 lg:rounded-b-3xl lg:py-32">
-        {/* <Image
-          src={bgGradient}
-          alt=""
-          className="absolute inset-0 h-full w-full opacity-50"
-        /> */}
         <Image
           src={workBG}
           alt=""

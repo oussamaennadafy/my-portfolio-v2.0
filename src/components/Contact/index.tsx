@@ -33,7 +33,7 @@ export default function Contact() {
                 <Image
                   src={image}
                   alt=""
-                  className="h-full w-full rounded-3xl object-cover xl:left-16"
+                  className="h-full w-full rounded-3xl object-cover xl:left-16 dark:brightness-75"
                   sizes="(min-width: 1280px) 35rem, (min-width: 1024px) calc(50vw - 5rem), (min-width: 768px) 42rem, calc(100vw - 2.5rem)"
                 />
               </div>
