@@ -8,6 +8,7 @@ import virtualMinds from '@/images/logos/icons/virtual-minds.png'
 import youcode from '@/images/logos/icons/youcode.jpeg'
 
 import heroBG from '@/images/about-hero-gradient.svg'
+import Link from 'next/link'
 
 const companies = [
   {
@@ -68,24 +69,31 @@ export function WorkExperience() {
               Panna french americano macchiato breve roast cinnamon cortado
               strong white pumpkin et single press aftertaste.
             </p>
-            <Button href="#" className="mt-10" variant="secondary">
-              Download CV
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                className="h-[18px] w-[18px] text-slate-600"
+            <Button className="mt-10" variant="secondary">
+              <Link
+                className='flex justify-between items-center gap-3'
+                aria-label="Download resume"
+                download="oussama-ennadafy-resume.pdf"
+                href='assets/pdf/oussama-ennadafy-resume.pdf'
               >
-                <title>move-layer-down</title>
-                <g fill="currentColor">
-                  <path
-                    d="M12,1a1,1,0,0,0-1,1v8H7a1,1,0,0,0-.768,1.641l5,6a1,1,0,0,0,1.536,0l5-6A1,1,0,0,0,17,10H13V2A1,1,0,0,0,12,1Z"
-                    fill="currentColor"
-                  ></path>
-                  <path d="M22,21H2a1,1,0,0,0,0,2H22a1,1,0,0,0,0-2Z"></path>
-                </g>
-              </svg>
+                <p>Download CV</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  className="h-[18px] w-[18px] text-slate-600"
+                >
+                  <title>move-layer-down</title>
+                  <g fill="currentColor">
+                    <path
+                      d="M12,1a1,1,0,0,0-1,1v8H7a1,1,0,0,0-.768,1.641l5,6a1,1,0,0,0,1.536,0l5-6A1,1,0,0,0,17,10H13V2A1,1,0,0,0,12,1Z"
+                      fill="currentColor"
+                    ></path>
+                    <path d="M22,21H2a1,1,0,0,0,0,2H22a1,1,0,0,0,0-2Z"></path>
+                  </g>
+                </svg>
+              </Link>
             </Button>
           </div>
           <ol className="col-span-2 grid grid-cols-1 gap-x-8 gap-y-10 text-base leading-7 text-gray-600 [counter-reset:section] sm:grid-cols-2 lg:gap-y-16">

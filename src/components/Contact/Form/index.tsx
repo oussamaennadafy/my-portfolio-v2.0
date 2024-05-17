@@ -123,7 +123,7 @@ export default function Form() {
           </div>
         </fieldset>
       </div>
-      <div className="mt-10 border-t border-slate-200 dark:border-gray-800 pt-8">
+      <div className="mt-10 border-t border-slate-200 dark:border-gray-900 pt-8">
         <Button variant='secondary' onClick={handleSubmit} className="w-full !text-base sm:!text-lg group dark:hover:bg-gray-800 dark:hover:text-gray-100">
           {
             loading ?
