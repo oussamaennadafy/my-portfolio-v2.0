@@ -10,5 +10,12 @@ const mdxComponents = {
 export function MdxContent({ code }) {
   const Component = useMDXComponent(code)
 
-  return <Component components={{ ...mdxComponents }} />
+  return <Component
+    components={{
+      h1: ({ children, className }) => (
+        <h2 className={`test ${className}`}>{children}</h2>
+      ),
+      // ...mdxComponents
+    }}
+  />
 }

@@ -285,7 +285,7 @@ export function Testimonials() {
             </div>
           </Swiper>
         </Container>
-        <div className="absolute inset-y-0 right-0 z-10 hidden bg-gradient-to-r from-slate-50/0 to-slate-50/80 dark:from-slate-900/0 dark:to-slate-950/90 2xl:block 2xl:w-64"></div>
+        <div className="absolute inset-y-0 right-0 z-10 hidden bg-gradient-to-r from-slate-50/0 to-slate-50/80 dark:from-gray-950/0 dark:to-gray-950 2xl:block 2xl:w-64"></div>
       </div>
       <Container className="mt-16 sm:mt-20">
         <div className="max-w-xl mx-auto lg:mx-0 lg:max-w-none">

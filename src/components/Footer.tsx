@@ -73,7 +73,7 @@ function SocialLink({ icon: Icon, label, ...props }) {
   )
 }
 
-export function Footer({ newsletter = true }) {
+export function Footer({ newsletter = true, borderTop = true }) {
   const [newsletterRef, newsletterInView] = useInView({
     root: null,
     rootMargin: "0px",
@@ -89,7 +89,7 @@ export function Footer({ newsletter = true }) {
   });
 
   return (
-    <section className={clsx(newsletter && 'pt-12 sm:pt-16 dark:border-t dark:border-gray-900')}>
+    <section className={clsx(newsletter && 'pt-12 sm:pt-16', borderTop && 'dark:border-t dark:border-gray-900')}>
       {newsletter && (
         <div className="relative">
           <div className="absolute inset-x-0 bottom-0 h-1/2 bg-slate-900 dark:bg-gray-950"></div>
