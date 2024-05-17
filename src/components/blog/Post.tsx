@@ -26,7 +26,7 @@ export function Post({ post }) {
       <Image
         src={workBG}
         alt=""
-        className="absolute inset-x-0 bottom-0 w-full h-full object-cover opacity-0 dark:opacity-100 dark:brightness-90"
+        className="absolute inset-x-0 bottom-0 w-full h-full object-cover opacity-0 dark:opacity-100 dark:brightness-75"
       />
       <div className="w-full px-4 pt-4">
         <Link

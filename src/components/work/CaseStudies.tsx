@@ -18,7 +18,7 @@ function CaseStudy({ caseStudy, index }) {
       <Image
         src={workBG}
         alt=""
-        className="absolute inset-x-0 bottom-0 w-full h-full object-cover"
+        className="absolute inset-x-0 bottom-0 w-full h-full object-cover z-0"
       />
       <Link
         href={caseStudy.url}
@@ -50,14 +50,14 @@ function CaseStudy({ caseStudy, index }) {
         </p>
         <Link
           href={caseStudy.url}
-          className="inline-flex items-center justify-center gap-2 py-3 mt-12 font-medium transition duration-300 bg-white rounded-full shadow-sm group px-9 text-md text-sky-900 shadow-sky-100/50 ring-1 ring-slate-100/90 hover:bg-white/60 hover:text-sky-700 hover:shadow-md hover:shadow-sky-100"
+          className="inline-flex items-center justify-center gap-2 py-3 mt-12 font-medium transition duration-300 bg-white dark:bg-gray-900/20 rounded-full shadow-sm dark:shadow-none group px-9 text-md text-sky-900 dark:text-gray-300 shadow-sky-100/50 ring-1 ring-slate-100/90 dark:ring-gray-700 hover:bg-white/60 hover:text-sky-700 hover:shadow-md hover:shadow-sky-100 z-10 dark:hover:ring-gray-600 dark:hover:bg-gray-800/60 dark:hover:text-gray-50"
         >
           View Case study
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor"
-            className="w-5 h-5 duration-300 ease-in-out text-sky-800 group-hover:text-sky-700"
+            className="w-5 h-5 duration-300 ease-in-out text-sky-800 dark:text-gray-300 group-hover:text-sky-700 dark:group-hover:text-gray-300"
           >
             <path
               fillRule="evenodd"

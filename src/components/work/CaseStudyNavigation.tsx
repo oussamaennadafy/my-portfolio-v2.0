@@ -27,7 +27,7 @@ export function CaseStudyNavigation({ caseStudySlug }) {
   const nextCaseStudy = next(caseStudySlug)
 
   return (
-    <section className="py-8 border-t border-slate-200 dark:border-gray-700">
+    <section className="py-8 border-t border-slate-200 dark:border-gray-900">
       <Container>
         <div className="flex items-center justify-between">
           <Link href={prevCaseStudy.url} className="group space-y-1.5">

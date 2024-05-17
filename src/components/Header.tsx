@@ -183,7 +183,7 @@ export function Header() {
   }
 
   return (
-    <header className="h-20 sm:h-24 border-b border-slate-200/80 dark:border-gray-800 bg-white dark:bg-gray-950">
+    <header className="h-20 sm:h-24 border-b border-slate-200/80 dark:border-gray-900 bg-white dark:bg-gray-950">
       <Container className="flex h-full w-full items-center">
         <nav className="relative z-40 flex w-full items-center justify-between gap-4">
           <div className="flex shrink-0 items-center">
@@ -272,7 +272,7 @@ export function Header() {
                     </svg>
                   </Menu.Button>
 
-                  <Menu.Items className="absolute right-0 z-20 mt-3 w-52 space-y-1 rounded-lg bg-white p-2.5 outline-none drop-shadow filter focus:outline-none">
+                  <Menu.Items className="absolute right-0 z-20 mt-3 w-52 space-y-1 rounded-lg bg-white dark:bg-gray-900 p-2.5 outline-none drop-shadow filter focus:outline-none">
                     {pages.map((subLink, i) => (
                       <Menu.Item key={`${subLink.label}-dropdown-desktop`}>
                         <Link
@@ -280,8 +280,8 @@ export function Header() {
                           className={clsx(
                             'block px-5 py-3.5 font-medium',
                             pathname == subLink.href
-                              ? 'bg-slate-100/60 text-slate-900 dark:text-slate-500'
-                              : 'rounded-md text-slate-700 transition duration-300 ease-in-out hover:bg-slate-50 hover:text-slate-900 dark:text-slate-200'
+                              ? 'bg-slate-100/60 text-slate-900 dark:text-gray-200 dark:bg-gray-800 rounded-md'
+                              : 'rounded-md text-slate-700 transition duration-300 ease-in-out dark:bg-gray-900 hover:bg-slate-50 dark:hover:bg-gray-900 hover:text-slate-900 dark:text-slate-200'
                           )}
                         >
                           {subLink.label}

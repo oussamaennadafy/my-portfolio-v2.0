@@ -5,6 +5,7 @@ import {
   FacebookIcon,
   TwitterIcon,
 } from '@/components/SocialIcons'
+import { useToast } from '@/store'
 import {
   FacebookShareButton,
   TwitterShareButton,
@@ -24,23 +25,36 @@ function SocialIcon({ icon: Icon, ...props }) {
 
 export function PostFooter() {
   const IS_SERVER = typeof window === 'undefined'
-  const url = IS_SERVER ? '' : window.location.href
+  const url = IS_SERVER ? '' : window.location.href;
+  const showToast = useToast(state => state.showToast)
 
+  const handleShare = async () => {
+    if(!navigator.clipboard) {
+      return;
+    }
+    try {
+      await navigator.clipboard.writeText(url);
+      showToast("success", "link copied successfully!")
+    } catch (error) {
+      showToast("error", error.message)
+    }
+  }
+  
   return (
     <footer className="mx-auto max-w-2xl">
       <hr className="mt-14 h-px w-full pb-6 border-slate-300/75 dark:border-gray-700 sm:pb-4" />
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-        <p className="pl-0.5 text-lg font-semibold tracking-wide text-slate-900 sm:pl-0">
+        <p className="pl-0.5 text-lg font-semibold tracking-wide text-slate-900 dark:text-gray-200 sm:pl-0">
           Share article
         </p>
         <div className="mt-2.5 flex gap-3 sm:mt-0 sm:gap-4">
-          <button className="group flex h-10 items-center justify-center gap-3 rounded-full border border-slate-200 dark:border-gray-700 px-6 text-sm font-medium text-slate-600 duration-200 ease-in-out hover:bg-slate-50">
+          <button onClick={handleShare} className="group flex h-10 items-center justify-center gap-3 rounded-full border border-slate-200 dark:border-gray-700 px-6 text-sm font-medium text-slate-600 dark:text-gray-300 duration-200 ease-in-out hover:bg-slate-50 dark:hover:bg-gray-900">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"
               viewBox="0 0 16 16"
-              className="h-3.5 w-3.5 text-slate-500 transition duration-200 ease-in-out group-hover:text-slate-600"
+              className="h-3.5 w-3.5 text-slate-500 dark:text-gray-300 transition duration-200 ease-in-out group-hover:text-slate-600 dark:group-hover:text-slate-300"
             >
               <g
                 strokeWidth="1.25"
