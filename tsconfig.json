@@ -34,7 +34,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".contentlayer/generated"
-, "public/assets/scripts/syncTheme.js"  ],
+, "public/assets/scripts/syncTheme.js" ],
   "exclude": [
     "node_modules"
   ]

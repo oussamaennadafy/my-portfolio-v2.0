@@ -18,7 +18,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<DefaultRe
       consulting,
       other,
     } }: contactFormDataType = await request.json();
-
+    
   const transport = nodemailer.createTransport({
     service: 'gmail',
     /* 

@@ -37,12 +37,12 @@ export function Hero() {
     rootMargin: "0px",
     threshold: 0,
     triggerOnce: true,
-  })
+  });
 
   return (
     <section ref={ref} className="relative py-20 overflow-hidden lg:py-24 dark:bg-gray-950">
-      <Image src={heroBG} alt="" className="absolute inset-x-0 w-auto top-56 lg:inset-y-0" />
       
+      <Image quality={3} src={heroBG} alt="" className="absolute inset-x-0 w-auto top-56 lg:inset-y-0" />
       <Container className="relative z-10 grid items-center gap-16 lg:grid-cols-2 lg:gap-8">
         <div className={`flex flex-col items-center max-w-2xl mx-auto transition-all duration-500 lg:items-start ${!inView ? "lg:-translate-x-1/2 lg:opacity-0" : ""}`}>
           <h1 className="text-5xl font-semibold text-center font-display text-slate-900 sm:text-6xl lg:text-left dark:text-gray-300">
@@ -102,7 +102,9 @@ export function Hero() {
               alt=""
               sizes="(min-width: 552px) 32rem, calc(100vw - 2.5rem)"
               fill
-              priority
+              priority={true}
+              quality={100}
+              placeholder='blur'
             />
             <div>
               <div className="absolute hidden w-max md:left-full md:top-16 md:block lg:-left-28 lg:-top-8 2xl:left-full 2xl:top-16">

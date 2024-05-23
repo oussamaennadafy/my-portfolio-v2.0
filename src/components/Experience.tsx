@@ -288,7 +288,7 @@ export function Experience() {
                 sizes="(min-width: 1280px) 45rem, (min-width: 1024px) calc(66.67vw - 4rem), (min-width: 640px) 36rem, calc(100vw - 2.5rem)"
               />
               <div>
-                <div className="absolute w-32 h-32 -translate-x-1/2 -translate-y-1/2 rounded-full left-1/2 top-1/2 bg-white/50 backdrop-blur-sm lg:h-44 lg:w-44">
+                <div className="absolute w-32 h-32 -translate-x-1/2 -translate-y-1/2 rounded-full left-1/2 top-1/2 bg-white/50 dark:bg-gray-800/30 backdrop-blur-sm lg:h-44 lg:w-44">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="145"

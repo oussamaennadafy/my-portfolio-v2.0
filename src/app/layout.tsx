@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
           inter.variable,
           lexend.variable,
           gochiHand.variable,
-          "bg-white dark:bg-gray-950"
+          "bg-white dark:bg-gray-950 antialiased"
         )}
       >
         <ToastSlot />

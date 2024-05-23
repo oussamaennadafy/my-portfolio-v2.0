@@ -5,7 +5,8 @@ import Image from 'next/image'
 import { Container } from './Container'
 
 import image from '@/images/portrait-02.jpg'
-import rails from '@//images/logos/icons/rails.png'
+// import rails from '@//images/logos/icons/rails.png'
+import nextjs from '@/images/logos/next-js.svg'
 import javascript from '@//images/logos/icons/javascript.png'
 import python from '@//images/logos/icons/python.png'
 import postgresql from '@//images/logos/icons/postgresql.png'
@@ -20,9 +21,9 @@ import { useInView } from 'react-intersection-observer'
 
 const stack = [
   {
-    name: 'Rails',
-    experience: '7+ years of experience',
-    logo: rails,
+    name: 'Next js',
+    experience: '1+ years of experience',
+    logo: nextjs,
   },
   {
     name: 'Javascript',
