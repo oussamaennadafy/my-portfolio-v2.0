@@ -1,10 +1,10 @@
 import React from 'react';
-import { HiX } from 'react-icons/hi'
+import { HiXCircle } from 'react-icons/hi2'
 import { ToastWrapper } from '.';
 
 function Error({ message }: { message: string }) {
   return (
-    <ToastWrapper Icon={HiX} background="bg-red-100" text="text-red-500" message={message} />
+    <ToastWrapper Icon={HiXCircle} background="bg-red-100" text="text-red-500" message={message} />
   )
 }
 

@@ -29,7 +29,7 @@ export default function Form() {
   const handleSubmit: TextFieldOnChangeType = async (e) => {
     // prevent default form behavior
     e.preventDefault();
-
+    
     // start loading
     setLoading(true);
     
@@ -42,7 +42,7 @@ export default function Form() {
       }
 
       // show success message
-      showToast("success", "email has been sent!");
+      showToast("success", "email has been sent successfully!");
 
       // clear form
       setFormData(formInitialState);

@@ -1,3 +1,5 @@
+"use client"
+
 import { Header } from '@/components/Header';
 import clsx from 'clsx';
 import { Inter, Lexend, Gochi_Hand } from 'next/font/google';
@@ -5,6 +7,8 @@ import '@/styles/globals.css';
 import { ToastSlot } from '@/components/common/toasts';
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
+import { useTheme } from '@/store';
+import { useEffect } from 'react';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -25,17 +29,25 @@ const gochiHand = Gochi_Hand({
   weight: '400',
 });
 
-export const metadata = {
-  title: {
-    template: '%s - oussama ennadafy',
-    default:
-      'oussama - Developer, freelancer, and general technology enthusiast',
-  },
-};
+// export const metadata = {
+//   title: {
+//     template: '%s - oussama ennadafy',
+//     default:
+//       'oussama - Developer, freelancer, and general technology enthusiast',
+//   },
+// };
 
 export default function RootLayout({ children }) {
+  const theme = useTheme(state => state.theme);
+  useEffect(() => {
+
+    // const hours = new Date().getHours()
+    // const isDayTime = hours > 6 && hours < 20;
+    // console.log(isDayTime);
+
+  }, [])
   return (
-    <html className='dark' lang="en">
+    <html className={`${theme}`} lang="en">
       <body
         className={clsx(
           'font-sans',
