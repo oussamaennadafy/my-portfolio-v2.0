@@ -2,7 +2,6 @@ import { NextResponse, NextRequest } from 'next/server'
 import contactFormSchema, { contactFormSchemaType } from './services/schemas/contactFormSchema';
 import formatZodErrorMessage from './services/utils/formatZodErrorMessage';
 import { SafeParseReturnType } from 'zod';
-import Cookies from 'js-cookie';
 
 // This function can be marked `async` if using `await` inside
 export async function middleware(request: NextRequest) {
