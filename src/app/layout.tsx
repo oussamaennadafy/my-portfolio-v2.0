@@ -9,6 +9,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 import { useTheme } from '@/store';
 import { useEffect } from 'react';
+import NewBanner from '@/components/NewBanner';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -60,6 +61,7 @@ export default function RootLayout({ children }) {
         <ToastSlot />
         <SpeedInsights />
         <Analytics />
+        <NewBanner /> 
         <Header />
         {children}
       </body>

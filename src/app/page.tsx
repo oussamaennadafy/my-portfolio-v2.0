@@ -5,6 +5,7 @@ import { FeaturedWork } from '@/components/work/FeaturedWork'
 import { Testimonials } from '@/components/Testimonials'
 import { FeaturedPosts } from '@/components/blog/FeaturedPosts'
 import { Footer } from '@/components/Footer'
+import NewBanner from '@/components/NewBanner'
 
 export const metadata = {
   description:
