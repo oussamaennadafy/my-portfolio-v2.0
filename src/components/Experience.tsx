@@ -6,6 +6,7 @@ import { Container } from './Container'
 import image from '@/images/experience-image.jpg'
 import { useInView } from 'react-intersection-observer'
 import Link from 'next/link'
+import React from "react";
 
 export function Experience() {
   const [ref, inView] = useInView({
