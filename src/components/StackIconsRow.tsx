@@ -1,3 +1,4 @@
+import React from "react";
 import Image from 'next/image'
 import clsx from 'clsx'
 
@@ -119,14 +120,19 @@ export function StackIconsRow() {
           The tools I use on my day-to-day
         </span>
       </div>
-      {icons.map((item, index) => (
-        <StackIcon
-          key={`stack-${index}`}
-          icon={item.icon}
-          alt={item.name}
-          index={index}
-        />
-      ))}
+
+      <div className='relative flex justify-center pt-16 bg-white dark:bg-gray-950 gap-x-12 overflow-x-hidden sm:gap-x-16 lg:pt-12 lg:pb-14 max-w-screen-xl'>
+        <div className='relative flex justify-center pt-16 bg-white dark:bg-gray-950 gap-x-12 overflow-x-hidden sm:gap-x-16 lg:pt-12 lg:pb-14 max-w-screen-xl'>
+          {icons.map((item, index) => (
+            <StackIcon
+              key={`stack-${index}`}
+              icon={item.icon}
+              alt={item.name}
+              index={index}
+            />
+          ))}
+        </div>
+      </div>
     </section>
   )
 }

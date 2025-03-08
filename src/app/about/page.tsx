@@ -5,6 +5,7 @@ import { Stack } from '@/components/Stack'
 import { Awards } from '@/components/Awards'
 import { Press } from '@/components/Press'
 import { Footer } from '@/components/Footer'
+import React from "react";
 
 export const metadata = {
   title: 'About',

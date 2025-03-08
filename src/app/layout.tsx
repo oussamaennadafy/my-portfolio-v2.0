@@ -10,6 +10,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { useTheme } from '@/store';
 import { useEffect } from 'react';
 import NewBanner from '@/components/NewBanner';
+import React from "react";
 
 const inter = Inter({
   subsets: ['latin'],

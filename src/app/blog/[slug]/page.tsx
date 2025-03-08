@@ -12,6 +12,7 @@ import {
   BusinessIcon,
   ContentCreationIcon,
 } from '@/components/CategoryIcons'
+import React from "react";
 
 const iconOptions = {
   'Web Development': WebDevelopmentIcon,

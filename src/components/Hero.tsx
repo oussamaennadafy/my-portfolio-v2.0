@@ -6,11 +6,12 @@ import { useInView } from "react-intersection-observer"
 import { Button } from './Button'
 import { Container } from './Container'
 import { GitHubIcon, LinkedInIcon, EmailIcon } from './SocialIcons'
-import heroPortrait from '@/images/portrait-01.jpg'
+import heroPortrait from '@/images/portrait-02.jpg'
 import heroBG from '@/images/home-hero-gradient.svg'
 import reactjs from '@/images/logos/next-js.svg'
 import tailwind from '@/images/logos/icons/tailwindcss.png'
 import nodejs from '@/images/logos/icons/nodejs.png'
+import React from "react";
 
 type SocialLinkProps = {
   href: string,
@@ -41,7 +42,7 @@ export function Hero() {
 
   return (
     <section ref={ref} className="relative py-20 overflow-hidden lg:py-24 dark:bg-gray-950">
-      
+
       <Image quality={3} src={heroBG} alt="" className="absolute inset-x-0 w-auto top-56 lg:inset-y-0" />
       <Container className="relative z-10 grid items-center gap-16 lg:grid-cols-2 lg:gap-8">
         <div className={`flex flex-col items-center max-w-2xl mx-auto transition-all duration-500 lg:items-start ${!inView ? "lg:-translate-x-1/2 lg:opacity-0" : ""}`}>
