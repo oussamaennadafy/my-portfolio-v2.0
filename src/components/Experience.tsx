@@ -22,7 +22,7 @@ export function Experience() {
         <div className="grid items-center max-w-xl gap-6 mx-auto lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:gap-16">
           <div>
             <h2 className="text-4xl font-semibold font-display text-slate-900 dark:text-gray-300 sm:text-5xl">
-              I&apos;m your{' '}
+              let&apos;s{' '}
               <span className="relative whitespace-nowrap">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -35,16 +35,18 @@ export function Experience() {
                   <path d="M247.564 18.5808C241.772 13.3568 232.473 12.7526 225.225 11.4427C217.124 9.97398 208.996 8.57034 200.846 7.46096C186.542 5.51305 172.169 4.08857 157.79 3.01565C126.033 0.645858 94.0929 0.0338786 62.3387 2.36982C42.1785 3.85419 22.008 5.90888 2.32917 10.8464C-0.0155171 11.4349 0.207047 14.6719 2.6889 14.7084C22.0261 14.9896 41.3866 12.6406 60.7109 11.8568C79.9471 11.0808 99.2274 10.6719 118.484 10.9558C142.604 11.3125 166.719 12.8334 190.722 15.5156C199.956 16.5469 209.195 17.6016 218.411 18.8255C227.864 20.0808 237.259 22 246.767 20.7422C247.709 20.6198 248.426 19.3568 247.564 18.5808Z" />
                 </svg>
 
-                <span className="relative text-sky-700 dark:text-white">all-in-one</span>
+                <span className="relative text-sky-700 dark:text-white">
+                  build together
+                </span>
               </span>{' '}
-              project solution
+              {/* project solution */}
+              something great
             </h2>
           </div>
           <div>
             <p className="text-lg leading-8 text-slate-700 dark:text-gray-200">
-              Experience the advantage of an all-inclusive project solution,
-              where excellence, speed, and responsiveness converge to ensure the
-              highest quality outcome.
+              Experience the advantage of a complete project solution, where quality,
+              speed, and innovation come together to deliver exceptional results.
             </p>
           </div>
         </div>
@@ -60,126 +62,7 @@ export function Experience() {
                   <div className="relative flex space-x-7">
                     <div>
                       <span className="flex items-center justify-center w-20 h-20 rounded-full shadow-lg dark:shadow-gray-800/10 bg-slate-900 ring-1 ring-gray-700/30">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          className="w-6 h-6 text-sky-50"
-                        >
-                          <g clipPath="url(#clip0_112_3)">
-                            <path
-                              d="M3.5 19.5V23.5H21.5V19.5"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                            <path
-                              d="M14.5 12.5V5.5L17.5 4.5V1.5H7.5V4.5L10.5 5.5V12.5L2.868 15.044C2.051 15.316 1.5 16.081 1.5 16.942V19.5H23.5V16.942C23.5 16.081 22.949 15.317 22.132 15.045L14.5 12.5Z"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </g>
-                          <defs>
-                            <clipPath id="clip0_112_3">
-                              <rect width="24" height="24" fill="white" />
-                            </clipPath>
-                          </defs>
-                        </svg>
-                      </span>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-medium font-display text-slate-900 dark:text-gray-100">
-                        Excellence
-                      </h3>
-                      <p className="mt-2.5 text-base text-slate-700 dark:text-gray-400">
-                        I take pride in doing things well. All client work is
-                        done with the best quality possible.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div className="relative pb-24 lg:pb-20">
-                  <span
-                    className="absolute -ml-px border border-dashed bottom-4 left-10 top-24 border-slate-300 dark:border-gray-500"
-                    aria-hidden="true"
-                  ></span>
-                  <div className="relative flex space-x-7">
-                    <div>
-                      <span className="flex items-center justify-center w-20 h-20 rounded-full shadow-lg dark:shadow-gray-800/10 bg-slate-900 ring-1 ring-gray-700/30">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          className="w-6 h-6 text-sky-50"
-                        >
-                          <g clipPath="url(#clip0_112_53)">
-                            <path
-                              d="M3.5 1.5H21.5"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                            <path
-                              d="M3.5 23.5H21.5"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                            <path
-                              d="M8.5 20.5V19.711C8.50005 19.5142 8.55814 19.3219 8.667 19.158L11.667 14.658C11.7583 14.521 11.882 14.4087 12.0272 14.3311C12.1723 14.2534 12.3344 14.2128 12.499 14.2128C12.6636 14.2128 12.8257 14.2534 12.9708 14.3311C13.116 14.4087 13.2397 14.521 13.331 14.658L16.331 19.158C16.4406 19.3223 16.499 19.5155 16.499 19.713V20.5H8.5Z"
-                              fill="currentColor"
-                            />
-                            <path
-                              d="M5.5 23.5V19.711C5.50002 18.9212 5.73384 18.1491 6.172 17.492L9.5 12.5L6.172 7.508C5.73384 6.8509 5.50002 6.07879 5.5 5.289V1.5"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                            <path
-                              d="M19.5 1.5V5.289C19.5 6.07879 19.2662 6.8509 18.828 7.508L15.5 12.5L18.828 17.492C19.2662 18.1491 19.5 18.9212 19.5 19.711V23.5"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </g>
-                          <defs>
-                            <clipPath id="clip0_112_53">
-                              <rect width="24" height="24" fill="white" />
-                            </clipPath>
-                          </defs>
-                        </svg>
-                      </span>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-medium font-display text-slate-900 dark:text-gray-100">
-                        Speed
-                      </h3>
-                      <p className="mt-2.5 text-base text-slate-700 dark:text-gray-400">
-                        I like to work hard and fast. I know how important
-                        deadlines are to my clients.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div className="relative">
-                  <div className="relative flex space-x-7">
-                    <div>
-                      <span className="flex items-center justify-center w-20 h-20 rounded-full shadow-lg dark:shadow-gray-800/10 bg-slate-900 ring-1 ring-gray-700/30">
+                        {/* communication icon */}
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="24"
@@ -235,11 +118,131 @@ export function Experience() {
                     </div>
                     <div>
                       <h3 className="text-xl font-medium font-display text-slate-900 dark:text-gray-100">
-                        Responsiveness
+                        Solve it Together
                       </h3>
                       <p className="mt-2.5 text-base text-slate-700 dark:text-gray-400">
-                        You can rely on me to be responsive and clear whenever
-                        we work together.
+                        Collaborate to find the best solutions for unique challenges to move forward
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div className="relative pb-24 lg:pb-20">
+                  <span
+                    className="absolute -ml-px border border-dashed bottom-4 left-10 top-24 border-slate-300 dark:border-gray-500"
+                    aria-hidden="true"
+                  ></span>
+                  <div className="relative flex space-x-7">
+                    <div>
+                      <span className="flex items-center justify-center w-20 h-20 rounded-full shadow-lg dark:shadow-gray-800/10 bg-slate-900 ring-1 ring-gray-700/30">
+                        {/* Excellence icon */}
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          className="w-6 h-6 text-sky-50"
+                        >
+                          <g clipPath="url(#clip0_112_3)">
+                            <path
+                              d="M3.5 19.5V23.5H21.5V19.5"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                            <path
+                              d="M14.5 12.5V5.5L17.5 4.5V1.5H7.5V4.5L10.5 5.5V12.5L2.868 15.044C2.051 15.316 1.5 16.081 1.5 16.942V19.5H23.5V16.942C23.5 16.081 22.949 15.317 22.132 15.045L14.5 12.5Z"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_112_3">
+                              <rect width="24" height="24" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </span>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-medium font-display text-slate-900 dark:text-gray-100">
+                        Excellence
+                      </h3>
+                      <p className="mt-2.5 text-base text-slate-700 dark:text-gray-400">
+                        Translate complex concepts into functional, user-friendly
+                        applications with measurable impact
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div className="relative">
+                  <div className="relative flex space-x-7">
+                    <div>
+                      <span className="flex items-center justify-center w-20 h-20 rounded-full shadow-lg dark:shadow-gray-800/10 bg-slate-900 ring-1 ring-gray-700/30">
+                        {/* time icon */}
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          className="w-6 h-6 text-sky-50"
+                        >
+                          <g clipPath="url(#clip0_112_53)">
+                            <path
+                              d="M3.5 1.5H21.5"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                            <path
+                              d="M3.5 23.5H21.5"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                            <path
+                              d="M8.5 20.5V19.711C8.50005 19.5142 8.55814 19.3219 8.667 19.158L11.667 14.658C11.7583 14.521 11.882 14.4087 12.0272 14.3311C12.1723 14.2534 12.3344 14.2128 12.499 14.2128C12.6636 14.2128 12.8257 14.2534 12.9708 14.3311C13.116 14.4087 13.2397 14.521 13.331 14.658L16.331 19.158C16.4406 19.3223 16.499 19.5155 16.499 19.713V20.5H8.5Z"
+                              fill="currentColor"
+                            />
+                            <path
+                              d="M5.5 23.5V19.711C5.50002 18.9212 5.73384 18.1491 6.172 17.492L9.5 12.5L6.172 7.508C5.73384 6.8509 5.50002 6.07879 5.5 5.289V1.5"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                            <path
+                              d="M19.5 1.5V5.289C19.5 6.07879 19.2662 6.8509 18.828 7.508L15.5 12.5L18.828 17.492C19.2662 18.1491 19.5 18.9212 19.5 19.711V23.5"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_112_53">
+                              <rect width="24" height="24" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </span>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-medium font-display text-slate-900 dark:text-gray-100">
+                        Stay Updated
+                      </h3>
+                      <p className="mt-2.5 text-base text-slate-700 dark:text-gray-400">
+                        Keep up with the latest trends and technologies in the tech world
                       </p>
                     </div>
                   </div>
@@ -390,8 +393,8 @@ export function Experience() {
                   <Link
                     className="relative inline-flex items-center justify-center w-12 h-12 duration-200 -translate-x-1/2 -translate-y-1/2 rounded-full left-1/2 top-1/2 bg-slate-900 hover:bg-slate-800 lg:h-20 lg:w-20"
                     aria-label="Download resume"
-                    download="oussama-ennadafy-resume.pdf"
-                    href='assets/pdf/oussama-ennadafy-resume.pdf'
+                    download="Oussama-Ennadafy-Resume.pdf"
+                    href='assets/pdf/Oussama-Ennadafy-Resume.pdf'
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -429,16 +432,16 @@ export function Experience() {
                       Years of experience
                     </dt>
                     <dd className="order-first text-3xl font-extrabold text-white sm:text-4xl">
-                      3
+                      +2
                     </dd>
                   </div>
 
                   <div className="flex flex-col gap-1">
                     <dt className="text-sm font-semibold leading-6 text-sky-50">
-                      Projects completed
+                      Job Success on upwork
                     </dt>
                     <dd className="order-first text-3xl font-extrabold text-white sm:text-4xl">
-                      +20
+                      100%
                     </dd>
                   </div>
                 </dl>
