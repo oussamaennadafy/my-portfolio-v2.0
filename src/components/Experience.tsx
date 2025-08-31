@@ -393,8 +393,8 @@ export function Experience() {
                   <Link
                     className="relative inline-flex items-center justify-center w-12 h-12 duration-200 -translate-x-1/2 -translate-y-1/2 rounded-full left-1/2 top-1/2 bg-slate-900 hover:bg-slate-800 lg:h-20 lg:w-20"
                     aria-label="Download resume"
-                    download="Oussama-Ennadafy-Resume.pdf"
-                    href='assets/pdf/Oussama-Ennadafy-Resume.pdf'
+                    download="oussama-ennadafy-resume.pdf"
+                    href='assets/pdf/oussama-ennadafy-resume.pdf'
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
