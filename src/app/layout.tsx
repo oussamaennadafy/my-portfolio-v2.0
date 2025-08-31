@@ -62,7 +62,7 @@ export default function RootLayout({ children }) {
         <ToastSlot />
         <SpeedInsights />
         <Analytics />
-        <NewBanner /> 
+        {/* <NewBanner />  */}
         <Header />
         {children}
       </body>

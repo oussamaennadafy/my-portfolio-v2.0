@@ -6,11 +6,11 @@ import { useInView } from "react-intersection-observer"
 import { Button } from './Button'
 import { Container } from './Container'
 import { GitHubIcon, LinkedInIcon, EmailIcon } from './SocialIcons'
-import heroPortrait from '@/images/portrait-02.jpg'
+import heroPortrait from '@/images/portrait-01.jpg'
 import heroBG from '@/images/home-hero-gradient.svg'
-import reactjs from '@/images/logos/next-js.svg'
-import tailwind from '@/images/logos/icons/tailwindcss.png'
-import nodejs from '@/images/logos/icons/nodejs.png'
+import idea from '@/images/logos/idea.svg'
+import build from '@/images/logos/build.svg'
+import launch from '@/images/logos/launch.svg'
 import React from "react";
 
 type SocialLinkProps = {
@@ -58,15 +58,14 @@ export function Hero() {
               >
                 <path d="M247.564 18.5807C241.772 13.3568 232.473 12.7526 225.225 11.4427C217.124 9.97395 208.996 8.57031 200.846 7.46093C186.542 5.51302 172.169 4.08854 157.79 3.01562C126.033 0.645827 94.0929 0.0338481 62.3387 2.36979C42.1785 3.85416 22.008 5.90885 2.32917 10.8463C-0.0155171 11.4349 0.207047 14.6719 2.6889 14.7083C22.0261 14.9896 41.3866 12.6406 60.7109 11.8568C79.9471 11.0807 99.2274 10.6719 118.484 10.9557C142.604 11.3125 166.719 12.8333 190.722 15.5156C199.956 16.5469 209.195 17.6016 218.411 18.8255C227.864 20.0807 237.259 22 246.767 20.7422C247.709 20.6198 248.426 19.3568 247.564 18.5807Z" />
               </svg>
-              <span className="relative">Helping</span>
+              <span className="relative">Transform</span>
             </span>{' '}
-            businesses turn their ideas into reality
+            challenges into digital solutions
           </h1>
           <p className="mt-6 text-lg leading-8 text-center text-slate-700 lg:text-left dark:text-gray-400">
-            I&#39;m a passionate developer, Freelancer, and general technology
-            enthusiast living in morocco. I&#39;ve worked with hundreds of
-            startups to help them develop their ideas into profitable
-            businesses.
+            I&#39;m a software engineer, freelancer, and technology enthusiast from Morocco.
+            I help businesses and startups build scalable products, solve complex problems,
+            and drive digital transformation with clean, efficient, and impactful solutions.
           </p>
           <div className="flex flex-wrap items-center justify-center mt-10 gap-x-10 gap-y-6 lg:justify-start">
             <Button variant='primary' href="/contact" className="h-11">
@@ -131,16 +130,16 @@ export function Hero() {
                 </svg>
               </div>
               <div className="absolute -top-6 right-12 inline-flex h-12 w-max items-center justify-center gap-3.5 rounded-2xl bg-white/90 dark:bg-gray-300 px-8 text-sm font-semibold text-slate-700 shadow-lg shadow-sky-100/50 dark:shadow-sky-100/30 ring-1 ring-slate-900/5 backdrop-blur-md md:-left-28 md:top-14 lg:-top-6 lg:left-44 lg:px-10 2xl:-left-48 2xl:top-14">
-                <Image src={reactjs} alt="react js" className="w-5 h-auto" priority />1
-                years of experience
-              </div>
-              <div className="absolute left-12 top-full inline-flex h-12 w-max -translate-y-6 items-center justify-center gap-3.5 rounded-2xl bg-white/90 dark:bg-gray-300 px-8 text-sm font-semibold text-slate-700 shadow-lg shadow-sky-100/50 dark:shadow-sky-100/30 ring-1 ring-slate-900/5 backdrop-blur-md md:left-0 md:-translate-x-20 md:-translate-y-24 lg:-left-3 lg:-translate-y-24 lg:px-10 xl:-left-6 xl:-translate-x-28 xl:-translate-y-32">
-                <Image src={nodejs} alt="" className="w-auto h-6" priority />2
-                years of experience
+                <Image src={idea} alt="react js" className="w-5 h-auto" priority />
+                From vision to value
               </div>
               <div className="absolute top-[350px] hidden h-12 w-max items-center justify-center gap-3.5 rounded-2xl bg-white/90 dark:bg-gray-300 px-8 text-sm font-semibold text-slate-700 shadow-lg shadow-sky-100/50 dark:shadow-sky-100/30 ring-1 ring-slate-900/5 backdrop-blur-md md:left-full md:inline-flex md:-translate-x-32 lg:left-48 lg:hidden lg:px-10 2xl:left-full 2xl:inline-flex 2xl:-translate-x-28">
-                <Image src={tailwind} alt="" className="h-auto w-7" priority />
-                <span className="">2 years of experience</span>
+                <Image src={build} alt="" className="h-auto w-7" priority />
+                <span className="">Turning logic to life</span>
+              </div>
+              <div className="absolute left-12 top-full inline-flex h-12 w-max -translate-y-6 items-center justify-center gap-3.5 rounded-2xl bg-white/90 dark:bg-gray-300 px-8 text-sm font-semibold text-slate-700 shadow-lg shadow-sky-100/50 dark:shadow-sky-100/30 ring-1 ring-slate-900/5 backdrop-blur-md md:left-0 md:-translate-x-20 md:-translate-y-24 lg:-left-3 lg:-translate-y-24 lg:px-10 xl:-left-6 xl:-translate-x-28 xl:-translate-y-32">
+                <Image src={launch} alt="" className="w-auto h-6" priority />
+                Launch the Solution
               </div>
             </div>
           </div>

@@ -2,17 +2,17 @@ import React from "react";
 import Image from 'next/image'
 import clsx from 'clsx'
 
-import rails from '@//images/logos/icons/rails.png'
+import java from '@//images/logos/icons/java.png'
 import javascript from '@//images/logos/icons/javascript.png'
 import html5 from '@/images/logos/icons/html5.png'
-import css from '@/images/logos/icons/css.png'
-import netlify from '@/images/logos/icons/netlify.png'
+import vuejs from '@/images/logos/icons/vuejs.png'
+import react from '@/images/logos/icons/react.png'
 import python from '@//images/logos/icons/python.png'
 import postgresql from '@//images/logos/icons/postgresql.png'
-import tailwind from '@//images/logos/icons/tailwindcss.png'
+import flutter from '@//images/logos/icons/Flutter.png'
 import ruby from '@//images/logos/icons/ruby.png'
 import figma from '@/images/logos/icons/figma.png'
-import sketch from '@/images/logos/icons/sketch.png'
+import laravel from '@/images/logos/icons/laravel.png'
 import c from '@/images/logos/icons/c.png'
 import firebase from '@/images/logos/icons/firebase.png'
 
@@ -26,28 +26,28 @@ const icons = [
     icon: html5,
   },
   {
-    name: 'CSS',
-    icon: css,
+    name: 'Vuejs',
+    icon: vuejs,
   },
   {
-    name: 'Tailwind CSS',
-    icon: tailwind,
+    name: 'Flutter',
+    icon: flutter,
   },
   {
     name: 'Figma',
     icon: figma,
   },
   {
-    name: 'Sketch',
-    icon: sketch,
+    name: 'Laravel',
+    icon: laravel,
   },
   {
-    name: 'Rails',
-    icon: rails,
+    name: 'Java',
+    icon: java,
   },
   {
-    name: 'Netlify',
-    icon: netlify,
+    name: 'React',
+    icon: react,
   },
   {
     name: 'Python',
