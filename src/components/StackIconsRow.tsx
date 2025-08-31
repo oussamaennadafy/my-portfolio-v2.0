@@ -12,7 +12,7 @@ import postgresql from '@//images/logos/icons/postgresql.png'
 import flutter from '@//images/logos/icons/Flutter.png'
 import ruby from '@//images/logos/icons/ruby.png'
 import figma from '@/images/logos/icons/figma.png'
-import laravel from '@/images/logos/icons/laravel.png'
+import laravel from '@/images/logos/icons/laravel-logo.png'
 import c from '@/images/logos/icons/c.png'
 import firebase from '@/images/logos/icons/firebase.png'
 
