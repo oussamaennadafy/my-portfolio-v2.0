@@ -121,8 +121,8 @@ export function StackIconsRow() {
         </span>
       </div>
 
-      <div className='relative flex justify-center pt-16 bg-white dark:bg-gray-950 gap-x-12 overflow-x-hidden sm:gap-x-16 lg:pt-12 lg:pb-14 max-w-screen-xl'>
-        <div className='relative flex justify-center pt-16 bg-white dark:bg-gray-950 gap-x-12 overflow-x-hidden sm:gap-x-16 lg:pt-12 lg:pb-14 max-w-screen-xl'>
+      <div className='relative flex justify-center pt-16 bg-white dark:bg-gray-950 gap-x-12 overflow-x-hidden sm:gap-x-16 lg:pt-12 lg:pb-14'>
+        <div className='relative flex justify-center pt-16 bg-white dark:bg-gray-950 gap-x-12 overflow-x-hidden sm:gap-x-16 lg:pt-12 lg:pb-14'>
           {icons.map((item, index) => (
             <StackIcon
               key={`stack-${index}`}

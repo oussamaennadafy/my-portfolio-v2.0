@@ -63,7 +63,7 @@ export function Hero() {
             challenges into digital solutions
           </h1>
           <p className="mt-6 text-lg leading-8 text-center text-slate-700 lg:text-left dark:text-gray-400">
-            I&#39;m a software engineer, and technology enthusiast from Morocco.
+            I&#39;m a Full-Stack Developer, and technology enthusiast from Morocco.
             I help businesses and startups build scalable products, solve complex problems,
             and drive digital transformation with clean, efficient, and impactful solutions.
           </p>
