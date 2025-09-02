@@ -19,7 +19,6 @@ export default function HomePage() {
       <Experience />
       <StackIconsRow />
       <FeaturedWork />
-      <Testimonials />
       <FeaturedPosts />
       <Footer />
     </>
