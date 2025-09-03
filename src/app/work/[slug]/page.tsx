@@ -39,10 +39,6 @@ export default function CaseStudyPage({ params }) {
         <MdxContent code={caseStudy.body.code} />
       </CaseStudyDetails>
       <CaseStudyGallery images={caseStudy.images} />
-      <CaseStudyTestimonial
-        clientName={caseStudy.client.name}
-        testimonial={caseStudy.testimonial}
-      />
       <CaseStudyNavigation caseStudySlug={caseStudy.slug} />
       <Footer newsletter={false} />
     </>

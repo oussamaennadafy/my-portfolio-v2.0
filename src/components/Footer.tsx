@@ -43,21 +43,6 @@ const socialLinks = [
     href: 'https://github.com/oussamaennadafy',
     target: "_blank"
   },
-  {
-    label: 'Dribbble',
-    icon: DribbbleIcon,
-    href: '#',
-  },
-  {
-    label: 'Instagram',
-    icon: InstagramIcon,
-    href: '#',
-  },
-  {
-    label: 'Twitter',
-    icon: TwitterIcon,
-    href: '#',
-  },
 ]
 
 function SocialLink({ icon: Icon, label, ...props }) {
