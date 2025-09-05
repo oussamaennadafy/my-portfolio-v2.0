@@ -68,7 +68,7 @@ export function WorkExperience() {
             <p className="mt-6 text-lg leading-relaxed text-slate-700 dark:text-gray-600">
               From YouCode Maroc to real-world projects and full-time development roles, 
               my journey has been driven by curiosity and a passion for building impactful solutions.
-              Now, I'm seeking new challenges to grow further and make a greater impact.
+              Now, I’m seeking new challenges to grow further and make a greater impact.
             </p>
             <Button className="mt-10" variant="secondary">
               <Link
