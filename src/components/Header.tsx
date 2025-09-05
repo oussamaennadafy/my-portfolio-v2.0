@@ -123,56 +123,6 @@ export function Header() {
                       {link.label}
                     </Link>
                   ))}
-
-                  <Disclosure as="div" className="relative">
-                    {({ open }) => (
-                      <>
-                        <Disclosure.Button
-                          className={clsx(
-                            'group flex w-full items-center gap-2 text-base font-semibold duration-200 ease-in-out pt-2',
-                            open
-                              ? 'text-slate-900 dark:text-gray-200'
-                              : 'text-slate-700 hover:text-slate-900 dark:text-gray-200'
-                          )}
-                        >
-                          <span>Pages</span>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            className={clsx(
-                              'h-5 w-5 duration-300',
-                              open
-                                ? 'rotate-90 text-slate-900 dark:text-gray-200'
-                                : 'text-slate-700 group-hover:text-slate-700 dark:text-gray-200 dark:group-hover:text-slate-200'
-                            )}
-                            aria-hidden="true">
-                            <path
-                              fill-rule="evenodd"
-                              d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                              clip-rule="evenodd">
-                            </path>
-                          </svg>
-                        </Disclosure.Button>
-
-                        <Disclosure.Panel className="z-20 space-y-4 px-3">
-                          {pages.map((subLink) => (
-                            <div
-                              className="mt-4"
-                              key={`${subLink.label}-dropdown-desktop`}
-                            >
-                              <Link
-                                href={subLink.href}
-                                className="block text-md font-medium text-slate-700 transition duration-200 ease-in-out hover:text-slate-900 dark:text-gray-200"
-                              >
-                                {subLink.label}
-                              </Link>
-                            </div>
-                          ))}
-                        </Disclosure.Panel>
-                      </>
-                    )}
-                  </Disclosure>
                 </div>
               </div>
             </Popover.Panel>

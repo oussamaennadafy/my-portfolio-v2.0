@@ -91,7 +91,7 @@ export default function Contact() {
                       Email me
                     </p>
                     <p className="mt-1.5 text-base text-slate-600 dark:text-gray-400 sm:mt-2">
-                      I will usually email you back within a day
+                      I will usually email you back within few hours
                     </p>
                     <Link
                       href="mailto:oussama.ennadafy@gmail.com"
@@ -139,11 +139,11 @@ export default function Contact() {
           <div className={`px-5 py-16 sm:px-6 sm:py-24 lg:col-span-6 lg:pl-0 lg:pr-8 lg:pt-32 xl:col-span-5 xl:col-start-8 2xl:pr-0 transition-all duration-500 ${inView ? "lg:translate-x-0 lg:opacity-100" : "lg:translate-x-1/2 lg:opacity-0"}`}>
             <div className="mx-auto max-w-lg lg:mr-0">
               <h3 className="font-display text-3xl font-semibold text-slate-900 dark:text-gray-200">
-                Fill our the form below to get started
+                Fill out the form below to get started
               </h3>
               <p className="mt-4 text-lg text-slate-600 dark:text-gray-400">
-                Turkish cortado mazagran skinny macchiato espresso trade
-                medium aromatic.
+                Feel free to reach me out, i will be happy to email 
+                you back in few hours.
               </p>
               <Form />
             </div>

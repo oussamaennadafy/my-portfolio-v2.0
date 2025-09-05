@@ -33,24 +33,24 @@ export function AboutHero() {
               </svg>
               <span className="relative dark:text-gray-300">I’m oussama</span>
             </span>{' '}
-            and I’m a developer & a freelancer
+            and I’m a web & mobile developer
           </h1>
           <p className="mt-8 text-lg leading-8 text-slate-700 dark:text-gray-400">
-            Pumpkin seasonal rich froth decaffeinated trifecta organic blue
-            panna doppio. Body a whipped lungo variety spice seasonal body press
-            mountain con macchiato. Medium coffee single white to caramelization
-            siphon con siphon id as con go single. So ristretto pumpkin affogato
-            cinnamon breve turkish organic. Lait black kopi dripper spice lait
-            cultivar robusta panna whipped and sit aromatic sugar.
+            Driven by curiosity and innovation, I navigate the ever-evolving landscape
+            of technology and software development. Passionate about creating impactful
+            digital solutions, I continuously refine my skills in full-stack development,
+            mobile applications, and web design. My professional journey combines hands-on
+            experience with a commitment to learning, allowing me to deliver projects that
+            are both efficient and scalable. Guided by a vision of leveraging technology to
+            solve real-world problems, I prioritize quality, creativity, and collaboration in every endeavor.
           </p>
           <p className="mt-6 text-lg leading-8 text-slate-700 dark:text-gray-400">
-            And café frappuccino extraction filter froth sugar siphon coffee
-            pumpkin press milk ristretto et au. Trade instant aged as wings bar
-            seasonal pumpkin barista turkish shot go seasonal robusta. Strong
-            iced lungo frappuccino espresso redeye macchiato aftertaste trade
-            pot. Seasonal turkish mocha wings sit crema blue au and grounds eu
-            cortado café cup. Filter viennese bar seasonal wings siphon as
-            frappuccino go luwak single mazagran.
+            Throughout my career, I have contributed to diverse projects, from startups to more structured
+            environments, gaining expertise in agile practices, user-centric design, and modern
+            development frameworks. My values center around integrity, continuous
+            improvement, and fostering innovation in teams and products alike.
+            I aspire to lead initiatives that push digital boundaries, transform
+            user experiences, and shape the future of technology.
           </p>
           <p
             className={clsx('mt-16 text-3xl text-slate-700 dark:text-gray-400', mrDafoe.className)}

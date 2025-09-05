@@ -12,24 +12,24 @@ import Link from 'next/link'
 
 const companies = [
   {
-    name: 'youcode',
+    name: 'YouCode Maroc',
     dates: 'Nov 2021 - Jul 2023',
     description:
-      'Breve macchiato bar cortado dripper shot sweet robust qui. Et café whipped go white that espresso fair origin pot cream est cup.',
+      "At YouCode, I studied through a “learning by doing” approach, building real projects from day one. This hands-on method strengthened my problem-solving skills and adaptability in fast-paced environments. It gave me the mindset to continuously learn, innovate, and deliver practical solutions in the tech industry.",
     logo: youcode,
   },
   {
-    name: 'virtual minds',
+    name: 'Virtual Minds',
     dates: 'Jul 2022 - Aug 2022',
     description:
-      'Breve macchiato bar cortado dripper shot sweet robust qui. Et café whipped go white that espresso fair origin pot cream est cup.',
+      'I completed an internship where I applied my skills to real-world projects and professional workflows. This experience sharpened my technical expertise while teaching me collaboration and problem-solving in a team setting. It reinforced my ability to turn ideas into functional, impactful solutions.',
     logo: virtualMinds,
   },
   {
-    name: 'Ora technologies',
+    name: 'Ora Technologies',
     dates: 'Nov 2023 - Present',
     description:
-      'Breve macchiato bar cortado dripper shot sweet robust qui. Et café whipped go white that espresso fair origin pot cream est cup.',
+      'In my first full-time role, I took my skills further by contributing to real-world projects with measurable impact. I collaborated closely with professionals across teams, learning to deliver quality solutions in a fast-paced environment. This experience solidified my growth as a developer and prepared me for bigger challenges ahead.',
     logo: ora,
   },
 ];
@@ -66,8 +66,9 @@ export function WorkExperience() {
               so far
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-slate-700 dark:text-gray-600">
-              Panna french americano macchiato breve roast cinnamon cortado
-              strong white pumpkin et single press aftertaste.
+              From YouCode Maroc to real-world projects and full-time development roles, 
+              my journey has been driven by curiosity and a passion for building impactful solutions.
+              Now, I'm seeking new challenges to grow further and make a greater impact.
             </p>
             <Button className="mt-10" variant="secondary">
               <Link

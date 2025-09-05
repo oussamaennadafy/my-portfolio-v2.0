@@ -20,8 +20,8 @@ export default function AboutPage() {
       <WorkExperience />
       <Workstation />
       <Stack />
-      <Awards />
-      <Press />
+      {/* <Awards /> */}
+      {/* <Press /> */}
       <Footer />
     </>
   )
