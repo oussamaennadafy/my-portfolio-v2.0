@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 import { Button } from './Button'
 import { Container } from './Container'
-import { TwitterIcon } from './SocialIcons'
+import { LinkedInIcon } from './SocialIcons'
 
 import workstationImage1 from '@/images/workstation-01.jpg'
 import workstationImage2 from '@/images/workstation-02.jpg'
@@ -18,18 +18,20 @@ export function Workstation() {
                 A tour of my gadgets and workstation
               </h2>
               <p className="max-w-lg mt-6 text-lg leading-8 text-slate-700 dark:text-gray-400">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Maiores impedit perferendis suscipit eaque, iste dolor
-                cupiditate blanditiis ratione. Instant extraction mazagran milk
-                instant milk foam café iced aftertaste iced brewed.
+                Here is where I truly find my passion,
+                A dedicated place to dig deep into computer science,
+                Exploring my favorite gadgets and personal workstation,
+                Discovering and experimenting with the latest technologies every day.
               </p>
               <Button
-                href="https://twitter.com/raguila8"
+                href="https://www.linkedin.com/in/oussama-ennadafy/"
+                target='_blank'
                 className="mt-10 gap-x-3.5"
                 variant="secondary"
               >
-                <TwitterIcon className="w-4 h-4 text-sky-500" />
-                Follow me on Twitter
+                {/* <TwitterIcon className="w-4 h-4 text-sky-500" /> */}
+                <LinkedInIcon className="w-4 h-4 text-[#0b66c2]" />
+                Contact me on linkedin
               </Button>
             </div>
           </div>

@@ -98,7 +98,7 @@ export default function Form() {
           required={false}
           autoComplete="tel"
           aria-describedby="phone-description"
-          placeholder="+1 (800) 123-4567"
+          placeholder="+212 688744076"
           onChange={handleInputChange}
           value={formData.phone}
           />

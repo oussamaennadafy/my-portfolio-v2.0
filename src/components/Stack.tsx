@@ -4,14 +4,14 @@ import Image from 'next/image'
 
 import { Container } from './Container'
 
-import image from '@/images/portrait-02.jpg'
+import image from '@/images/portrait-01.jpg'
 // import rails from '@//images/logos/icons/rails.png'
 import nextjs from '@/images/logos/next-js.svg'
-import javascript from '@//images/logos/icons/javascript.png'
-import python from '@//images/logos/icons/python.png'
+import flutter from '@//images/logos/icons/flutter.png'
+import java from '@//images/logos/icons/java.png'
 import postgresql from '@//images/logos/icons/postgresql.png'
-import tailwind from '@//images/logos/icons/tailwindcss.png'
-import ruby from '@//images/logos/icons/ruby.png'
+import typescript from '@//images/logos/icons/typescript.png'
+import nodejs from '@//images/logos/icons/nodejs.png'
 import avatar1 from '@/images/avatars/avatar-1.png'
 import avatar2 from '@/images/avatars/avatar-2.png'
 import avatar3 from '@/images/avatars/avatar-3.png'
@@ -22,33 +22,33 @@ import { useInView } from 'react-intersection-observer'
 const stack = [
   {
     name: 'Next js',
-    experience: '1+ years of experience',
+    experience: 'The React Framework',
     logo: nextjs,
   },
   {
-    name: 'Javascript',
-    experience: '8+ years of experience',
-    logo: javascript,
+    name: 'Flutter',
+    experience: 'Build for any screen',
+    logo: flutter,
   },
   {
-    name: 'Python',
-    experience: '4 years of experience',
-    logo: python,
+    name: 'Java',
+    experience: 'Reliable systems',
+    logo: java,
   },
   {
     name: 'Postgresql',
-    experience: '6 years of experience',
+    experience: 'Secure & reliable db',
     logo: postgresql,
   },
   {
-    name: 'Tailwind',
-    experience: '3 years of experience',
-    logo: tailwind,
+    name: 'Typescript',
+    experience: 'JavaScript superset',
+    logo: typescript,
   },
   {
-    name: 'Ruby',
-    experience: '9 years of experience',
-    logo: ruby,
+    name: 'Node js',
+    experience: 'javascript runtime',
+    logo: nodejs,
   },
 ]
 
@@ -63,7 +63,7 @@ export function Stack() {
   });
 
   return (
-    <section className="py-16 overflow-hidden bg-white dark:bg-gradient-to-b dark:from-gray-950 dark:via-gray-950 dark:to-gray-900 sm:py-24 lg:py-32">
+    <section className="overflow-hidden bg-white dark:bg-gradient-to-b dark:from-gray-950 dark:via-gray-950 dark:to-gray-900 pt-16 sm:pt-24 lg:pt-32">
       <Container>
         <div className="grid grid-cols-1 gap-y-16 gap-x-8 sm:gap-y-20 lg:grid-cols-2">
           <div className="lg:order-2">
@@ -102,10 +102,10 @@ export function Stack() {
                 </span>
               </h2>
               <p className="mt-6 text-lg leading-8 text-slate-700 dark:text-gray-400">
-                I&apos;ve been a software developer for over 13 years, and while my
-                stack has shifted over the years, I kept coming back to the same
-                technologies. The following is the stack that I&apos;ve developed &
-                honed over the years as a software developer.
+                I&apos;ve worked with a wide range of technologies, building school projects, personal 
+                projects, and contributing to professional projects across multiple platforms, 
+                including web and mobile. I&apos;ve learned that a successful developer must be 
+                adaptable to the evolving needs of the market in order to make a meaningful impact.
               </p>
               <div className="grid grid-cols-2 gap-2 mt-12 sm:gap-3">
                 {stack.map((tech) => (
@@ -142,14 +142,14 @@ export function Stack() {
                 <Image
                   src={image}
                   alt=""
-                  className="object-cover object-left w-full h-full rounded-2xl dark:brightness-75"
+                  className="object-cover object-center w-full h-full rounded-2xl dark:brightness-75"
                   sizes="(min-width: 640px) 32rem, calc(100vw - 2.5rem)"
                 />
               </div>
               <div ref={ref} className={`absolute max-w-xs p-8 rounded-2xl bg-sky-700/95 dark:bg-sky-800/95 backdrop-blur-sm transition-all duration-500 ${inView ? "opacity-100 xl:right-0 xl:bottom-10 xl:translate-x-1/4 -bottom-16 right-6" : "opacity-0 xl:translate-x-1/2 -bottom-24 xl:bottom-10"}`}>
                 <p className="text-2xl font-medium font-display text-sky-50 dark:text-gray-300">
-                  <span className="text-[28px] font-bold text-white dark:text-gray-300">55+</span>{' '}
-                  Clients have loved my work
+                  <span className="text-[28px] font-bold text-white dark:text-gray-300">10+</span>{' '}
+                  Projects has build/contributed on
                 </p>
                 <div className="mt-6 flex -space-x-1.5 overflow-hidden">
                   {clientAvatars.map((avatar, index) => (
