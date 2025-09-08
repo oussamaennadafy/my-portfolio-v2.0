@@ -6,15 +6,16 @@ import { CaseStudyNavigation } from '@/components/work/CaseStudyNavigation'
 import { allCaseStudies } from 'contentlayer/generated'
 import { MdxContent } from '@/components/mdx/MdxContent'
 import { Footer } from '@/components/Footer'
+import { Metadata } from 'next'
 
 export const generateStaticParams = async () =>
   allCaseStudies.map((caseStudy) => ({ slug: caseStudy.slug }))
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata({ params }): Promise<Metadata> {
   const caseStudy = allCaseStudies.find(
     (caseStudy) => caseStudy.slug === params.slug
   )
-  return { title: caseStudy.title, description: caseStudy.description }
+  return { title: caseStudy.title, description: caseStudy.description };
 }
 
 export default function CaseStudyPage({ params }) {
